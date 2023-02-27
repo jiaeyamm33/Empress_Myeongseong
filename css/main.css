@@ -33,6 +33,7 @@ img{display: block;}
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .m_logo a{
   position: absolute;
   top: 50%;
