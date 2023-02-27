@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+section{
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+section > h2{display: none;}
+.inner, #news{
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+img{display: block;}
+
+
+/* 1. 메인 사진 */
+#m{
+  background-image: url(../image/main.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.m_logo{
+  width: 400px;
+  height: 400px;
+  border: 5px solid #FCB416;
+  border-radius: 50%;
+  background: #ffffff80;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.m_logo a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* 2. PB 브랜드 */
+#pb{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.227), rgba(0, 0, 0, 0.2)), url(../image/pb_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+#pb .inner h2{
+  font-size: var(--f-size05);
+  font-weight: 200;
+  color: var(--t-color02);
+}
+#pb .inner h2::after{
+  content: "";
+  display: block;
+  width: 680px;
+  height: 4px;
+  background: var(--t-color02);
+  margin: 20px 0;
+}
+#pb .inner p{
+  font-size: var(--f-size04);
+  color: var(--t-color02);
+  margin-bottom: 50px;
+}
+.color_y{color: var(--t-color03);}
+.pb_list{
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.pb_list a{
+  width: 387px;
+  height: 400px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pb_list li:first-child a{
+  background: #fcb31680;
+}
+.pb_list li:nth-child(2) a{
+  background: #ffffff80;
+}
+.pb_list li:last-child a{
+  background: #7db64180;
+}
+
+/* 3. esg경영 */
+#esg{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../image/esg_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--t-color02);
+  position: relative;
+}
+#esg .inner h2{
+  font-size: var(--f-size05);
+  font-weight: 100;
+  margin: 150px 0 50px 0;
+}
+#esg .inner h2 small{
+  font-size: 64px;
+  padding-left: 5px;
+}
+#esg .inner > p:first-of-type{
+  font-size: var(--f-size04);
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+#esg .inner > p:nth-of-type(2){
+  font-size: var(--f-size03);
+}
+.esg_list{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 590px;
+  height: 590px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.esg_list li{
+  width: 285px;
+  height: 285px;
+  background: #000000c0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.esg_list li h3{
+  font-size: var(--f-size03);
+  margin: 20px 0;
+}
+.esg_list li p{
+  font-size: var(--f-size01);
+  line-height: 25px;
+}
+
+/* 4. 늬우스 */
+#news{position: relative;}
+#news h2{
+  display: block;
+  font-size: var(--f-size04);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.news_big{
+  width: 440px;
+  float: left;
+  margin-right: 70px;
+}
+.news_big span{
+  display: inline-block;
+  font-size: var(--f-size02);
+  color: var(--t-color02);
+  background: var(--t-color03);
+  margin: 15px 5px 10px 5px;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+.news_big h3{
+  font-size: 32px;
+  line-height: 40px;
+}
+.news_list{
+  width: 660px;
+  float: left;
+}
+.news_list li{
+  height: 180px;
+  margin-bottom: 20px;
+}
+.news_list img{
+  width: 180px;
+  height: 180px;
+  float: left;
+  margin-right: 30px;
+}
+.news_list h3{
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.news_list p{
+  font-size: 20px;
+}
+#news::after{
+  content: "";
+  display: block;
+  width: 1200px;
+  height: 10px;
+  background: var(--t-color03);
+  position: absolute;
+  top: 850px;
+}
+
+/* 5. 매장찾기 */
+#store{
+  width: 1200px;
+  margin: 0 auto;
+}
+#store h2{
+  font-size: var(--f-size04);
+  line-height: 40px;
+  display: inline-block;
+}
+#store h2::after{
+  content: "";
+  display: block;
+  width: 730px;
+  height: 4px;
+  margin: 50px 0;
+  background: var(--t-color03);
+}
+#store select{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 230px;
+  padding: 10px 0;
+  border: 2px solid #FCB416;
+  border-radius: 50px;
+  font-size: var(--f-size01);
+  text-indent: 20px;
+  background: url('../image/arrow_down.png') no-repeat 90% 50%;
+  cursor: pointer;
+}
+#store select::-ms-expand {
+  display: none;
+}
+#store select:focus {
+  border-color: #FCB416;
+  outline: none;
+}
+.store_info > img{
+  float: right;
+}
+.store_info ul{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.store_info ul li img{
+  width: 80px;
+  cursor: pointer;
+  margin: auto;
+}
