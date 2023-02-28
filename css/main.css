@@ -206,6 +206,7 @@ img{display: block;}
 /* 5. 매장찾기 */
 #store{
   width: 1200px;
+  height: 500px;
   margin: 0 auto;
 }
 #store h2{
@@ -253,4 +254,12 @@ img{display: block;}
   width: 80px;
   cursor: pointer;
   margin: auto;
+}
+#store > img{float: right;}
+
+/* 6. 채용 */
+#career{
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.327), rgba(0, 0, 0, 0.3)), url(../image/career_bg.jpg) no-repeat;
 }
