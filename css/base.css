@@ -18,10 +18,10 @@
 body {
   font-family: 'Pretendard', '맑은 고딕', sans-serif;
   font-size: 12px;
+  font-weight: 300;
   color: var(--t-color01);
 }
 a{
   color: var(--t-color01);
   text-decoration: none;
-  font-size: 12px;
 }

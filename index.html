@@ -20,7 +20,7 @@
   <header>
     <div class="h_inner">
       <h1>
-        <a href="index.html" title="상단 바로가기">
+        <a href="index.html" title="메인페이지로 바로가기">
           <img src="./image/logo.png" alt="상단로고">
         </a>
       </h1>
@@ -81,26 +81,45 @@
           </li>
         </ul>
       </nav>
+      <nav class="lnb">
+        <ul>
+          <li>
+            <a href="login.html" title="로그인">로그인</a>
+            <ul class="sub">
+              <li><a href="join.html" title="회원가입">회원가입</a></li>
+              <li><a href="notice.html" title="공지사항">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="lnb">
-      <ul>
-        <li><a href="login.html" title="로그인">로그인</a></li>
-        <li><a href="join.html" title="회원가입">회원가입</a></li>
-        <li><a href="notice.html" title="공지사항">공지사항</a></li>
-      </ul>
-    </nav>
-
   </header>
 
   <!-- 메인콘텐츠 영역 -->
   <main>
+    <nav class="m_nav">
+      <ul>
+        <li><a href="#m" title=""></a></li>
+        <li><a href="#pb" title=""></a></li>
+        <li><a href="#esg" title=""></a></li>
+        <li><a href="#news" title=""></a></li>
+        <li><a href="#s_c" title=""></a></li>
+      </ul>
+    </nav>
+    
     <!-- 1. 메인 사진? 이름 뭐라함 -->
     <section id="m">
       <h2>메인</h2>
-      <div class="m_logo">
-        <a href="https://emart.ssg.com/" title="이마트몰" target="_blank">
+      <div class="m_flip">
+        <div class="m_front card">
           <img src="./image/logo.png" alt="로고">
-        </a>
+        </div>
+        <div class="m_back card">
+          <a href="https://emart.ssg.com/" title="이마트몰" target="_blank">
+            <img src="./image/emartmall.png" alt="로고">
+            <span>이마트몰로 바로가기 <i class="fas fa-arrow-circle-right"></i></span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -199,50 +218,121 @@
       <h2>매장찾기, 채용정보</h2>
       <!-- 5. 매장찾기 -->
       <article id="store">
-        <h2>매장 점포 휴점일과<br>영업시간을 알아보세요</h2>
-        <form id="store_info" action="store.php" method="post">
-          <select name="store" id="store_info">
-            <option value="1">명일점</option>
-            <option value="2">성수점</option>
-            <option value="3">왕십리점</option>
-            <option value="4">오산점</option>
-          </select>
-        </form>
-        <div class="store_info">
-          <ul>
-            <li>
-              <img src="./image/clock.png" alt="영업시간">
-              <p>영업시간</p>
-              <p>00:00~00:00</p>
-            </li>
-            <li>
-              <img src="./image/warehouse.png" alt="휴점일">
-              <p>휴점일</p>
-              <p>둘째주, 넷째주 일요일</p>
-            </li>
-            <li>
-              <img src="./image/phone.png" alt="고객센터">
-              <p>고객센터</p>
-              <p>0000-0000</p>
-            </li>
-          </ul>
+        <div class="s_box">
+          <h2>매장 점포 휴점일과<br>영업시간을 알아보세요</h2>
+          <form id="store_info" action="store.php" method="post">
+            <select name="store" id="store_info">
+              <option value="1">명일점</option>
+              <option value="2">성수점</option>
+              <option value="3">왕십리점</option>
+              <option value="4">오산점</option>
+            </select>
+          </form>
+          <div class="store_info">
+            <ul>
+              <li>
+                <img src="./image/clock.png" alt="영업시간">
+                <p>영업시간</p>
+                <p>00:00~00:00</p>
+              </li>
+              <li>
+                <img src="./image/warehouse.png" alt="휴점일">
+                <p>휴점일</p>
+                <p><span class="color_y">둘째주, 넷째주 일요일</span></p>
+              </li>
+              <li>
+                <img src="./image/phone.png" alt="고객센터">
+                <p>고객센터</p>
+                <p>0000-0000</p>
+              </li>
+            </ul>
+          </div>
         </div>
         <img src="./image/store.jpg" alt="매장 이미지">
       </article>
       <!-- 6. 채용 -->
       <article id="career">
-        <div>
-          <h2>Ride on DT</h2>
-          <p>지속적으로 성장하는 혁신 기업</p>
+        <div class="c_inner">
+          <div class="c_title">
+            <h2>Ride on DT</h2>
+            <p>지속적으로 성장하는 혁신 기업</p>
+          </div>
+          <div class="c_link">
+            <p><a href="career.html" title="입사지원바로가기">입사지원바로가기</a></p>
+            <p><a href="career.html" title="채용공고보러가기">채용공고보러가기</a></p>
+          </div>
         </div>
-
       </article>
     </section>
   </main>
 
   <!-- 푸터 영역 -->
   <footer>
-
+    <div class="f_inner">
+      <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
+      <div class="f_info">
+        <ul class="f_link">
+          <li><a href="#" title="고객센터">고객센터</a></li>
+          <li><a href="#" title="이용약관">이용약관</a></li>
+          <li><a href="#" title="공정거래자율준수">공정거래자율준수</a></li>
+          <li><a href="#" title="윤리신고센터">윤리신고센터</a></li>
+          <li><a href="#" title="개인정보처리방침"><span class="color_y">개인정보처리방침</span></a></li>
+          <li><a href="#" title="영상정보운영방침"><span class="color_y">영상정보운영방침</span></a></li>
+        </ul>
+        <address>
+          <dl>
+            <dt>상호 : </dt>
+            <dd>이마트(주)</dd>
+            <dt>주소 : </dt>
+            <dd>서울특별시 성동구 뚝섬로 377(성수동2가)</dd>
+            <dt>대표자 : </dt>
+            <dd>강희석</dd>
+            <dt>사업자등록번호 : </dt>
+            <dd>206-86-50913</dd>
+            <dt>통신판매업 신고번호 : </dt>
+            <dd>제 2011-서울성동-0345호</dd>
+            <dt>이마트대표전화 : </dt>
+            <dd>02-380-5678</dd>
+            <dt>㈜에스에스지닷컴 : </dt>
+            <dd>1577-3419</dd>
+          </dl>
+        </address>
+        <select onchange="siteUrl(this)">
+          <option value="">FAMILY SITE</option>
+          <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
+          <option value="https://www.shinsegaepoint.com/">신세계포인트</option>
+          <option value="https://emart.ssg.com/">이마트몰</option>
+          <option value="http://culture.emart.com/main">문화센터</option>
+          <option value="http://store.traders.co.kr/index.jsp">이마트 트레이더스</option>
+          <option value="http://www.emarteveryday.co.kr">이마트 에브리데이</option>
+          <option value="https://www.emart24.co.kr">이마트24</option>
+          <option value="https://www.shinsegaegroupinside.com">신세계그룹</option>
+          <option value="http://www.shinsegae.com/">신세계백화점</option>
+          <option value="http://www.sikorea.co.kr/">신세계인터내셔날</option>
+          <option value="http://www.shinsegaefood.com/main.sf">신세계푸드</option>
+          <option value="http://www.shinsegae-con.co.kr">신세계건설</option>
+          <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
+          <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
+          <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
+          <option value="https://www.google.co.kr">신세계사이먼</option>
+          <option value="http://www.ssg.com">SSG.COM</option>
+        </select>
+        <select>
+          <option value="">Korea</option>
+        </select>
+      </div>
+    </div>
   </footer>
+  <script>
+    // 푸터 패밀리 사이트 스크립트
+    function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨
+      if(select.value!='none') { //옵션을 선택하면
+        window.open(select.value); //선택한 사이트가 열리게 하고
+        select.value='none'; //기존값을 지운다
+      }else { //선택을 하지 않으면
+        return; //프로그램을 종료한다
+      }
+    }
+  </script>
 </body>
 </html>
