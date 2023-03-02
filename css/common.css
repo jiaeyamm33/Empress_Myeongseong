@@ -87,3 +87,7 @@ address dd{margin-right: 20px;}
   color: #fff;
   background: var(--t-color04);
 }
+
+.hidden {
+  display: none;
+}
