@@ -110,6 +110,10 @@ img{display: block;}
   justify-content: space-between;
   vertical-align: middle;
 }
+.pb_list li{
+  width: 100%;
+  position: relative;
+}
 .pb_list a{
   width: 387px;
   height: 50vh;
@@ -117,15 +121,33 @@ img{display: block;}
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .5s;
+  position: absolute;
 }
 .pb_list li:first-child a{
   background: #fcb31680;
 }
 .pb_list li:nth-child(2) a{
   background: #ffffff80;
+  transition-delay: .2s;
 }
 .pb_list li:last-child a{
   background: #7db64180;
+  transition-delay: .4s;
+}
+.pb_list li:first-child a:hover{
+  background: #fcb316;  
+}
+.pb_list li:nth-child(2) a:hover{
+  background: #ffffff;
+}
+.pb_list li:last-child a:hover{
+  background: #7db641;
+}
+.pb_list li a img{transition: .5s;}
+.pb_list li:hover a img{
+  filter: contrast(200%);
+  transform: scale(1.02);
 }
 
 /* 3. esg경영 */
@@ -140,10 +162,16 @@ img{display: block;}
   font-size: var(--f-size05);
   font-weight: 100;
   margin: 30vh 0 50px 0;
+  transform: translateX(-100%);
+  transition: 1s;
 }
 #esg .inner h2 small{
   font-size: 64px;
   padding-left: 5px;
+}
+#esg .inner > p{
+  transform: translateX(-100%);
+  transition: 1s;
 }
 #esg .inner > p:first-of-type{
   font-size: var(--f-size04);
@@ -261,7 +289,7 @@ img{display: block;}
 }
 .s_box h2{
   font-size: var(--f-size04);
-  line-height: 40px;
+  line-height: 45px;
   display: inline-block;
 }
 .s_box h2::after{
@@ -305,7 +333,7 @@ img{display: block;}
   font-size: var(--f-size02);
   line-height: 26px;
 }
-.store_info ul li p:first-of-type{font-size: var(--f-size01);}
+.store_info ul li p:last-of-type{font-size: var(--f-size01);}
 .store_info ul li img{
   width: 80px;
   margin: 0 auto;
@@ -354,6 +382,6 @@ img{display: block;}
   font-weight: 100;
 }
 .c_link p:hover{
-  box-shadow: 5px 5px 5px 0 #333;
+  box-shadow: 16px 16px 5px 0 #333;
   background: #fcb31651;
 }

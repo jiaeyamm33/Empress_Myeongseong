@@ -4,9 +4,9 @@ window.addEventListener("wheel", function(e){
 	e.preventDefault();
 },{passive : false});
 
-var $html = $("html");
-var page = 1;
-var lastPage = $("section").length;
+let $html = $("html");
+let page = 1;
+let lastPage = $("section").length;
 
 $html.animate({scrollTop:0},10);
 
@@ -23,16 +23,37 @@ $(window).on("wheel", function(e){
 
     page--;
   }
-  var posTop = (page-1) * $(window).height();
+  let posTop = (page-1) * $(window).height();
 
   $html.animate({scrollTop : posTop});
-
 });
 
-
-// 매장찾기
 $(function(){
 
+  $(window).scroll(function(){
+    let ws = $(this).scrollTop();
+    console.log(ws);
+
+    // pb
+    if(ws>950){
+      $('.pb_list li a').css('top','0');
+    }else{
+      $('.pb_list li a').css('top','1000px');
+    }
+
+    // esg
+    if(ws>1930){
+      $('#esg h2').css('transform','translateX(0)');
+      $('#esg .inner > p').css('transform','translateX(0)');
+      $($('#esg .esg_list')).fadeIn(1000);
+    }else{
+      $('#esg h2').css('transform','translateX(-100%)');
+      $('#esg .inner > p').css('transform','translateX(-100%)');
+      $($('#esg .esg_list')).fadeOut();
+    }
+  });
+
+  // 매장찾기
   $('.store_info li img').hover(function(){
     let src = $(this).attr('src').replace('png','gif');
     $(this).attr('src', src);
