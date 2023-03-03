@@ -81,7 +81,7 @@ section {
 
 .vslist li p {
  font-size: var(--f-size02);   
- padding-top: 20px;
+ padding-top: 40px;
  line-height: 24px;
 }   
 
@@ -102,19 +102,24 @@ section {
 
 .ci p:first-of-type {
     font-size: var(--f-size03);
-    padding: 30px 0px;
+    padding: 56px 0px 30px 0px; 
+}
+
+.ci p:first-of-type span {
+    color: var(--t-color03);
+    font-weight: bold;
 }
 
 .ci p:last-of-type {
     font-size: var(--f-size01);
-    line-height: 24px;
+    line-height: 32px;
 
 }
 
 /* 연혁 */
 
 #history {
-    padding-top: 70px;
+    padding-top: 150px;
     width: 1200px;
     margin: 0px auto;
     height: 820px;
@@ -296,13 +301,46 @@ section {
 
 #comeway {
     width: 100%;
+    height: 670px;
+
     background: var(--t-color03);
 }
 
-#comeway h3 {
+#comeway article h3 {
     font-size: var(--f-size04);
 }
 
 #comeway article {
+    padding: 70px 0px 0px 0px;
+    width: 1200px;
+    margin: 0px auto;
+}
+
+#comeway article div {
+    width: 50%;
+}
+
+#comeway .comway_con {
+    margin: 40px 0px 0px 0px;
+    width: 100%;
     display: flex;
+}
+
+#comeway .c_info {
+    background: var(--t-color02);
+}
+
+#comeway .c_info dl {
+    line-height: var(--f-size03);
+    padding: 70px 0px 0px 30px;
+}
+
+#comeway .c_info dl dt {
+    font-size: var(--f-size02);
+    font-weight: bold;
+}
+
+#comeway .c_info dl dd {
+    font-size: var(--f-size01);
+    margin-bottom: 20px;
 }
