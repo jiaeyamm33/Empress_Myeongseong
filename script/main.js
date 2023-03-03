@@ -26,7 +26,9 @@ $(window).on("wheel", function(e){
   let posTop = (page-1) * $(window).height();
 
   $html.animate({scrollTop : posTop});
+
 });
+
 
 $(function(){
 
@@ -35,14 +37,14 @@ $(function(){
     console.log(ws);
 
     // pb
-    if(ws>950){
-      $('.pb_list li a').css('top','0');
+    if(ws>900){
+      $('.pb_list li').css('top','0');
     }else{
-      $('.pb_list li a').css('top','1000px');
+      $('.pb_list li').css('top','1000px');
     }
 
     // esg
-    if(ws>1930){
+    if(ws>1900){
       $('#esg h2').css('transform','translateX(0)');
       $('#esg .inner > p').css('transform','translateX(0)');
       $($('#esg .esg_list')).fadeIn(1000);
