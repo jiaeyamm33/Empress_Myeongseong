@@ -16,7 +16,7 @@ header .gnb a{
   display: flex;
   position: relative;
 }
-.login1 h2{
+.login1 h2, .login1 h3{
   display: none;
 }
 .login1 article{
