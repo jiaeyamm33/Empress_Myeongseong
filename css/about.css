@@ -308,6 +308,7 @@ section {
 
 #comeway article h3 {
     font-size: var(--f-size04);
+    color: var(--t-color02);
 }
 
 #comeway article {
@@ -332,15 +333,26 @@ section {
 
 #comeway .c_info dl {
     line-height: var(--f-size03);
-    padding: 70px 0px 0px 30px;
+    padding: 40px 0px 0px 80px;
 }
 
 #comeway .c_info dl dt {
     font-size: var(--f-size02);
     font-weight: bold;
+    color: var(--t-color03);
 }
 
 #comeway .c_info dl dd {
     font-size: var(--f-size01);
     margin-bottom: 20px;
+}
+
+#comeway .c_info i.fas {
+    font-size: 40px;    
+    text-indent: -50px;
+    transform: translateY(20px);
+}
+
+#comeway .c_info i.fa-location-dot {
+    text-indent: -40px;
 }
