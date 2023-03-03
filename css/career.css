@@ -18,3 +18,7 @@
 .c_box01 a{
   display: inline-block;
 }
+.c_box01 p{
+  font-size: 24px;
+  color: #fff;
+}
