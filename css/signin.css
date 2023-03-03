@@ -1,0 +1,44 @@
+@charset "utf-8";
+main{
+  height: 100vh;
+}
+header{
+  border-bottom: 1px solid #dadada;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+}
+header .gnb a{
+  color: #333!important;
+}
+.login1 {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+.login1 h2{
+  display: none;
+}
+.login1 article{
+  position: absolute;
+  top: 300px;
+}
+.login1 .log_art1{
+  left: -150px;
+}
+.login1 .log_art2{
+  left: 150px;
+}
+.txt1{
+  font-size: 32px;
+}
+input[type=text],input[type=password]{
+  display: block;
+  margin: 0 auto;
+}
+.log_art1 ul{
+  display: flex;
+}
+.log_art1 ul span{
+  display: block;
+}
