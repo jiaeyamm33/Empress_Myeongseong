@@ -13,7 +13,7 @@
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="./script/main.js"></script>
+  <script src="./script/main.js" defer></script>
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -96,11 +96,11 @@
 
     <nav class="m_nav">
       <ul>
-        <li><a href="#m" title=""></a></li>
-        <li><a href="#pb" title=""></a></li>
-        <li><a href="#esg" title=""></a></li>
-        <li><a href="#news" title=""></a></li>
-        <li><a href="#s_c" title=""></a></li>
+        <li><a href="#m_con" title="메인" class="mn_on"></a></li>
+        <li><a href="#pb" title="pb브랜드"></a></li>
+        <li><a href="#esg" title="esg경영"></a></li>
+        <li><a href="#news" title="뉴스"></a></li>
+        <li><a href="#s_c" title="매장찾기&채용"></a></li>
       </ul>
     </nav>
   </header>
@@ -108,7 +108,7 @@
   <!-- 메인콘텐츠 영역 -->
   <main>    
     <!-- 1. 메인 사진? 이름 뭐라함 -->
-    <section id="m">
+    <section id="m_con">
       <h2>메인</h2>
       <div class="m_flip">
         <div class="m_front card">
@@ -221,7 +221,7 @@
         <div class="s_box">
           <h2>매장 점포 휴점일과<br>영업시간을 알아보세요</h2>
           <form id="store_info" action="store.php" method="post">
-            <select name="store" id="store_info">
+            <select name="store" id="store_info" onchange="optionValue(this)">
               <option value="1">명일점</option>
               <option value="2">성수점</option>
               <option value="3">왕십리점</option>
