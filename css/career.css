@@ -1,27 +1,108 @@
 @charset "utf-8";
-#career{
+#career {
   width: 100%;
   height: 100vh;
-  background: #FCB416;
+  background: #fcb416;
 }
-#career h2{
+#career article {
+  width: 1200px;
+  margin: 0px auto;
+}
+#career h2 {
   font-size: 128px;
   color: #fff;
-  margin-left: 360px;
   transform: translateY(320px);
 }
-.c_box01{
+.c_box01 {
   display: inline-block;
   width: 264px;
-  height: 30px;
-  border-bottom: 1px solid #fff;
+  height: 20px;
+  transform: translateY(360px);
+  box-sizing: border-box;
+  transition: all linear 0.3s;
   border-radius: 0px 0px 20px 0px;
+  border-bottom: 1px solid var(--t-color04);
+  border-right: 1px solid var(--t-color04);
+}
+.c_box01:hover{
+  border-bottom: 1px solid #fff;
   border-right: 1px solid #fff;
+
 }
-.c_box01 a{
+/* .c_box01:before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  display: block;
+  border-radius: 0px 0px 20px 0px;
+  width: 1px;
+  height: 1px;
+  background-color: var(--t-color04);
+  transition: all linear 0.5s;
+}
+.c_box01:hover:before {
+  border-radius: 0px 0px 20px 0px;
+  width: 247px;
+} */
+.c_box01:first-of-type{
+  margin-right: 32px;
+}
+.c_box01 a {
   display: inline-block;
+  line-height: 0px;
 }
-.c_box01 p{
+.c_box01 p {
   font-size: 24px;
+  color: var(--t-color04);
+  font-weight: 400;
+  transform: translateY(-10px);
+  transition: all linear 0.3s;
+}
+.c_box01:hover p{
   color: #fff;
+}
+.c_box01 p > i{
+  margin-left: 48px;
+}
+/* 채용공고서식 */
+#job{
+  width: 1200px;
+  margin: 0px auto;
+}
+.c_txt01{
+  font-size: 40px;
+  padding-top: 88px;
+  font-weight: 400;
+  line-height: 48px;
+}
+.c_txt02{
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  padding-top: 16px;
+}
+.c_txt03{
+  font-size: 16px;
+  text-align: right;
+}
+.c_txt03 i{
+  padding-left: 8px;
+  color: var(--t-color03);
+}
+#job ul li{
+  width: 387px;
+  height: 261px;
+  border: 1px solid #333;
+}
+#job ul li h3{
+  color: var(--t-color03);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+#job ul li h4{
+  color: var(--t-color04);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
 }
