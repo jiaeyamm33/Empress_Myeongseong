@@ -36,8 +36,29 @@ header .gnb > ul > li > a{
 header .sub{
   display: none;
 }
+
+header .gnb:hover .sub {
+  display: block;
+}
+
+header .sub {
+  width: 1920px;
+  position: absolute;
+  top: 100px;
+  background: #ffffff70;
+  left: -120px;
+  height: 290px;
+  text-align: center;
+}
+
 header .sub > ul{}
-header .sub > li{}
+header .sub li{
+  padding: 10px 0px;
+}
+
+header .gnb ul li:first-child .sub {
+  left: 600px;
+}
 header .sub > li > a{}
 header .lnb{
   position: absolute;
