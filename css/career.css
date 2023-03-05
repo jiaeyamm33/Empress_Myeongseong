@@ -64,6 +64,7 @@
 .c_box01 p > i{
   margin-left: 48px;
 }
+
 /* 채용공고서식 */
 #job{
   width: 1200px;
@@ -89,20 +90,107 @@
   padding-left: 8px;
   color: var(--t-color03);
 }
+#job ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* list-style:inside; */
+}
 #job ul li{
   width: 387px;
   height: 261px;
   border: 1px solid #333;
+  box-sizing: border-box;
+  padding-left: 24px;
+  border-radius: 8px;
+  margin-top: 16px;
 }
 #job ul li h3{
   color: var(--t-color03);
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
+  margin-top: 16px;
 }
 #job ul li h4{
   color: var(--t-color04);
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
+  margin-top: 8px;
+  padding-bottom: 109px;
+}
+#job ul li:first-child h4{
+  padding-bottom: 138px !important;
+}
+#job ul li span{
+  display: inline-block;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50px;
+}
+#job ul li span:first-of-type{
+  width: 80px;
+  background: var(--t-color03);
+  color: var(--t-color02);
+  font-size: 16px;
+  font-weight: 400;
+}
+#job ul li span:nth-of-type(2){
+  width: 100px;
+  background: var(--t-color04);
+  color: var(--t-color02);
+  font-size: 18px;
+  margin: 0px 8px 0px 8px;
+}
+#job ul li span:last-of-type{
+  font-size: 16px;
+}
+/* 이마트 채용프로세스 */
+#c_process{
+  width: 1200px;
+  margin: 0px auto;
+}
+#c_process ul{
+  width: 1048px;
+  height: 285px;
+}
+#c_process ul li{
+  position: relative;
+}
+#c_process ul li div{
+  position: absolute;
+  width: 196px;
+  height: 196px;
+  border-radius: 50%;
+}
+@keyframes circle_border{
+  form{
+    border: 2px solid var(--t-color03);
+    transform: rotate(0deg);
+  }
+  to{
+    border: 2px solid var(--t-color03);
+    transform: (80deg);
+  }
+}
+.circle-top{
+  border: 2px solid var(--t-color04);
+}
+.circle-bottom{
+  animation: circle_border 1s linear;
+}
+#c_process h3{
+  font-size: 24px;
+  margin-top: 24px;
+}
+.c_txt04{
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 16px;
+  text-indent: 16px;
+}
+.c_txt04 span{
+  font-size: 16px;
 }
