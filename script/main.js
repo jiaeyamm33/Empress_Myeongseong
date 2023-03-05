@@ -7,7 +7,7 @@ window.addEventListener('wheel', function(e){
 
 let $html = $('html');
 let page = 1;
-let lastPage = $('section').length;
+let lastPage = $('section').length+1;
 
 $html.animate({scrollTop:0},10);
 
@@ -40,16 +40,16 @@ $(window).on('wheel', function(e){
 
 
 // 메인 내비 이동
-let mn = $('.m_nav a');
+let mn = $('.m_nav li');
 mn.click(function(){
   $('.m_nav a').removeClass('mn_on');
-  $(this).addClass('mn_on');
+  $(this).find('a').addClass('mn_on');
 
-  let id_name = $(this).attr('href');
-  console.log(id_name);
+  let id_name = $(this).find('a').attr('href');
+  // console.log(id_name);
 
   let secOffset = $(id_name).offset().top;
-  console.log(secOffset);
+  // console.log(secOffset);
 
   $('html, body').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
 
@@ -114,7 +114,16 @@ $('.store_info li img').mouseleave(function(){
   $(this).attr('src', src);
 });
 
-const optionValue = (target) => {
-  const value = target.value;
-  console.log(value);
+let optionValue = (target) => {
+  let value = target.value;
+  // console.log(value);
+  if(value==1){
+    $('.store_info li:last-child').find('p:last-of-type').text('02-2145-1234');
+  }else if(value==2){
+    $('.store_info li:last-child').find('p:last-of-type').text('02-3408-1234');
+  }else if(value==3){
+    $('.store_info li:last-child').find('p:last-of-type').text('02-6438-1234');
+  }else if(value==4){
+    $('.store_info li:last-child').find('p:last-of-type').text('031-369-7123');
+  }
 }
