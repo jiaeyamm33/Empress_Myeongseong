@@ -204,9 +204,11 @@ header .h_inner2 {
     display: flex;
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
-#relc .logis li {
+#relc ul li {
+    z-index: 2000;
     width: 25%;
     font-size: 20px;
 }
@@ -221,20 +223,29 @@ header .h_inner2 {
 }
 
 #relc .logis div {
+    padding-top: 30px;
     width: 100%;
     height: 700px;
+    position: absolute;
+    top: 52px;
+    left:0px;
+}
+
+#relc .logis {
+    padding-bottom: 700px;
 }
 #relc .logis div ul {
-    width: 400%;
-    padding-top: 50px;
+    width: 100%;
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 #relc .logis div ul li {
-    padding: 20px 0px;
     width: 25%;
+    display: inline-block;
+    padding: 20px 0px;
 }
 
 #relc .logis div ul li a {
@@ -244,6 +255,10 @@ header .h_inner2 {
     font-size: var(--f-size02);
 }
 
+.casa_img {
+    width: 212px;
+    height: 212px;
+}
 /* 뉴스 */
 
 #news {
@@ -351,6 +366,10 @@ header .h_inner2 {
     color: var(--t-color03);
 }
 
+#comeway .c_info dl dt i.fas {
+    color: var(--t-color01);
+}
+
 #comeway .c_info dl dd {
     font-size: var(--f-size01);
     margin-bottom: 20px;
@@ -364,4 +383,8 @@ header .h_inner2 {
 
 #comeway .c_info i.fa-location-dot {
     text-indent: -40px;
+}
+
+.on {
+    background: var(--t-color03) !important;
 }
