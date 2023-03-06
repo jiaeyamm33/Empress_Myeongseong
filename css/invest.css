@@ -5,18 +5,79 @@ main{
 section{
   /* width: 100%; */
   /* margin: 0px auto; */
-  height: 100vh;
+  height: 1024px;
   background-image: url(../image/invest.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
 section article{
   width: 1200px;
+  height: 100vh;
+  /* height: 100vh; */
   margin: 0px auto;
+  /* overflow: hidden; */
 }
 section > article > h2{
   color: var(--t-color02);
   font-size: 128px;
   font-weight: 100;
   transform: translateY(280px);
+}
+.i_box01 {
+  /* transform: translateX(16px); */
+  display: inline-block;
+  width: 264px;
+  height: 20px;
+  transform: translateY(340px);
+  box-sizing: border-box;
+  transition: all linear 0.3s;
+  border-radius: 0px 0px 20px 0px;
+  border-bottom: 1px solid var(--t-color02);
+  border-right: 1px solid var(--t-color02);
+}
+.i_box01:first-of-type{
+  margin-right: 32px;
+}
+.i_box01 a {
+  display: inline-block;
+  line-height: 0px;
+}
+.i_box01 p {
+  font-size: 24px;
+  color: var(--t-color02);
+  font-weight: 400;
+  transform: translateY(-10px);
+  transition: all linear 0.3s;
+}
+.i_box01 p > i{
+  margin-left: 48px;
+}
+section > article >ul{
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(400px);
+}
+section > article >ul > li{
+  width: 286px;
+  height: 250px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  transition: 0.5s;
+}
+section article ul li a{
+  color: #fff;
+}
+section article ul li a h3{
+  font-size: 28px;
+  text-align: center;
+  padding: 24px;
+}
+section article ul li a p{
+  font-size: 16px;
+  padding: 88px 24px 16px 24px;
+  line-height: 24px;
+}
+section article ul li:hover{
+  background: rgba(0, 0, 0, 0.6);
 }
