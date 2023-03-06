@@ -9,6 +9,15 @@ section {
     overflow: hidden;
 }
 
+header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--t-color01);
+}
+
+header .h_inner2 {
+    background: #fff;
+}
+
 /* 맨처음 기업개요 이미지 */
 
 #about_m {
