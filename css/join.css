@@ -1,0 +1,149 @@
+@charset "utf-8";
+main{
+  height: 100vh;
+}
+header{
+  border-bottom: 1px solid #dadada;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+}
+header .gnb a{
+  color: #333!important;
+}
+.login1 {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+h2{
+  display: none;
+}
+h3{
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+h3::after{
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #333;
+  height: 1px;
+  top: 55px;
+}
+.join1{
+  width: 860px;
+  margin: 0 auto;
+  position: relative;
+  top: 150px;
+}
+.join1 .txt1{
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+article legend::after{
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #333;
+  height: 1px;
+  top: 130px;
+}
+.ser_box{
+  top: 20px;
+  font-size: 13px;
+  display: none;
+  position: relative;
+}
+.ser_box::after{
+  border-bottom: 1px solid #333;
+  width: 100%;
+  position: absolute;
+  display: block;
+  content: "";
+}
+.join2 .txt2{
+  font-size: 16px;
+}
+.join2 > li{
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.ser_box p:first-child{
+  font-size: 15px;
+  font-weight: bold;
+}
+.ser_box p:nth-child(2){
+  font-weight: bold;
+}
+.join2 .arrow{
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #FCB416;
+  border-left: none;
+  border-top:none;
+  top: 0px;
+  right: 0;
+  cursor: pointer;
+}
+.join2 .arrow2{
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #FCB416;
+  border-left: none;
+  border-top:none;
+  top: 0px;
+  right: 0;
+  cursor: pointer;
+}
+.a_on{
+  transform: rotate(45deg);
+}
+.a_off{
+  transform: rotate(-135deg) translateX(-5px) translateY(-5px);
+}
+label[for="cb2"]{
+  font-size: 16px;
+}
+.join3{
+  position: relative;
+  font-size: 16px;
+}
+.join3 .txt3{
+  padding-top: 40px;
+  font-size: 24px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.join3 .txt3 span{
+  float: right;
+  font-size: 16px;
+  color: #FF0000;
+  margin-top: 10px;
+}
+.join3 .txt3::after{
+  display: block;
+  content: "";
+  position: relative;
+  width: 860px;
+  height: 1px;
+  top: 30px;
+}
+.join3 input{
+  position: absolute;
+  left: 100px;
+}
+.join3 p{
+  margin-bottom: 20px;
+}
+input[class="email"]+span{
+position: absolute;
+left: 360px;
+}
