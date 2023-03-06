@@ -99,11 +99,30 @@
 #job ul li{
   width: 387px;
   height: 261px;
-  border: 1px solid #333;
+  border: 2px solid #333;
   box-sizing: border-box;
   padding-left: 24px;
   border-radius: 8px;
   margin-top: 16px;
+  position: relative;
+  transition: 0.5s;
+}
+/* #job ul li::before{
+  content: "";
+  position: absolute;
+  top: -1px; left: -1px;
+  border:1px solid var(--t-color03);
+  display: inline-block;
+  transition: all 0.5s;
+  width: 0%;
+  height: 259px;
+  border-radius: 8px;
+} */
+#job ul li:hover{
+  border: 2px solid var(--t-color03);
+  box-sizing: border-box;
+  background: #F8F5E4;
+  /* filter: grayscale(2); */
 }
 #job ul li h3{
   color: var(--t-color03);
@@ -123,28 +142,28 @@
 #job ul li:first-child h4{
   padding-bottom: 138px !important;
 }
-#job ul li span{
+#job ul li a span{
   display: inline-block;
   height: 30px;
   text-align: center;
   line-height: 30px;
   border-radius: 50px;
 }
-#job ul li span:first-of-type{
+#job ul li a span:first-of-type{
   width: 80px;
   background: var(--t-color03);
   color: var(--t-color02);
   font-size: 16px;
   font-weight: 400;
 }
-#job ul li span:nth-of-type(2){
+#job ul li a span:nth-of-type(2){
   width: 100px;
   background: var(--t-color04);
   color: var(--t-color02);
   font-size: 18px;
   margin: 0px 8px 0px 8px;
 }
-#job ul li span:last-of-type{
+#job ul li a span:last-of-type{
   font-size: 16px;
 }
 /* 이마트 채용프로세스 */
