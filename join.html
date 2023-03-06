@@ -21,7 +21,7 @@
   <header>
     <div class="h_inner">
       <h1>
-        <a href="index.html" title="메인페이지로 바로가기">
+        <a href="index.html" title="상단 바로가기">
           <img src="./image/logo.png" alt="상단로고">
         </a>
       </h1>
@@ -73,27 +73,34 @@
           </li>
 
           <li>
-            <a href="#" title="채용정보">채용정보</a>
+            <a href="career.html" title="채용정보">채용정보</a>
             <ul class="sub">
               <li><a href="#" title="채용프로세스">채용프로세스</a></li>
               <li><a href="#" title="채용">채용</a></li>
               <li><a href="#" title="나의 지원 현황">나의 지원 현황</a></li>
             </ul>
           </li>
-        </ul>
-      </nav>
-      <nav class="lnb">
-        <ul>
+
           <li>
-            <a href="signin.html" title="로그인">로그인</a>
+            <a href="#" title="로그인">로그인</a>
             <ul class="sub">
-              <li><a href="join.html" title="회원가입">회원가입</a></li>
+              <li><a href="#" title="">회원가입</a></li>
               <li><a href="notice.html" title="공지사항">공지사항</a></li>
             </ul>
           </li>
         </ul>
       </nav>
     </div>
+
+    <nav class="m_nav">
+      <ul>
+        <li><a href="#m_con" title="메인" class="mn_on"></a></li>
+        <li><a href="#pb" title="pb브랜드"></a></li>
+        <li><a href="#esg" title="esg경영"></a></li>
+        <li><a href="#news" title="뉴스"></a></li>
+        <li><a href="#s_c" title="매장찾기&채용"></a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- 메인콘텐츠 영역 -->
@@ -194,6 +201,7 @@
             </li>
           </ul>
           <input type="checkbox" id="cb2">
+          <label for="cb2"></label>
           <label for="cb2">동의함</label>
         </fieldset>
         <fieldset class="join3">
@@ -205,7 +213,14 @@
             <label for="cb4">이메일</label>
           <input type="text" class="email" maxlength="16">
           <span>@</span>
-          <input type="text" class="email" maxlength="16">
+          <input type="text" class="email" maxlength="16" id="email">
+          <select id="email">
+            <option>직접입력하기</option>
+            <option>naver.com</option>
+            <option>kakao.com</option>
+            <option>apple.com</option>
+            <option>ssg.com</option>
+          </select>
           </p>
           <p class="pass_box">
             <label for="cb5">비밀번호</label>
@@ -215,11 +230,10 @@
             <label for="cb6">비밀번호 확인</label>
             <input type="password" class="re-password" maxlength="16">
           </p>
-          <p class="p_box">
-            <label for="cb7">휴대폰 번호</label>
-            <input type="tel" class="p_number" maxlength="16">
-          </p>
-          
+          <div class="btn_box">
+            <button id="btn1" class="join_btn01">취소</button>
+            <button id="btn2" class="join_btn02">회원가입</button>
+          </div>
         </fieldset>
       </form>
     </article>
