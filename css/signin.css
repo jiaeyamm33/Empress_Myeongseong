@@ -1,5 +1,5 @@
 @charset "utf-8";
-main{
+section{
   height: 100vh;
 }
 header{
@@ -51,11 +51,10 @@ input[type=text],input[type=password]{
   width: 302px;
   height: 42px;
   background: #FCB416;
-  font-size: 16px;
+  font-size: 18px;
   color: #484C55;
   border-radius: 5px;
   border: none;
-  font-weight: bold;
   cursor: pointer;
 }
 .log_art1 ul{
