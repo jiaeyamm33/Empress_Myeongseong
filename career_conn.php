@@ -27,4 +27,5 @@
   $result = mysqli_query($conn, $query);
 
   echo '입력완료';
+  
   ?>
