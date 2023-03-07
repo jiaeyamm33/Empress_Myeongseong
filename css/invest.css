@@ -9,6 +9,7 @@ section{
   background-image: url(../image/invest.jpg);
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden;
 }
 section article{
   width: 1200px;
