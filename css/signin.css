@@ -37,8 +37,8 @@ header .gnb a{
 input[type=text],input[type=password]{
   display: block;
   margin: 0 auto;
-  width: 300px;
-  height: 40px;
+  width: 400px;
+  height: 50px;
   margin-top: 20px;
   background: #ccc;
   border-radius: 5px;
@@ -48,8 +48,8 @@ input[type=text],input[type=password]{
 }
 .login_btn{
   margin-top: 20px;
-  width: 302px;
-  height: 42px;
+  width: 402px;
+  height: 52px;
   background: #FCB416;
   font-size: 18px;
   color: #484C55;
@@ -70,15 +70,15 @@ input[type=text],input[type=password]{
 .login2 .txt2{
   position: relative;
   cursor: pointer;
-  left: -55px;
+  left: -105px;
 }
 .login2 .txt3{
   position: relative;
-  left: 40px;
+  left: 90px;
 }
 .login2 .txt4{
   position: relative;
-  left: 60px;
+  left: 110px;
 }
 input[id="cb1"] + label {
 	display: inline-block;
@@ -88,7 +88,7 @@ input[id="cb1"] + label {
   background: #D9D9D9;
   position: relative;
   top: 5px;
-  left: -60px;
+  left: -110px;
 }
 input[id="cb1"]:checked + label::after {
   position: absolute;

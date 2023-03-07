@@ -1,6 +1,7 @@
 @charset "utf-8";
 section{
-  height: 120vh;
+  height: 1200px;
+  position: static;
 }
 header{
   border-bottom: 1px solid #dadada;
@@ -63,6 +64,7 @@ article legend::after{
   position: absolute;
   display: block;
   content: "";
+  padding-bottom: 20px;
 }
 .join2 .txt2{
   font-size: 16px;
@@ -70,6 +72,9 @@ article legend::after{
 .join2 > li{
   margin-bottom: 45px;
   position: relative;
+}
+.join2 > li:last-child{
+  margin-bottom: 40px;
 }
 
 .ser_box p:first-child{
@@ -173,7 +178,7 @@ input[class="email"]+select{
 }
 button{
   width: 300px;
-  height: 40px;
+  height: 52px;
   background: #FCB416;
   font-size: 18px;
   color: #484C55;
