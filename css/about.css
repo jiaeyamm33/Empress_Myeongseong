@@ -347,6 +347,12 @@ header .h_inner2 {
     margin: 0px 20px;
 }
 
+#comeway article div {
+    width: 49%;
+    height: 420px;
+    margin: 0px 20px;
+}
+
 #comeway .comway_con {
     margin: 40px 0px 0px 0px;
     width: 100%;
