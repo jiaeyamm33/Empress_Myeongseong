@@ -63,11 +63,17 @@ section > article >ul > li{
   width: 286px;
   height: 250px;
   border-radius: 8px;
-  border: 1px solid #fff;
+  border: 1px solid var(--t-color04);
   transition: 0.5s;
+  object-fit: cover;
 }
 section article ul li a{
   color: #fff;
+}
+section article ul li a img{
+  width: 100%;
+  border-radius: 8px;
+  filter: grayscale(0.5);
 }
 section article ul li a h3{
   font-size: 28px;
