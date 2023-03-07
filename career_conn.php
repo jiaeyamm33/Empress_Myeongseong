@@ -22,7 +22,7 @@
     die('연결실패:' .mysqli_connect_error());
   }
 
-  $query = "INSERT INTO test_drive VALUES (0, '".$name."', '".$phone."', '".$sms."' ,'".$email."', '".$region."', '".$s_car."', '".$my_car."', '".$s_date."')";
+  $query = "INSERT INTO career VALUES (0, '".$name."', '".$email."', '".$phone."' ,'".$title."', '".$education."', '".$experience."', '".$certificate."', '".$file."', '".$status."')";
 
   $result = mysqli_query($conn, $query);
 
