@@ -210,7 +210,7 @@
   width: 196px;
   height: 196px;
   border-radius: 50%;
-  background: var(--t-color03);
+  background: conic-gradient(var(--t-color03) 0.1deg, var(--t-color04) 0deg);
   text-align: center;
 }
 #c_process ul li p{
