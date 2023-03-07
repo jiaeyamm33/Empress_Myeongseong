@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul,li{list-style: none;}
+    .wrap{
+      position: relative;
+    }
+    .progress{
+      position: relative;
+      height: 198px;
+      width: 198px;
+      border-radius: 50%;
+      background: conic-gradient(#e5b917 0.1deg, #202020 0deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* animation: ha 1s infinite; */
+    }
+    .progress::before{
+      content: "";
+      position: absolute;
+      height: 191px;
+      width: 191px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+    /* @keyframes ha{
+      0%{
+        background: conic-gradient(#333 0.1deg, #ededed 0deg);
+      }
+      100%{
+        background: conic-gradient(#333 360deg, #ededed 0deg);
+      }
+    } */
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="wrap">
+      <div class="progress">
+        <span>ㅅㅂ</span>
+      </div>
+    </li>
+  </ul>
+  <script>
+    let progress = document.querySelector(".progress");
+    let progressStartvlaue=0,
+        progressEndValue=900;
+    
+    let progress1 = setInterval(()=>{
+      progressStartvlaue++;
+      progress.style.background =`conic-gradient(#e5b917 ${progressStartvlaue*0.1}deg, #202020 0deg)`;
+      if(progressStartvlaue == progressEndValue){
+        clearInterval(progress1);
+      }
+    },1)
+  </script>
+</body>
+</html>
