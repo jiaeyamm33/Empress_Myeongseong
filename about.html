@@ -14,6 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="./script/about.js" defer></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
   <!-- 폰트어썸 -->
 
 </head>
@@ -340,14 +341,11 @@
       <a href="#none" title="더보기" id="more">더보기</a>
       <div id="newsmore"></div>
     </section>
-
     <section id="comeway">
         <article>
           <h3>오시는 길</h3>
           <div class="comway_con">
-          <div>
-            <img src="./image/map.png" alt="이마트 위치">
-          </div>
+          <div id="map"></div>
           <div class="c_info">
             <dl>
               <dt><i class="fas fa-location-dot"></i> 장소</dt>
@@ -367,6 +365,26 @@
         </div>
         </article>
     </section>
+    
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
+    <script>
+      var container = document.getElementById('map');
+      var options = {
+        center: new kakao.maps.LatLng(37.539940, 127.052857),
+        level: 3
+      };
+  
+      var map = new kakao.maps.Map(container, options);
+
+      var markerPosition  = new kakao.maps.LatLng(37.539940, 127.052857); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+marker.setMap(map);
+    </script>
   </main>
   <!-- 푸터 영역 -->
   <footer>
