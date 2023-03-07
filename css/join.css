@@ -1,7 +1,6 @@
 @charset "utf-8";
 section{
-  height: 1200px;
-  position: static;
+  height: 1300px;
 }
 header{
   border-bottom: 1px solid #dadada;
