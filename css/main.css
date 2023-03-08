@@ -306,11 +306,10 @@ img{display: block;}
 .news_big{
   width: 440px;
   float: left;
-  margin-right: 70px;
 }
 .news_big span{
   display: inline-block;
-  font-size: var(--f-size02);
+  font-size: var(--f-size01);
   color: var(--t-color02);
   background: var(--t-color03);
   margin: 15px 5px 10px 5px;
@@ -318,16 +317,17 @@ img{display: block;}
   border-radius: 50px;
 }
 .news_big h3{
-  font-size: 32px;
+  font-size: 28px;
   line-height: 40px;
 }
 .news_list{
-  width: 660px;
-  float: left;
+  width: 680px;
+  float: right;
 }
 .news_list li{
   height: 180px;
   margin-bottom: 20px;
+  transition: .5s;
 }
 .news_list img{
   width: 180px;
@@ -336,11 +336,11 @@ img{display: block;}
   margin-right: 30px;
 }
 .news_list h3{
-  font-size: 26px;
-  margin-bottom: 30px;
+  font-size: 22px;
+  padding: 20px 0;
 }
 .news_list p{
-  font-size: 20px;
+  font-size: var(--f-size01);
 }
 #news::after{
   content: "";
@@ -351,6 +351,7 @@ img{display: block;}
   position: absolute;
   top: 850px;
 }
+.news_list li:hover{background: var(--t-color03);}
 
 /* 5. 매장찾기 */
 #s_c{
