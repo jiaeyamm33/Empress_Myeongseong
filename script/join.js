@@ -12,4 +12,26 @@ $(function(){
     $(this).next().slideToggle().parent().siblings().find('.ser_box').slideUp();
     return false;
   });
+
+  var chEck=$("#cb2");
+  let inPut = $('.join3 input');
+  $(inPut).prop("disabled", true);
+
+
+  chEck.click(function(){
+    if(this.checked){
+      $(inPut).prop("disabled", false);
+      $('.agree').css("display","none")
+    }else{
+      $(inPut).prop("disabled", true);
+      $('.agree').css("display","inline")
+    }
+  })
+  $('.join3').click(function(){
+    if(chEck.checked){
+      $('.agree').css("display","none")
+    }else{
+      $('.agree').css("display","inline")
+    }
+  });
 })
