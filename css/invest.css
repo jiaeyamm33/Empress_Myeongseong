@@ -20,7 +20,7 @@ section article{
 }
 section > article > h2{
   color: var(--t-color02);
-  font-size: 128px;
+  font-size:88px;
   font-weight: 100;
   transform: translateY(280px);
 }
@@ -38,6 +38,9 @@ section > article > h2{
 }
 .i_box01:first-of-type{
   margin-right: 32px;
+}
+.i_box01:hover{
+  box-shadow: 1px 4px 4px #ffffff7b;
 }
 .i_box01 a {
   display: inline-block;
@@ -74,11 +77,14 @@ section article ul li a img{
   width: 100%;
   border-radius: 8px;
   filter: grayscale(0.5);
-  
+  transition: 0.3s;
   /* z-index: 9; */
 }
+section article ul li:hover img{
+  filter: blur(3px);
+}
 section article ul li a h3{
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
   padding: 24px;
   transform: translateY(-250px);
