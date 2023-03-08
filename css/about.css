@@ -86,6 +86,10 @@ header .h_inner2 {
     opacity: 0;
 }
 
+.vslist li img {
+    width: 100%;
+}
+
 
 .vslist li p {
  font-size: var(--f-size02);   
