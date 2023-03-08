@@ -6,7 +6,6 @@ header .gnb > ul > li > a {
 
 section {
     margin: 0px auto;
-    overflow: hidden;
 }
 
 header {
@@ -21,8 +20,8 @@ header .h_inner2 {
 /* 맨처음 기업개요 이미지 */
 
 #about_m {
+    max-width: 100%;
     height: 100vh;
-    width: 100%;
     background-image: url(../image/about_back.jpeg);
     background-size: cover;
     background-attachment: fixed;
@@ -59,6 +58,7 @@ header .h_inner2 {
 
 #vsci {
     padding-top: 70px;
+    width: 100%;
 }
 
 #vsci h3 {
@@ -68,12 +68,14 @@ header .h_inner2 {
 #vsci article {
     width: 1200px;
     margin: 0px auto;
+    box-sizing: border-box;
 }
 
 .vslist {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 1200px;
+    box-sizing: border-box;
     padding: 100px 10px;
 }
 
@@ -324,7 +326,6 @@ header .h_inner2 {
 /* 오시는 길*/
 
 #comeway {
-    width: 100%;
     height: 670px;
 
     background: var(--t-color03);

@@ -33,12 +33,19 @@ $(function(){
 })
 })
 
+let historyCon2020 = [
+    {year : '2021', text : 'July, 이마트 스타벅스코리아 지분 추가 인수'},
+    {year : '2021', text : 'December, 대한민국 브랜드대상 대통령상 수상'},
+    {year : '2020', text : 'May, (주)신세계와 (주)이마트로 법인 분할, 新CI 선포'},
+    {year : '2020', text : 'November, 이마트 트레이더스 1호점 오픈'},
+]
+
 
 let historyCon2010 = [
-    {year : '2010', text : 'November, 이마트 트레이더스 1호점 오픈'},
+    {year : '2016', text : 'November, 이마트 트레이더스 매출 돌파'},
+    {year : '2014', text : 'June, 이마트 이베이코리아 지분 양수도 계약 체결'},
     {year : '2011', text : 'May, (주)신세계와 (주)이마트로 법인 분할, 新CI 선포'},
-    {year : '2014', text : 'December, 대한민국 브랜드대상 대통령상 수상'},
-    {year : '2016', text : 'November, 이마트 트레이더스 매출 돌파'}
+    {year : '2010', text : 'November, 이마트 트레이더스 1호점 오픈'},
 ]
 
 
@@ -48,3 +55,5 @@ let historyCon2000 = [
     {year : '2014', text : 'December, 대한민국 브랜드대상 대통령상 수상'},
     {year : '2016', text : 'November, 이마트 트레이더스 매출 돌파'}
 ]
+
+let historyCon20
