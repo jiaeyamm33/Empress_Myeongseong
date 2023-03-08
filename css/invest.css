@@ -74,16 +74,22 @@ section article ul li a img{
   width: 100%;
   border-radius: 8px;
   filter: grayscale(0.5);
+  
+  /* z-index: 9; */
 }
 section article ul li a h3{
   font-size: 28px;
   text-align: center;
   padding: 24px;
+  transform: translateY(-250px);
+  /* z-index: 10; */
 }
 section article ul li a p{
   font-size: 16px;
   padding: 88px 24px 16px 24px;
   line-height: 24px;
+  transform: translateY(-250px);
+  /* position: absolute; */
 }
 section article ul li:hover{
   background: rgba(0, 0, 0, 0.6);
