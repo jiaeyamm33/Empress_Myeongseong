@@ -26,12 +26,23 @@ $(function(){
 
   $(window).scroll(function() {
     let ws = $(this).scrollTop();
-
-    if(ws == 681) {
-        $( '.vslist li' ).animate( {
+    console.log(ws);
+    if(ws >= 640) {
+        var otime = 600;
+        $( '.vslist li:first-child' ).animate( {
+          opacity: '1'
+        }, otime, function() {
+          $( '.vslist li:nth-child(2)' ).animate( {
             opacity: '1'
-          }, 1000 );
-        }
+          }, otime, function() {
+            $( '.vslist li:nth-child(3)' ).animate( {
+              opacity: '1'
+            }, otime, function() {
+                $('.vslist li:last-child').animate({opacity: '1'})
+            });
+          });
+        } );
+        } 
     })
 
 

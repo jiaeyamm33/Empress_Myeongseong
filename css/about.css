@@ -86,6 +86,7 @@ header .h_inner2 {
     text-align: center;
     padding-left: 54px;
     opacity: 0;
+    animation: vsani 1s linear forwards; 
 }
 
 .vslist li:first-child {
@@ -240,6 +241,7 @@ header .h_inner2 {
     color: var(--t-color02);
     line-height: 50px;
     border: 1px solid var(--t-color02);
+    box-sizing: border-box;
 }
 
 #relc .logis div {
@@ -414,4 +416,12 @@ header .h_inner2 {
 
 .on {
     background: var(--t-color03) !important;
+}
+
+@keyframes vsani {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1s;
+    }
 }
