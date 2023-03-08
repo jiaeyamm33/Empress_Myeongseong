@@ -10,25 +10,24 @@ header .gnb a{
   color: #333!important;
 }
 .login1 {
-  width: 400px;
-  margin: 0 auto;
+  width: 1100px;
   text-align: center;
-  display: flex;
   position: relative;
+  margin: 0 auto;
 }
 .login1 h2, .login1 h3{
   display: none;
 }
 .login1 article{
-  position: absolute;
-  top: 300px;
+  position: relative;
+  top: 250px;
 }
 .login1 .log_art1{
-  left: -300px;
+  float: left;
 }
 .login1 .log_art2{
-  left: 250px;
-  margin-top: 60px;
+  float: right;
+  margin-top: 50px;
 }
 .txt1{
   font-size: 32px;
