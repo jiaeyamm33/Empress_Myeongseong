@@ -17,7 +17,7 @@ $(function(){
   let inPut = $('.join3 input');
   $(inPut).prop("disabled", true);
 
-
+  
   chEck.click(function(){
     if(this.checked){
       $(inPut).prop("disabled", false);
@@ -27,11 +27,5 @@ $(function(){
       $('.agree').css("display","inline")
     }
   })
-  $('.join3').click(function(){
-    if(chEck.checked){
-      $('.agree').css("display","none")
-    }else{
-      $('.agree').css("display","inline")
-    }
-  });
+  
 })
