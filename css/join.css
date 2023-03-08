@@ -144,27 +144,25 @@ label[for="cb2"]{
   height: 1px;
   top: 30px;
 }
-.join3 input{
-  position: absolute;
-  left: 100px;
-}
 .join3 p{
   line-height: 40px;
   margin-top: 20px;
 }
-.join3 input{
+.join3 p input{
   width: 400px;
   height: 40px;
-  background: #CCCCCC;
+  background: #cccccc;
   border: none;
   border-radius: 5px;
+  position: absolute;
+  left: 100px;
 }
 input[class="email"]+span{
 position: absolute;
 left: 295px;
 }
 input[class="email"]{
-  width: 180px;
+  width: 180px!important;
 }
 input[class="email"]:nth-of-type(2){
   width: 180px;
@@ -175,27 +173,31 @@ input[class="email"]+select{
   right: 155px;
   width: 180px;
   height: 40px;
-  background: #CCCCCC;
+  background: #cccccc;
   border: none;
   border-radius: 5px;
-}
-button{
-  width: 300px;
-  height: 52px;
-  background: #FCB416;
-  font-size: 18px;
-  color: #484C55;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-.join_btn01{
-  background: #484C55;
-  color: #fff;
 }
 .btn_box{
   text-align: center;
   padding-top: 100px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.btn_box input{
+  width: 300px;
+  height: 52px;
+  background: #FCB416;
+  border: none;
+  font-size: 18px;
+  color: #484C55;
+  border-radius: 5px;
+  font-family: 'Pretendard';
+}
+.btn_box input:first-child{
+  margin-right: 30px;
+  background: #484C55;
+  color: #fff;
 }
 input[id="cb1"] + label, input[id="cb2"] + label{
 	display: inline-block;
@@ -223,4 +225,8 @@ input[id="cb1"]:checked + label::after, input[id="cb2"]:checked + label::after{
 }
 input[id="cb1"], input[id="cb2"]{
 	display: none;
+}
+.agree{
+  color: #FF0000;
+  margin-left: 20px;
 }
