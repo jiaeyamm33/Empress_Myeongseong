@@ -9,18 +9,24 @@ $subject = $_POST['subject'];
 $education = $_POST['education'];
 $experience = $_POST['experience'];
 $certificate = $_POST['certificate'];
-$file = $_POST['file'];
+$file = $_FILES['file'];
+$cdate = date("Y-m-d");
 
 //입력한 데이터의 보안성을 위해 한번더 저장
 $name = mysqli_real_escape_string($conn, $name);
+$email = mysqli_real_escape_string($conn, $email);
+$phone = mysqli_real_escape_string($conn, $phone);
 $subject = mysqli_real_escape_string($conn, $subject);
-$memo = mysqli_real_escape_string($conn, $memo);
-$pwd = mysqli_real_escape_string($conn, $pwd);
+$education = mysqli_real_escape_string($conn, $education);
+$experience = mysqli_real_escape_string($conn, $experience);
+$certificate = mysqli_real_escape_string($conn, $certificate);
 
-$ip = $_SERVER['REMOTE_ADDR'];
-
-$query = "INSERT INTO notice(name, email, phone, subject, education, experience, certificate, file) VALUES('$name', '$email', '$phone', '$subject', '$education', '$experience', '$certificate', '$file')";
+$query = "INSERT INTO career(name, email, phone, subject, education, experience, certificate, file) VALUES('$name', '$email', '$phone', '$subject', '$education', '$experience', '$certificate')";
 
 mysqli_query($conn, $query);
 
 ?>
+
+<!-- <script>
+  location.href="career_list.php";
+</script> -->

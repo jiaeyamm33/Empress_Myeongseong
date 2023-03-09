@@ -1,4 +1,13 @@
 @charset "utf-8";
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--t-color01);
+}
+header .gnb a{
+  color: #333 !important;
+}
+
 #career {
   width: 100%;
   height: 100vh;
@@ -245,4 +254,45 @@
 }
 .c_txt04 span{
   font-size: 16px;
+}
+
+/* 지원현황 */
+#c_list{
+  width: 1200px;
+  height: 1000px;
+  margin: 250px auto;
+  text-align: center;
+  background: #eee;
+}
+#c_list h2{
+  font-size: var(--f-size04);
+  line-height: 100px;
+}
+#c_list > p{
+  font-size: var(--f-size02);
+  margin-bottom: 100px;
+}
+.c_btn01{
+  float: right;
+  font-size: var(--f-size01);
+}
+.c_btn01 .fas{
+  color: var(--t-color03);
+  font-size: var(--f-size02);
+}
+.c_tab{
+  font-size: var(--f-size03);
+  display: flex;
+  gap: 20px;
+  color: #ACAEBF;
+  padding-bottom: 10px;
+}
+.c_on{color: var(--t-color01);}
+table:first-of-type tr{
+  background: var(--t-color04);
+  color: var(--t-color02);
+  border-top: 2px solid #FCB416;
+  font-size: var(--f-size02);
+  font-weight: 200;
+  line-height: 36px;
 }

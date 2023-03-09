@@ -10,10 +10,11 @@ include 'career_conn.php';
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이마트</title>
+  <title>이마트 지원현황</title>
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
-  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <!-- <link rel="stylesheet" href="./css/common.css" type="text/css"> -->
+  <link rel="stylesheet" href="./css/career.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -108,22 +109,25 @@ include 'career_conn.php';
 
   </header>
   <main>
-    <article>
+    <article id="c_list">
       <h2>나의 지원현황</h2>
       <p>나의 지원현황을 확인하세요.</p>
-      <a href="career.html" title="채용공고 보러가기">채용공고 보러가기</a>
-      <form name="search" method="post" action="career_sub.php">
+      <a href="career.html" title="채용공고 보러가기" class="c_btn01">채용공고 보러가기 <i class="fas fa-arrow-circle-right"></i></a>
+      <ul class="c_tab">
+        <li class="c_on">지원현황</li>
+        <li>관심공고</li>
+      </ul>
+      <form name="search" method="post" action="career_list.php">
         <table>
           <colgroup>
             <col width="50">
             <col width="100">
             <col width="100">
-            <col width="750">
-            <col width="100">
-            <col width="100">
+            <col width="650">
+            <col width="150">
+            <col width="150">
           </colgroup>
-          <caption>지원현황</caption>
-          <tr>
+          <tr class="title">
             <th>No</th>
             <th>지원일</th>
             <th>이름</th>
@@ -132,12 +136,12 @@ include 'career_conn.php';
             <th>상태</th>
           </tr>
           <?php
-            $query = 'select * from notice order by idx desc';
+            $query = 'select * from career order by num desc';
             $result = mysqli_query($conn, $query);
             while($data = mysqli_fetch_array($result)){?>
 
             <tr>
-              <td><?=$data['idx']?></td>
+              <td><?=$data['num']?></td>
               <td><?=$data['cdate']?></td>
               <td><?=$data['name']?></td>
               <td><?=$data['subject']?></td>
