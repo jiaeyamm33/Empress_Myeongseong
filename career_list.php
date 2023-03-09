@@ -1,3 +1,9 @@
+<?php 
+
+include 'career_conn.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,13 +14,10 @@
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/join.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- 제이쿼리 ui -->
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="./script/join.js" defer></script>
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -54,7 +57,7 @@
         </ul>
       </nav>
     </div> <!-- h_inner -->
-    
+
     <div class="h_inner2">
       <nav class="lnb">
         <div class="lnb_box">
@@ -102,150 +105,52 @@
         </div> <!-- lnb_box -->
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
-  </header>
 
-  <!-- 메인콘텐츠 영역 -->
+  </header>
   <main>
-    
-    <!-- 회원가입 영역 시작 -->
-    <section class="join1">
-    <h2>회원가입영역</h2>
     <article>
-      <h3>회원가입</h3>
-      <form action="">
-        <fieldset>
-          <legend class="txt1">이용약관</legend>
-          <ul class="join2">
-            <li>
-              <a href="#" title=""><label for="cb1"><span class="txt2">서비스 이용약관</span><div class="arrow a_on"></div></a>
-              <div class="ser_box">
-                <p>
-                  제 1 장 총칙
-                </p>
-                <br>
-                <p>
-                  제 1조 (목적)
-                </p>
-                <br>
-                <p>
-                  이 약관은 ㈜이마트(이하 “회사”라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 회사와 회원의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
-                </p>
-                <br>
-                <p>
-                  제 2조 (정의)
-                </p>
-                <br>
-                <p>
-                  ① 사이트란 회사의 재화 또는 용역(이하 "재화 등"이라 함)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신 설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이트를 운영하는 사업자의 의미로도 사용합니다.
-                </p>
-                <br>
-                <p>
-                  ②서비스란 이용 고객 또는 회원이 PC, 이동전화, 휴대용 단말기 등 각종 유무선 기기 또는 프로그램을 통하여 이용할 수 있도록 회사가 제공하는 모든 서비스를 말합니다.
-                </p>
-                <br>
-                <p>
-                  ③ '회원'이란 회사 사이트에 이용계약을 체결한 개인이나 법인 또는 법인에 준하는 단체를 말합니다.
-                </p>
-                <br>
-                <p>
-                  ④ 이 약관에서 사용하는 용어의 정의는 이 조항에서 정하는 것을 제외하고는 관계 법령 및 서비스별 안내에서 정하는 바에 의합니다.
-                </p>
-                <input type="checkbox" id="cb1">
-                <label for="cb1"></label>
-                <label for="cb1">필수</label>
-              </div>
-            </li>
-            <li>
-              <a href="#" title=""><label for="cb1"><span class="txt2">개인정보 수집・이용 동의서</span><div class="arrow2 a_on"></div></a>
-              <div class="ser_box">
-                  <p>
-                    수집하는 개인정보 항목 및 방법
-                  </p>
-                  <br>
-                  <p>
-                    1. 당사는 고객에게 본인확인, 포인트 적립 및 결제 서비스, 다양하고 편리한 서비스를 제공하기 위해 아래의 방법을 통해 개인정보를 수집하고 있습니다.
-                  </p>
-                  <br>
-                  <p>
-                    ① 개인정보 수집항목
-                  </p>
-                  <p>
-                    ㅁ 신세계포인트 : 신세계포인트 개인정보처리방침에 의해 이루어지며, shinsegaepoint.com에서 확인 가능합니다
-                  </p>
-                  <br>
-                  <p>
-                    1) 회원가입 시
-                  </p>
-                  <p>
-                    [선택항목] : 전화번호, 성별, 생년월일, 직장정보(직장명, 주소, 연락처), 클럽가입 여부, 자녀정보(맘키즈클럽 시 자녀명, 생년월일, 성별), 차량번호, 마케팅 수신 동의여부 (선택항목은 입력하지 않아도 회원가입이 가능합니다.)
-                  </p>
-                  <br>
-                  <p>
-                    2) 통합회원/인증회원 가입 본인확인 필요 시<br>
-                    - CI, DI, 이름, 생년월일, 성별, 아이핀번호(아이핀 본인인증시), 마이핀번호(마이핀 본인인증시) 등 본인확인에 필요한 정보
-                  </p>
-                  <br>
-                  <p>
-                    3) 외국인회원 가입시 : 국적
-                  </p>
-                  <br>
-                  <p>
-                    4) 법정대리인 동의 필요 시 : 법정대리인 정보(성명, 생년월일, 주소, 연락처, 관계)
-                  </p>
-                  <br>
-                  <p>
-                    5) 법인회원 가입시 <br>
-                    [필수항목] : 사업자등록번호, 법인명, 아이디, 비밀번호, 사업자주소, 전자우편주소, 담당자명, 휴대전화번호
-                  </p>
-              </div>
-              </p>
-            </li>
-          </ul>
-          <input type="checkbox" id="cb2" required>
-          <label for="cb2"></label>
-          <label for="cb2">동의함</label>
-          <span class="agree">*회원정보 동의하기를 눌러주세요</span>
-        </fieldset>
-        <fieldset class="join3">
-          <legend class="txt3">정보입력<span>*필수입력</span></legend>
-          <p class="name_box"><label for="cb3">이름</label>
-            <input type="text" class="name" maxlength="30" id="cd3" autofocus>
-          </p>
-          <p class="email_box">
-            <label for="cb4">이메일</label>
-          <input type="text" class="email" maxlength="16">
-          <span>@</span>
-          <input type="text" class="email" maxlength="16" id="email">
-          <select id="email">
-            <option>직접입력하기</option>
-            <option>naver.com</option>
-            <option>kakao.com</option>
-            <option>apple.com</option>
-            <option>ssg.com</option>
-          </select>
-          </p>
-          <p class="pass_box">
-            <label for="cb5">비밀번호</label>
-            <input type="password" class="password" maxlength="16">
-          </p>
-          <p class="repass_box">
-            <label for="cb6">비밀번호 확인</label>
-            <input type="password" class="re-password" maxlength="16">
-          </p>
-          <p class="tel_box">
-            <label for="cb7">휴대폰번호</label>
-            <input type="tel" class="tel_num" maxlength="16">
-          </p>
-          <div class="btn_box">
-            <input type="submit" value="취소" id="btn1" class="join_btn01">
-            <input type="submit" value="회원가입" id="btn2" class="join_btn02">
-          </div>
-        </fieldset>
+      <h2>나의 지원현황</h2>
+      <p>나의 지원현황을 확인하세요.</p>
+      <a href="career.html" title="채용공고 보러가기">채용공고 보러가기</a>
+      <form name="search" method="post" action="career_sub.php">
+        <table>
+          <colgroup>
+            <col width="50">
+            <col width="100">
+            <col width="100">
+            <col width="750">
+            <col width="100">
+            <col width="100">
+          </colgroup>
+          <caption>지원현황</caption>
+          <tr>
+            <th>No</th>
+            <th>지원일</th>
+            <th>이름</th>
+            <th>공고명/지원분야</th>
+            <th>경력사항</th>
+            <th>상태</th>
+          </tr>
+          <?php
+            $query = 'select * from notice order by idx desc';
+            $result = mysqli_query($conn, $query);
+            while($data = mysqli_fetch_array($result)){?>
+
+            <tr>
+              <td><?=$data['idx']?></td>
+              <td><?=$data['cdate']?></td>
+              <td><?=$data['name']?></td>
+              <td><?=$data['subject']?></td>
+              <td><?=$data['experience']?></td>
+              <td><?=$data['status']?></td>
+            </tr>
+            <?php } ?>
+        </table>
+        <input type="text" id="search_txt" name="search_txt">
+        <input type="submit" value="검색">
       </form>
     </article>
-    </section>
   </main>
-
   <!-- 푸터 영역 -->
   <footer>
     <div class="f_inner">
@@ -294,7 +199,7 @@
           <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
           <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
           <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
-          <option value="https://www.google.co.kr">신세계사이먼</option>
+          <option value="https://www.premiumoutlets.co.kr">신세계사이먼</option>
           <option value="http://www.ssg.com">SSG.COM</option>
         </select>
       </div>
@@ -311,5 +216,5 @@
       }
     }
   </script>
-</body>
+  </body>
 </html>

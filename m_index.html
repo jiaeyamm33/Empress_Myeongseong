@@ -7,14 +7,14 @@
   <title>이마트</title>
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
-  <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/join.css" type="text/css">
+  <link rel="stylesheet" href="./css/m_common.css" type="text/css">
+  <link rel="stylesheet" href="./css/m_main.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- 제이쿼리 ui -->
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="./script/join.js" defer></script>
+  <!-- 스와이퍼 css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -54,7 +54,7 @@
         </ul>
       </nav>
     </div> <!-- h_inner -->
-    
+
     <div class="h_inner2">
       <nav class="lnb">
         <div class="lnb_box">
@@ -102,147 +102,140 @@
         </div> <!-- lnb_box -->
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
+
   </header>
 
   <!-- 메인콘텐츠 영역 -->
   <main>
-    
-    <!-- 회원가입 영역 시작 -->
-    <section class="join1">
-    <h2>회원가입영역</h2>
-    <article>
-      <h3>회원가입</h3>
-      <form action="">
-        <fieldset>
-          <legend class="txt1">이용약관</legend>
-          <ul class="join2">
-            <li>
-              <a href="#" title=""><label for="cb1"><span class="txt2">서비스 이용약관</span><div class="arrow a_on"></div></a>
-              <div class="ser_box">
-                <p>
-                  제 1 장 총칙
-                </p>
-                <br>
-                <p>
-                  제 1조 (목적)
-                </p>
-                <br>
-                <p>
-                  이 약관은 ㈜이마트(이하 “회사”라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 회사와 회원의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
-                </p>
-                <br>
-                <p>
-                  제 2조 (정의)
-                </p>
-                <br>
-                <p>
-                  ① 사이트란 회사의 재화 또는 용역(이하 "재화 등"이라 함)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신 설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이트를 운영하는 사업자의 의미로도 사용합니다.
-                </p>
-                <br>
-                <p>
-                  ②서비스란 이용 고객 또는 회원이 PC, 이동전화, 휴대용 단말기 등 각종 유무선 기기 또는 프로그램을 통하여 이용할 수 있도록 회사가 제공하는 모든 서비스를 말합니다.
-                </p>
-                <br>
-                <p>
-                  ③ '회원'이란 회사 사이트에 이용계약을 체결한 개인이나 법인 또는 법인에 준하는 단체를 말합니다.
-                </p>
-                <br>
-                <p>
-                  ④ 이 약관에서 사용하는 용어의 정의는 이 조항에서 정하는 것을 제외하고는 관계 법령 및 서비스별 안내에서 정하는 바에 의합니다.
-                </p>
-                <input type="checkbox" id="cb1">
-                <label for="cb1"></label>
-                <label for="cb1">필수</label>
-              </div>
+    <!-- 1. 메인 사진? 이름 뭐라함 -->
+    <section id="m_con">
+      <h2>메인</h2>
+      <div class="m_logo">
+        <a href="https://emart.ssg.com/" title="이마트몰" target="_blank"><img src="./image/logo.png" alt="로고"></a>
+      </div>
+    </section>
+
+    <!-- 2. PB 브랜드 -->
+    <section id="pb">
+      <h2>PB 브랜드</h2>
+      <article class="inner">
+        <h2>Private Brand</h2>
+        <p><span class="color_y">PB</span> 브랜드</p>
+        <ul class="pb_list">
+          <li>
+            <a href="https://emart.ssg.com/specialStore/nobrand/main.ssg" title="노브랜드" target="_blank"><img src="./image/nobrand_m.png" alt="노브랜드"></a>
+          </li>
+          <li>
+            <a href="https://emart.ssg.com/specialStore/ssgpeacock/main.ssg" title="피코크" target="_blank"><img src="./image/peacock_m.png" alt="피코크"></a>
+          </li>
+          <li>
+            <a href="https://emart.ssg.com/service/traders/dvstore.ssg" title="트레이더스" target="_blank"><img src="./image/traders.png" alt="트레이더스"></a>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 3. esg경영 -->
+    <section id="esg">
+      <h2>esg경영</h2>
+      <article class="inner">
+        <h2>ESG<br><small>Management</small></h2>
+        <p>지속 가능한 경영,<br>에코이마트가 약속합니다</p>
+        <p>이마트는 친환경 녹색경영실천에 앞장섭니다</p>
+        <div class="swiper mySwiper">
+          <ul class="esg_list swiper-wrapper">
+            <li class="swiper-slide">
+              <img src="./image/esg_01.png" alt="사회공헌">
+              <h3>사회공헌</h3>
+              <p>이마트와 함께 하는 가슴<br>따뜻한 이야기</p>
             </li>
-            <li>
-              <a href="#" title=""><label for="cb1"><span class="txt2">개인정보 수집・이용 동의서</span><div class="arrow2 a_on"></div></a>
-              <div class="ser_box">
-                  <p>
-                    수집하는 개인정보 항목 및 방법
-                  </p>
-                  <br>
-                  <p>
-                    1. 당사는 고객에게 본인확인, 포인트 적립 및 결제 서비스, 다양하고 편리한 서비스를 제공하기 위해 아래의 방법을 통해 개인정보를 수집하고 있습니다.
-                  </p>
-                  <br>
-                  <p>
-                    ① 개인정보 수집항목
-                  </p>
-                  <p>
-                    ㅁ 신세계포인트 : 신세계포인트 개인정보처리방침에 의해 이루어지며, shinsegaepoint.com에서 확인 가능합니다
-                  </p>
-                  <br>
-                  <p>
-                    1) 회원가입 시
-                  </p>
-                  <p>
-                    [선택항목] : 전화번호, 성별, 생년월일, 직장정보(직장명, 주소, 연락처), 클럽가입 여부, 자녀정보(맘키즈클럽 시 자녀명, 생년월일, 성별), 차량번호, 마케팅 수신 동의여부 (선택항목은 입력하지 않아도 회원가입이 가능합니다.)
-                  </p>
-                  <br>
-                  <p>
-                    2) 통합회원/인증회원 가입 본인확인 필요 시<br>
-                    - CI, DI, 이름, 생년월일, 성별, 아이핀번호(아이핀 본인인증시), 마이핀번호(마이핀 본인인증시) 등 본인확인에 필요한 정보
-                  </p>
-                  <br>
-                  <p>
-                    3) 외국인회원 가입시 : 국적
-                  </p>
-                  <br>
-                  <p>
-                    4) 법정대리인 동의 필요 시 : 법정대리인 정보(성명, 생년월일, 주소, 연락처, 관계)
-                  </p>
-                  <br>
-                  <p>
-                    5) 법인회원 가입시 <br>
-                    [필수항목] : 사업자등록번호, 법인명, 아이디, 비밀번호, 사업자주소, 전자우편주소, 담당자명, 휴대전화번호
-                  </p>
-              </div>
-              </p>
+            <li class="swiper-slide">
+              <img src="./image/esg_02.png" alt="친환경 경영">
+              <h3>친환경 경영</h3>
+              <p>푸른미래를 생각하는<br>그린 이마트</p>
+            </li>
+            <li class="swiper-slide">
+              <img src="./image/esg_03.png" alt="동반성장">
+              <h3>동반성장</h3>
+              <p>협력회사의 경쟁력 강화하는<br>실질적 지원</p>
+            </li>
+            <li class="swiper-slide">
+              <img src="./image/esg_04.png" alt="투명경영">
+              <h3>투명경영</h3>
+              <p>투명한 기업문 정착을 위한<br>이마트의 노력</p>
             </li>
           </ul>
-          <input type="checkbox" id="cb2" required>
-          <label for="cb2"></label>
-          <label for="cb2">동의함</label>
-          <span class="agree">*회원정보 동의하기를 눌러주세요</span>
-        </fieldset>
-        <fieldset class="join3">
-          <legend class="txt3">정보입력<span>*필수입력</span></legend>
-          <p class="name_box"><label for="cb3">이름</label>
-            <input type="text" class="name" maxlength="30" id="cd3" autofocus>
-          </p>
-          <p class="email_box">
-            <label for="cb4">이메일</label>
-          <input type="text" class="email" maxlength="16">
-          <span>@</span>
-          <input type="text" class="email" maxlength="16" id="email">
-          <select id="email">
-            <option>직접입력하기</option>
-            <option>naver.com</option>
-            <option>kakao.com</option>
-            <option>apple.com</option>
-            <option>ssg.com</option>
-          </select>
-          </p>
-          <p class="pass_box">
-            <label for="cb5">비밀번호</label>
-            <input type="password" class="password" maxlength="16">
-          </p>
-          <p class="repass_box">
-            <label for="cb6">비밀번호 확인</label>
-            <input type="password" class="re-password" maxlength="16">
-          </p>
-          <p class="tel_box">
-            <label for="cb7">휴대폰번호</label>
-            <input type="tel" class="tel_num" maxlength="16">
-          </p>
-          <div class="btn_box">
-            <input type="submit" value="취소" id="btn1" class="join_btn01">
-            <input type="submit" value="회원가입" id="btn2" class="join_btn02">
+          <div class="swiper-pagination"></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 4. 늬우스 -->
+    <section id="news">
+      <h2>NEWS</h2>
+      <article class="news_big">
+        <a href="#" title="뉴스 링크">
+          <img src="./image/news_01.jpg" alt="뉴스 이미지">
+          <h3>국내 최초 할인점 창동 이마트에서 만난 서른 살의 이마트</h3>
+          <p>2023.02.17</p>
+        </a>
+        <a href="m_about.html#news" title="뉴스 바로가기" class="more_btn">더보기</a>
+      </article>
+    </section>
+
+    <!-- 매장찾기, 채용정보 -->
+    <section id="s_c">
+      <h2>매장찾기, 채용정보</h2>
+      <!-- 5. 매장찾기 -->
+      <article id="store">
+        <div class="s_box">
+          <h2>매장 점포 휴점일과<br>영업시간을 알아보세요</h2>
+          <form id="store_info" action="store.php" method="post">
+            <select name="store" id="store_info" onchange="optionValue(this)">
+              <option value="1">명일점</option>
+              <option value="2">성수점</option>
+              <option value="3">왕십리점</option>
+              <option value="4">오산점</option>
+            </select>
+          </form>
+          <div class="store_info">
+            <ul>
+              <li>
+                <img src="./image/clock.png" alt="영업시간">
+                <p>영업시간</p>
+                <p>10:00~23:00</p>
+              </li>
+              <li>
+                <img src="./image/warehouse.png" alt="휴점일">
+                <p>휴점일</p>
+                <p><span class="color_y">둘째주,<br>넷째주 일요일</span></p>
+              </li>
+              <li>
+                <img src="./image/phone.png" alt="고객센터">
+                <p>고객센터</p>
+                <p>02-2145-1234</p>
+              </li>
+            </ul>
           </div>
-        </fieldset>
-      </form>
-    </article>
+        </div>
+      </article>
+      <!-- 6. 채용 -->
+      <article id="career">
+        <div class="c_inner">
+          <div class="c_title">
+            <h2>Ride on DT</h2>
+            <p>지속적으로 성장하는 혁신 기업</p>
+          </div>
+          <div class="c_link">
+            <div class="c_box">
+              <p><a href="career.html" title="입사지원바로가기">입사지원바로가기</a></p>
+            </div>
+            <div class="c_box">
+              <p><a href="career.html" title="채용공고보러가기">채용공고보러가기</a></p>
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
 
@@ -294,13 +287,29 @@
           <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
           <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
           <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
-          <option value="https://www.google.co.kr">신세계사이먼</option>
+          <option value="https://www.premiumoutlets.co.kr">신세계사이먼</option>
           <option value="http://www.ssg.com">SSG.COM</option>
         </select>
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1.5,
+      spaceBetween: 40,
+      loop: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+
     // 푸터 패밀리 사이트 스크립트
     function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨
       if(select.value!='none') { //옵션을 선택하면
