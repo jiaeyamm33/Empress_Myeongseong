@@ -10,6 +10,9 @@ header .h_inner2{
 header .gnb a{
   color: #333!important;
 }
+.join1>article{
+  width: 100%;
+}
 h2{
   display: none;
 }
@@ -27,17 +30,17 @@ h3::after{
   top: 55px;
 }
 .join1{
-  width: 860px;
+  width: 760px;
   margin: 0 auto;
   position: relative;
   top: 150px;
-  height: 1300px;
+  /* overflow: hidden; */
 }
 .join1 .txt1{
   font-size: 24px;
   margin-bottom: 50px;
 }
-article legend::after{
+article .txt1:first-child:after{
   display: block;
   content: "";
   position: absolute;
@@ -87,7 +90,7 @@ article legend::after{
   border-left: none;
   border-top:none;
   top: 0px;
-  right: 0;
+  right: 3%;
   cursor: pointer;
 }
 .join2 .arrow2{
@@ -99,7 +102,7 @@ article legend::after{
   border-left: none;
   border-top:none;
   top: 0px;
-  right: 0;
+  right: 3%;
   cursor: pointer;
 }
 .a_on{
@@ -112,6 +115,7 @@ label[for="cb2"]{
   font-size: 16px;
 }
 .join3{
+  width: 780px;
   position: relative;
   font-size: 16px;
 }
@@ -119,64 +123,71 @@ label[for="cb2"]{
   padding-top: 40px;
   font-size: 24px;
   margin-bottom: 50px;
-  position: relative;
 }
-.join3 .txt3 span{
-  float: right;
-  font-size: 16px;
-  color: #FF0000;
-  margin-top: 10px;
-}
-.join3 .txt3::after{
+article::after{
   display: block;
   content: "";
   position: relative;
-  width: 860px;
-  height: 1px;
-  top: 30px;
+  width: 100%;
+  border-top:1px solid #333 ;
+  top: -710px;
+}
+.join3 .txt3 span{
+  font-size: 16px;
+  color: #FF0000;
+  margin-top: 10px;
+  position: absolute;
+  right: 20px;
 }
 .join3 p{
   line-height: 40px;
   margin-top: 20px;
+  text-align: center;
 }
 .join3 p input{
-  width: 400px;
+  width: 430px;
   height: 40px;
   background: #cccccc;
   border: none;
   border-radius: 5px;
-  position: absolute;
-  left: 100px;
+  justify-content: center;
+  font-size: 14px;
+  text-indent: 10px;
+}
+.join3 p input::placeholder{
+  color: #333;
+  font-family: 'Pretendard';
 }
 input[class="email"]+span{
 position: absolute;
-left: 295px;
+left: 320px;
 }
 input[class="email"]{
-  width: 180px!important;
+  width: 130px!important;
 }
 input[class="email"]:nth-of-type(2){
-  width: 180px;
-  left: 320px;
+  width: 130px;
+  margin-left: 25px;
 }
 input[class="email"]+select{
-  position: absolute;
-  right: 155px;
-  width: 180px;
+  width: 130px;
   height: 40px;
   background: #cccccc;
   border: none;
   border-radius: 5px;
 }
 .btn_box{
+  padding-top: 30px;
   text-align: center;
-  padding-top: 100px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
 }
 .btn_box input{
-  width: 300px;
+  width: 360px;
   height: 52px;
   background: #FCB416;
   border: none;
@@ -184,9 +195,9 @@ input[class="email"]+select{
   color: #484C55;
   border-radius: 5px;
   font-family: 'Pretendard';
+  margin-bottom:20px ;
 }
-.btn_box input:first-child{
-  margin-right: 30px;
+.btn_box input:last-child{
   background: #484C55;
   color: #fff;
 }
@@ -220,4 +231,54 @@ input[id="cb1"], input[id="cb2"]{
 .agree{
   color: #FF0000;
   margin-left: 20px;
+}
+/* 모바일 */
+@media (max-width:767px) {
+  .join1 {
+      width: 350px;
+      margin: 0 auto;
+      overflow: hidden;
+  }
+  .join3 .txt3 span{
+    right: 430px;
+  }
+  .join3 p input{
+    width: 330px;
+    height: 40px;
+    background: #cccccc;
+    border: none;
+    border-radius: 5px;
+    float: left;
+    font-size: 14px;
+    text-indent: 8px;
+    margin-left: 5px;
+  }
+  article::after{
+    top: -700px;
+  }
+  input[class="email"]+span{
+    left: 110px;
+    }
+  input[class="email"]{
+    float: left;
+    width: 95px!important;
+  }
+  input[class="email"]:nth-of-type(2){
+    width: 95px;
+  }
+  input[class="email"]+select{
+    width: 95px;
+    height: 42px;
+    background: #cccccc;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 240px;
+    font-size: 12px;
+  }
+  .btn_box input{
+    width: 330px;
+    position: relative;
+    left: -387px;
+  }
 }
