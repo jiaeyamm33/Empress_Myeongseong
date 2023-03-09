@@ -401,11 +401,3 @@ header .h_inner2 {
 .on {
     background: var(--t-color03) !important;
 }
-
-@keyframes vsani {
-    from {
-        opacity: 0;
-    } to {
-        opacity: 1s;
-    }
-}
