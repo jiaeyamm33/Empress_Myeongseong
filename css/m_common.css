@@ -44,7 +44,22 @@ header .toggle span {
  cursor: pointer;
 }
 
+.gnb {
+  height: 100vh;
+  width: 100%;
+  z-index: 55555;
+}
 
+.gnb #gnblist li {
+  padding: 30px 0px;
+  font-size: 1rem;
+  padding-left: 10%;
+  line-height: 30px;
+}
+
+.gnb #gnblist li .sub {
+  display: none;
+}
 /* 푸터서식 */
 footer{
   width: 100%;
