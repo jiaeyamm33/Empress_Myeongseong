@@ -52,8 +52,9 @@ header .toggle span {
   width: 100%;
   z-index: 7777777;
   position: fixed;
-  top: 0;
+  top: 100px;
   background: #fff;
+  border-top: 3px solid var(--t-color03);
 }
 
 .b-over {
@@ -67,6 +68,14 @@ header .toggle span {
   height: 100px;
   padding-left: 40px;
   border-bottom: 3px solid var(--t-color03);
+}
+
+.gnb .m_logo h2 {
+  width: 100px;
+}
+
+.gnb .m_logo h2 img {
+  width: 100%;
 }
 
 .gnb .m_logo #gnbtoggle {
@@ -243,7 +252,10 @@ address dd{margin-right: 0.5rem;}
   display: none;
 }
 
+.block {
+  display: block!important;
+}
+
 .none {
   display: none!important;
 }
-
