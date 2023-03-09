@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* 헤더서식 */
+header{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 9999999;
+  background: #ffffff70;
+}
+.h_inner{
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1{
+  width: 100px;
+}
+header h1 img{width: 100%;}
+header .gnb > ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header .toggle {
+ display: flex;
+ flex-direction: column;
+ margin-right: 15px;
+ padding: 5px 5px;
+}
+
+header .toggle span {
+ background-color: var(--t-color04);
+ display: block;
+ width: 35px;
+ height: 4px;
+ margin: 3px;
+ transition: 0.3s;
+ cursor: pointer;
+}
+
+
+/* 푸터서식 */
+footer{
+  width: 100%;
+  background: var(--t-color04);
+  padding: 50px 0;
+  color: #fff;
+}
+
+.f_inner{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+}
+.f_link{
+  display: flex;
+  gap: 35px;
+}
+.f_link a{
+  font-size: var(--f-size02);
+  color: #fff;
+  line-height: 32px;
+}
+address{
+  width: 730px;
+  padding: 20px 0;
+  font-size: var(--f-size);
+  line-height: 24px;
+}
+address dt, address dd{display: inline-block;}
+address dd{margin-right: 20px;}
+.f_info select{
+  width: 100px;
+  height: 20px;
+  border: 1px solid #fff;
+  font-size: 12px;
+  color: #fff;
+  background: var(--t-color04);
+}
+
+.hidden {
+  display: none;
+}
+
+
