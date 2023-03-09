@@ -1,0 +1,32 @@
+/* 헤더 영역 글씨 별도 */
+
+header .gnb > ul > li > a {
+ color: var(--t-color01);
+}
+
+header {
+ background-color: #fff;
+ border-bottom: 1px solid var(--t-color01);
+}
+
+header .h_inner2 {
+ background: #fff;
+}
+
+/* 맨처음 기업개요 이미지 */
+#about_m {
+    max-width: 100%;
+    background-image: url(../image/about_back.jpeg);
+    background-size: cover;
+    position: relative;
+}
+
+#about_m .m_p {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
