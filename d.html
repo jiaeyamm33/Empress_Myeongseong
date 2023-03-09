@@ -6,59 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    ul,li{list-style: none;}
-    .wrap{
-      position: relative;
-    }
-    .progress{
-      position: relative;
-      height: 198px;
-      width: 198px;
-      border-radius: 50%;
-      background: conic-gradient(#e5b917 0.1deg, #202020 0deg);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* animation: ha 1s infinite; */
-    }
-    .progress::before{
-      content: "";
-      position: absolute;
-      height: 191px;
-      width: 191px;
-      border-radius: 50%;
-      background: #ffffff;
-    }
-    /* @keyframes ha{
-      0%{
-        background: conic-gradient(#333 0.1deg, #ededed 0deg);
-      }
-      100%{
-        background: conic-gradient(#333 360deg, #ededed 0deg);
-      }
-    } */
+    ul{text-align: center;}
+ul li{position: relative; display: inline-block; width: 150px; height: 150px; border: 1px solid #ccc;}
+
+ul li span{position: absolute; background: darkblue; transition: all 0.5s;}
+ul li span:nth-child(1) {left: 10px; top: 10px; width: 0; height: 1px;}
+ul li span:nth-child(2) {right: 10px; top: 10px; width: 1px; height: 0;}
+ul li span:nth-child(3) {right: 10px; bottom: 10px; width: 0; height: 1px;}
+ul li span:nth-child(4) {left: 10px; bottom: 10px; width: 1px; height: 0;}
+ul li:hover span:nth-child(1) {width: 86%;}
+ul li:hover span:nth-child(2) {height: 86%;}
+ul li:hover span:nth-child(3) {width: 86%;}
+ul.type1 li:hover span:nth-child(4) {height: 86%;}
   </style>
 </head>
 <body>
-  <ul>
-    <li class="wrap">
-      <div class="progress">
-        <span>ㅅㅂ</span>
-      </div>
+  <ul class="type1">
+    <li>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </li>
   </ul>
-  <script>
-    let progress = document.querySelector(".progress");
-    let progressStartvlaue=0,
-        progressEndValue=900;
-    
-    let progress1 = setInterval(()=>{
-      progressStartvlaue++;
-      progress.style.background =`conic-gradient(#e5b917 ${progressStartvlaue*0.1}deg, #202020 0deg)`;
-      if(progressStartvlaue == progressEndValue){
-        clearInterval(progress1);
-      }
-    },1)
-  </script>
 </body>
 </html>
