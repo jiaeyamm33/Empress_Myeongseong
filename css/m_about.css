@@ -13,11 +13,17 @@ header .h_inner2 {
  background: #fff;
 }
 
+section h3, article h3 {
+    padding-left: 1rem;
+}
+
 /* 맨처음 기업개요 이미지 */
 #about_m {
-    max-width: 100%;
+    width: 100%;
+    height: 100vh;
     background-image: url(../image/about_back.jpeg);
     background-size: cover;
+    background-attachment: fixed;
     position: relative;
 }
 
@@ -26,7 +32,371 @@ header .h_inner2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     text-align: center;
 }
 
+#about_m .m_p p {
+    font-size: 4rem;
+    color: var(--t-color02);
+    width: 190px;
+    border-right: 4px solid var(--t-color02);
+    line-height: 5rem;
+}
+
+#about_m .m_p > p span {
+    color: var(--t-color03);
+}
+
+#about_m .m_p p:last-child {
+    border-right: none;
+}
+
+
+/* 비전과 CI */
+
+#vsci {
+    padding-top: 70px;
+    width: 100%;
+}
+
+#vsci h3 {
+    font-size: var(--f-size04);
+}
+
+#vsci article {
+    box-sizing: border-box;
+}
+
+.vslist {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 100px 0px;
+}
+
+.vslist li {
+    width: 40%;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+.vslist li img {
+    width: 100%;
+}
+
+
+.vslist li p {
+padding: 1.5rem 0px;
+ font-size: 1rem;
+ line-height: 24px;
+}   
+
+
+.ci .cimg {
+    padding-top: 2.5rem;
+    display: block; 
+    width: 100%;
+}
+
+.ci p {
+    text-align: center;
+}
+
+.ci p span {
+    color: var(--t-color03);
+}
+
+.ci p:first-of-type {
+    font-size: 1.5rem;
+    padding: 3rem 0px 2rem 0px; 
+}
+
+.ci p:first-of-type span {
+    color: var(--t-color03);
+    font-weight: bold;
+}
+
+.ci p:last-of-type {
+    font-size: var(--f-size01);
+    line-height: 2rem;
+
+}
+
+/* 연혁 */
+
+#history {
+    padding: 100px 0px;
+}
+
+#history h3 {
+    font-size: var(--f-size04);
+}
+
+#history p {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+#history p span {
+    color: var(--t-color03);
+}
+
+#history select {
+    display: block;
+    margin: 0px auto;
+    border: none;
+    text-indent: 1rem;
+    padding: 10px 0px;
+    font-size: 2rem;
+    color: var(--t-color04);
+    width: 270px;
+    border-bottom: 3px solid var(--t-color04);
+    appearance: none;
+    -webkit-appearance: none;
+    background: url(../image/select_arrow.png) no-repeat right 10px center;
+
+}
+
+#history .hiscon {
+    padding-top: 40px;
+}
+
+.hiscon ul {
+    width: 97%;
+    margin-left: 10px;
+}
+
+#history .hiscon ul li {
+    border-bottom: 2px solid var(--t-color04);
+    line-height: 3.4rem;
+    font-size: 0.9rem;
+    height: 3.4rem;
+}
+
+#history .hiscon ul li span {
+    background-color: var(--t-color03);
+    height: 25px;
+    padding: 5px 10px;
+    color: var(--t-color02);
+    margin-right: 20px;
+}
+
+/* 관계사 현황 */
+
+#relc h3 {
+    font-size: var(--f-size04);
+    padding-bottom: 30px;
+}
+
+#relc .logis {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+#relc ul li {
+    z-index: 2000;
+    width: 85%;
+    font-size: 1rem;
+    margin: 0px auto;
+}
+
+.tab {
+    display: inline-block;
+    width: 100%;
+    background: var(--t-color04);
+    color: var(--t-color02);
+    line-height: 50px;
+    border: 1px solid var(--t-color02);
+    box-sizing: border-box;
+}
+
+#relc .logis div {
+    padding-top: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+}
+
+#relc .logis {
+    padding-bottom: 750px;
+}
+#relc .logis div ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#relc .logis div ul li {
+    width: 33%;
+    display: inline-block;
+    padding: 20px 0px;
+}
+
+#relc .logis div ul li img {
+    width: 100%;
+}
+
+#relc .logis div ul li a {
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    font-size: 0.9rem;
+}
+
+
+/* 뉴스 */
+
+#news {
+    padding-top: 50px;
+}
+
+#news h3 {
+    font-size: var(--f-size04);
+    padding: 0px 0px 40px 0px;
+}
+
+#news ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#news ul li {
+    width: 95%;
+    padding: 30px 0px;
+    display: block;
+}
+
+#news ul li div {
+    width: 100%;
+    width: 320px;
+    margin: 0px auto;
+}
+
+#news ul li img {
+    display: block;
+    width: 320px;
+    height: 170px;
+    object-fit: cover;
+}
+
+#news ul li img:first-of-type {
+    border: 1px solid var(--t-color01);
+}
+
+#news ul li a {
+    display: block;
+    line-height: 28px;
+}
+
+#news ul li div a:nth-of-type(2) {
+    padding-top: 5px;
+    font-size: 0.9rem;
+}
+
+#news ul li div a:last-of-type {
+    font-size: 0.85rem;
+}
+
+#more {
+    display: block;
+    width: 310px;
+    height: 50px;
+    margin: 20px auto 50px auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1rem;
+    border: 3px solid var(--t-color03);
+    border-radius: 10px;
+}
+
+/* 오시는 길*/
+
+#comeway {
+    width: 100%;
+    background: var(--t-color03);
+}
+
+#comeway article h3 {
+    font-size: var(--f-size04);
+    color: var(--t-color02);
+}
+
+#comeway article {
+    padding: 70px 0px;
+}
+
+#comeway article div {
+    width: 49%;
+    margin: 0px 20px;
+}
+
+#comeway article div {
+    width: 49%;
+    height: 420px;
+    margin: 0px 20px;
+}
+
+#comeway .comway_con {
+    margin: 40px 0px 0px 0px;
+    width: 100%;
+}
+
+#comeway .c_info {
+    margin: 0px auto;
+    height: 420px;
+    box-sizing: border-box;
+    width: 85%;
+    background: var(--t-color02);
+    padding: 55px 0px 0px 60px;
+}
+
+#comeway .c_info dl {
+    line-height: var(--f-size03);
+}
+
+#comeway .c_info dl dt {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--t-color03);
+}
+
+#comeway .c_info dl dt i.fas {
+    color: var(--t-color01);
+}
+
+#comeway .c_info dl dd {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+#comeway .c_info dl dd:last-child {
+    margin-bottom: 0px;
+}
+
+#comeway .c_info i.fas {
+    font-size: 1.5rem;    
+    text-indent: -35px;
+    transform: translateY(15px);
+}
+
+#comeway .c_info i.fa-bus-simple {
+    transform: translateY(3px);
+}
+
+#comeway .c_info i.fa-location-dot {
+    text-indent: -30px;
+}
+
+.on {
+    background: var(--t-color03) !important;
+}

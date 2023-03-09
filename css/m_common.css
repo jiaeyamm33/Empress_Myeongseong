@@ -18,6 +18,7 @@ header{
   align-items: center;
 }
 header h1{
+  margin-left: 20px;
   width: 100px;
 }
 header h1 img{width: 100%;}
@@ -48,41 +49,57 @@ header .toggle span {
 footer{
   width: 100%;
   background: var(--t-color04);
-  padding: 50px 0;
+  padding: 50px 0 30px 0;
   color: #fff;
 }
 
-.f_inner{
-  width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 50px;
-}
-.f_link{
-  display: flex;
-  gap: 35px;
-}
-.f_link a{
-  font-size: var(--f-size02);
-  color: #fff;
-  line-height: 32px;
-}
-address{
-  width: 730px;
-  padding: 20px 0;
-  font-size: var(--f-size);
-  line-height: 24px;
-}
-address dt, address dd{display: inline-block;}
-address dd{margin-right: 20px;}
-.f_info select{
+footer select{
   width: 100px;
   height: 20px;
   border: 1px solid #fff;
   font-size: 12px;
   color: #fff;
   background: var(--t-color04);
+  margin: 1.7% 5% 0 0;
 }
+
+.f_inner{
+  width: 100%;
+}
+
+footer .flnb_top {
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .flnb_top h2 {
+  padding-left: 5%;  
+}
+
+.f_link{
+  margin: 0px auto;
+  width: 92%;
+  padding: 20px 0px 20px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.f_link a{
+  font-size: 0.85rem;
+  color: #fff;
+  line-height: 1rem;
+}
+address{
+  width: 90%;
+  margin: 0px auto;
+  padding: 0px 0px 10px 5%;
+  font-size: 0.7rem;
+  line-height: 1.7rem;
+}
+address dt, address dd{display: inline-block;}
+address dd{margin-right: 0.5rem;}
 
 .hidden {
   display: none;
