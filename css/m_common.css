@@ -78,28 +78,6 @@ header .toggle span {
   width: 100%;
 }
 
-.gnb .m_logo #gnbtoggle {
-  display: flex;
-  flex-direction: column;
-  margin-right: 15px;
-  padding: 5px 5px;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.gnb .m_logo #gnbtoggle span {
-  background-color: var(--t-color04);
-  display: block;
-  width: 35px;
-  height: 4px;
-  margin: 3px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-
 .gnb .m_logo a {
   line-height: 120px;
   vertical-align: center;
