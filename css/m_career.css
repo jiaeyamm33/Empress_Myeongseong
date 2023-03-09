@@ -62,12 +62,122 @@
 .c_txt02{
   margin-top: 16px;
   font-size: 16px;
+  line-height: 24px;
 }
 .c_txt03{
-  font-size: 16px;
+  margin-top: 16px;
+  font-size: 14px;
   text-align: right;
 }
 .c_txt03 i{
   padding-left: 8px;
   color: var(--t-color03);
+}
+#job ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* list-style:inside; */
+}
+#job ul li{
+  width: 100%;
+  height: 200px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  padding-left: 24px;
+  border-radius: 8px;
+  margin-top: 16px;
+  position: relative;
+  transition: 0.5s;
+}
+#job ul li h3{
+  color: var(--t-color03);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 16px;
+}
+#job ul li h4{
+  color: var(--t-color04);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  margin-top: 8px;
+  padding-bottom: 59px;
+}
+#job ul li:first-child h4{
+  padding-bottom: 88px !important;
+}
+#job ul li a span{
+  display: inline-block;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 50px;
+}
+#job ul li a span:first-of-type{
+  width: 80px;
+  background: var(--t-color03);
+  color: var(--t-color02);
+  font-size: 14px;
+  font-weight: 400;
+}
+#job ul li a span:nth-of-type(2){
+  width: 72px;
+  background: var(--t-color04);
+  color: var(--t-color02);
+  font-size: 14px;
+  margin: 0px 8px 0px 8px;
+}
+#job ul li a span:last-of-type{
+  font-size: 14px;
+}
+.sbox01{
+  width: 50px !important;
+}
+/* 이마트 채용프로세스 */
+#c_process{
+  width: 90%;
+  margin: 0px auto;
+}
+#c_process > .c_txt02{
+  margin-bottom: 40px;
+}
+#c_process ul{
+  width: 90%;
+  /* height: 285px; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  margin: 0px auto;
+  text-align: center;
+  /* justify-content: space-around; */
+}
+#c_process ul li{
+  width: 90%;
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  /* position: relative; */
+}
+#c_process ul li div{
+  width: 230px;
+  height: 230px;
+  margin: 0px auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--t-color03) 0.1deg, var(--t-color04) 0deg);
+  text-align: center;
+}
+#c_process ul li img{
+  width: 228px;
+  height: 228px;
+  margin-top: 1px;
+}
+#c_process ul li p:first-of-type{
+  margin-top: 16px;
+  color: var(--t-color03);
+  font-size: 32px;
+}
+#c_process ul li p:last-of-type{
+  margin-top: 8px;
+  font-size: 20px;
 }
