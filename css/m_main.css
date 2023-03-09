@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+section{
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+section > h2{display: none;}
+.inner, #news{
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 50px;
+}
+img{display: block;}
+
+/* 1. 메인 사진 */
+#m_con{
+  height: 100vh;
+  background-image: url(../image/main.jpg);
+  background-position: center;
+}
+.m_logo{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #FCB416;
+  background: #ffffffcc;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 3px 3px 10px 0 #333;
+}
+.m_logo img{
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 2. PB 브랜드 */
+#pb{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.227), rgba(0, 0, 0, 0.2)), url(../image/pb_bg.jpg);
+  background-position: center;
+}
+#pb .inner h2{
+  font-size: var(--f-size04);
+  font-weight: 400;
+  color: var(--t-color02);
+}
+#pb .inner h2::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--t-color02);
+}
+#pb .inner p{
+  font-size: var(--f-size03);
+  color: var(--t-color02);
+  line-height: 60px;
+}
+.color_y{color: var(--t-color03);}
+.pb_list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+.pb_list li{
+  position: relative;
+}
+.pb_list a{
+  width: 100%;
+  height: 180px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.pb_list a img{
+  width: 150px;
+}
+.pb_list li:first-child a{
+  background: #fcb31680;
+}
+.pb_list li:nth-child(2) a{
+  background: #ffffff80;
+}
+.pb_list li:last-child a{
+  background: #7db64180;
+}
+
+/* 3. esg경영 */
+:root {--swiper-theme-color: #FCB416 !important;}
+#esg{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)), url(../image/esg_bg.jpg);
+  background-position: center;
+  color: var(--t-color02);
+}
+#esg .inner h2{
+  font-size: var(--f-size04);
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+#esg .inner h2 small{
+  font-size: var(--f-size02);
+  font-weight: 200;
+}
+#esg .inner > p{font-weight: 200;}
+#esg .inner > p:first-of-type{
+  font-size: var(--f-size02);
+  line-height: 50px;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+#esg .inner > p:nth-of-type(2){font-size: 12px;}
+.swiper{
+  width: 100%;
+  height: 100%;
+  overflow: visible !important;
+}
+.swiper-pagination{bottom: -30px !important;}
+.swiper-pagination-bullet{
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1 !important;
+  background: #ffffffbe !important;
+}
+.swiper-pagination-bullet-active{
+  width: 30px !important;
+  border-radius: 10px !important;
+  background: #FCB416 !important;
+}
+.esg_list{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0;
+}
+.esg_list li{
+  background: #000000c0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+}
+.esg_list li h3{
+  font-size: var(--f-size02);
+  margin: 20px 0;
+}
+.esg_list li p{
+  font-size: var(--f-size);
+  line-height: 25px;
+  font-weight: 200;
+}
+
+/* 4. 늬우스 */
+#news{background: #eee;}
+#news h2{
+  display: block;
+  font-size: var(--f-size04);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.news_big{width: 100%;}
+.news_big img{
+  width: 100%;
+  margin: 20px 0;
+}
+.news_big h3{
+  font-size: var(--f-size03);
+  line-height: 30px;
+}
+.news_big p{
+  font-size: var(--f-size01);
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+.news_big .more_btn{
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  width: 200px;
+  margin: 0 auto;
+  background: #fff;
+  border: 2px solid #FCB416;
+  border-radius: 10px;
+  font-size: var(--f-size02);
+}
+
+/* 5. 매장찾기 */
+#s_c{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#store{
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 50px;
+}
+.s_box{
+  width: 100%;
+  margin: 0 auto;
+}
+.s_box h2{
+  font-size: var(--f-size03);
+  line-height: 25px;
+  display: inline-block;
+}
+.s_box h2::after{
+  content: "";
+  display: block;
+  width: 750px;
+  height: 4px;
+  margin: 5vh 0;
+  background: var(--t-color03);
+}
+.s_box form{display: inline-block;}
+.s_box select{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 230px;
+  padding: 10px 0;
+  border: 2px solid #FCB416;
+  border-radius: 50px;
+  font-size: var(--f-size01);
+  text-indent: 20px;
+  background: url('../image/arrow_down.png') no-repeat 90% 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+.s_box select::-ms-expand {
+  display: none;
+}
+.s_box select:focus {
+  border-color: #FCB416;
+  outline: none;
+}
+.store_info ul{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.store_info ul li p:first-of-type{
+  font-size: var(--f-size02);
+  line-height: 36px;
+}
+.store_info ul li p:last-of-type{font-size: var(--f-size01);}
+.store_info ul li img{
+  width: 80px;
+  margin: 0 auto;
+}
+#store > img{
+  margin-left: 20px;
+}
+
+/* 6. 채용 */
+#career{
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.327), rgba(0, 0, 0, 0.3)), url(../image/career_bg.jpg) no-repeat;
+  background-position: top center;
+}
+.c_inner{
+  width: 100%;
+  margin: 0 auto;
+  color: var(--t-color02);
+}
+.c_title h2{
+  font-size: var(--f-size05);
+}
+.c_title p{
+  font-size: var(--f-size03);
+  line-height: 50px;
+}
+.c_link{
+}
+.c_box{
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transition: .3s;
+}
+.c_link p{
+  font-size: var(--f-size03);
+  display: inline-block;
+  line-height: 50px;
+}
+.c_link a{
+  display: inline-block;
+  padding: 30px 0 25px 0;
+  color: var(--t-color02);
+  font-weight: 100;
+}
+.c_link div:hover{
+  box-shadow: 16px 16px 5px 0 #333;
+  background: #fcb31651;
+}
