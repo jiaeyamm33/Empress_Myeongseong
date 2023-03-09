@@ -8,7 +8,7 @@ let gnbli = $('.gnb #gnblist li a');
   $(this).toggleClass('gnbdeco').parent().siblings().find('a').removeClass('gnbdeco');
   $(this).find('i.fa-angle-down').toggleClass('subro');
   $(this).parent().siblings().find('i.fa-angle-down').removeClass('subro');
-  $(this).parent().siblings().find('.sub').hide();
+  $(this).parent().siblings().find('.sub').slideUp();
  })
 
  let tb = $('#toggle');
@@ -20,6 +20,9 @@ let gnbli = $('.gnb #gnblist li a');
 
   $('.gnb').toggleClass('block');
   $('body').toggleClass('b-over');
+
+
+
  })
 
  

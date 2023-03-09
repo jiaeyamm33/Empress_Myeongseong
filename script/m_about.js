@@ -2,7 +2,6 @@ $(function(){
 
 
  let tab_mnu = $('#relc .logis li .tab');
-
  console.log(tab_mnu);
  tab_mnu.click(function() {
   $(this).addClass('on').parent().siblings().find('a').removeClass('on');
@@ -28,7 +27,7 @@ $(function(){
     let ws = $(this).scrollTop();
     console.log(ws);
     if(ws >= 640) {
-        var otime = 600;
+        var otime = 300;
         $( '.vslist li:first-child' ).animate( {
           opacity: '1'
         }, otime, function() {
@@ -45,7 +44,12 @@ $(function(){
         } 
     })
 
+    let suba = $('.gnb #gnblist li:first-of-type .sub li a'); 
 
+    suba.click(function() {
+      $('.gnb').css('display', 'none');
+
+})    
 
   $('#more').click(function() {
   
