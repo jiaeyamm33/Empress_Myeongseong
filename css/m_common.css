@@ -18,6 +18,7 @@ header{
   align-items: center;
 }
 header h1{
+  margin-left: 20px;
   width: 100px;
 }
 header h1 img{width: 100%;}
