@@ -81,6 +81,7 @@ section h3, article h3 {
     width: 40%;
     margin: 0px 10px;
     text-align: center;
+    opacity: 0;
 }
 
 .vslist li img {
@@ -196,12 +197,11 @@ padding: 1.5rem 0px;
 #relc .logis {
     width: 100%;
     text-align: center;
-    position: relative;
 }
 
 #relc ul li {
     z-index: 2000;
-    width: 85%;
+    width: 90%;
     font-size: 1rem;
     margin: 0px auto;
 }
@@ -217,16 +217,11 @@ padding: 1.5rem 0px;
 }
 
 #relc .logis div {
+    margin: 0px auto;
     padding-top: 30px;
     width: 100%;
-    position: absolute;
-    bottom: 0px;
-    left:0px;
 }
 
-#relc .logis {
-    padding-bottom: 750px;
-}
 #relc .logis div ul {
     width: 100%;
     display: flex;
@@ -247,7 +242,8 @@ padding: 1.5rem 0px;
 #relc .logis div ul li a {
     display: block;
     text-align: center;
-    line-height: 35px;
+    line-height: 1.2rem;
+    padding-top: 15px;
     font-size: 0.9rem;
 }
 
@@ -260,7 +256,7 @@ padding: 1.5rem 0px;
 
 #news h3 {
     font-size: var(--f-size04);
-    padding: 0px 0px 40px 0px;
+    margin: 30px 0px;
 }
 
 #news ul {

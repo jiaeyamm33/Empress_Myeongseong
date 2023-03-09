@@ -129,7 +129,6 @@ img{display: block;}
   background: var(--t-color03);
   transform: rotateY(-180deg);
 }
-/* 2, 4번째 동그라미 왜 찌그러진건지 모르겠음,,,,,,, */
 .m_back a{
   width: 400px;
   height: 400px;
