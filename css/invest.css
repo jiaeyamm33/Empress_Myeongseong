@@ -69,17 +69,36 @@ section > article >ul > li{
   border: 1px solid var(--t-color04);
   transition: 0.5s;
   object-fit: cover;
+  position: relative;
+  overflow: hidden;
 }
+section> article> ul li span{position: absolute; background: var(--t-color02); transition: all 0.5s; z-index: 999;}
+section> article> ul li span:nth-child(1) {left: 10px; top: 10px; width: 0; height: 1px;}
+section> article> ul li span:nth-child(2) {right: 10px; top: 10px; width: 1px; height: 0;}
+section> article> ul li span:nth-child(3) {right: 10px; bottom: 10px; width: 0; height: 1px;}
+section> article> ul li span:nth-child(4) {left: 10px; bottom: 10px; width: 1px; height: 0;}
+section> article> ul li:hover span:nth-child(1) {width: 93%;}
+section> article> ul li:hover span:nth-child(2) {height: 92%;}
+section> article> ul li:hover span:nth-child(3) {width: 93%;}
+section> article> ul li:hover span:nth-child(4) {height: 92%;}
 section article ul li a{
   color: #fff;
+  display: inline-block;
 }
 section article ul li a img{
   width: 100%;
   border-radius: 8px;
-  filter: grayscale(0.5);
+  /* filter: grayscale(0.5); */
   transition: 0.3s;
   /* z-index: 9; */
 }
+/* section article ul li a div{
+  position: absolute;
+  left: 0px; top: 0px;
+  width: 286px;
+  height: 250px;
+  background: rgba(0, 0, 0, 0.7);
+} */
 section article ul li:hover img{
   filter: blur(3px);
 }
@@ -87,7 +106,8 @@ section article ul li a h3{
   font-size: 24px;
   text-align: center;
   padding: 24px;
-  transform: translateY(-250px);
+  transform: translateY(-170px);
+  transition: 0.3s;
   /* z-index: 10; */
 }
 section article ul li a p{
@@ -95,8 +115,20 @@ section article ul li a p{
   padding: 88px 24px 16px 24px;
   line-height: 24px;
   transform: translateY(-250px);
+  display: none;
+  /* transition: 1s; */
   /* position: absolute; */
 }
-section article ul li:hover{
-  background: rgba(0, 0, 0, 0.6);
+section article ul li:hover p{
+  display: block;
+}
+section article ul li:hover h3{
+  transform: translateY(-250px);
+}
+section article ul li:hover a div{
+  position: absolute;
+  left: 0px; top: 0px;
+  width: 286px;
+  height: 250px;
+  background: rgba(0, 0, 0, 0.7);
 }
