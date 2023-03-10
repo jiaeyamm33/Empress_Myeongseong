@@ -4,10 +4,10 @@ header .gnb > ul > li > a {
  color: var(--t-color01);
 }
 
-header {
- background-color: #fff;
- border-bottom: 1px solid var(--t-color01);
+section, article {
+    box-sizing: border-box;
 }
+
 
 header .h_inner2 {
  background: #fff;
@@ -39,7 +39,8 @@ section h3, article h3 {
 #about_m .m_p p {
     font-size: 4rem;
     color: var(--t-color02);
-    width: 190px;
+    width: 187.5px;
+    box-sizing: border-box;
     border-right: 4px solid var(--t-color02);
     line-height: 5rem;
 }

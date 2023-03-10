@@ -84,6 +84,17 @@ $(window).scroll(function() {
   let pb = $('#pb').offset().top;
   let esg = $('#esg').offset().top;
 
+  // 헤더 색상 변경
+  if (pb<=ws) {
+    $('header').css('background','#fff');
+    $('header .h_inner2').css('background','#fff');
+    $('header .gnb > ul > li > a').css('color','#333');
+  } else {
+    $('header').css('background','#ffffff30');
+    $('header .h_inner2').css('background','#ffffff30');
+    $('header .gnb > ul > li > a').css('color','#fff');
+  }
+
   // pb 아래에서 위로
   if (pb==ws) {
     $('.pb_list li').css('top','0');
@@ -102,7 +113,6 @@ $(window).scroll(function() {
     $($('#esg .esg_list')).fadeOut();
   }
 });
-
 
 // 매장찾기
 $('.store_info li img').hover(function(){

@@ -1,18 +1,37 @@
+<?php
+include('career_conn.php');
+
+$data = [
+  'name' => '',
+  'email' => '',
+  'phone' => '',
+  'subject' => '',
+  'education' => '',
+  'experience' => '',
+  'certificate' => '',
+  'file' => ''
+];
+
+$num = $_GET['num'];
+$num = mysqli_real_escape_string($conn, $num);
+$query = "SELECT * FROM career WHERE num = '$num'";
+
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>투자정보</title>
+  <title>이마트</title>
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/invest.css" type="text/css">
+  <link rel="stylesheet" href="./css/career.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <script src="./script/prefixfree.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="./script/prefixfree.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -52,12 +71,11 @@
         </ul>
       </nav>
     </div> <!-- h_inner -->
-    
+
     <div class="h_inner2">
       <nav class="lnb">
         <div class="lnb_box">
           <ul class="sub">
-            <li><a href="about.html" title="기업개요">기업개요</a></li>
             <li><a href="about.html#vsci" title="비전">비전</a></li>
             <li><a href="about.html#vsci" title="CI소개">CI소개</a></li>
             <li><a href="about.html#history" title="연혁">연혁</a></li>
@@ -102,73 +120,75 @@
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
   </header>
-  
   <main>
-    <section>
-      <article>
-        <h2>투자정보</h2>
-        <div class="i_box01">
-          <a href="https://company.emart.com/ko/investor/irpresentation_list.do" title="IR자료실 보러가기">
-            <p>
-              IR자료실 보러가기<i class="fa-solid fa-circle-chevron-right"></i>
-            </p>
-          </a>
-        </div>
-        <ul>
-          <li>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <a href="https://company.emart.com/ko/investor/governance_01.do" title="이마트 경영정보 보러가기">
-              <img src="./image/invest1.jpg" alt="경영사진">
-              <div></div>
-              <h3>경영정보</h3>
-                <p>이마트는 주주가 믿고 투자할 수 있는 합리적이고 투명한 경영 활동을 통해 기업 가치를 극대화하겠습니다.</p>
-            </a>
-          </li>
-          <li>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <a href="https://company.emart.com/ko/investor/list_stock.do" title="이마트 공시정보 보러가기">
-              <img src="./image/invest2.jpg" alt="공시정보사진">
-              <div></div>
-              <h3>공시정보</h3>
-                <p>이마트의 결산 공시 및 주주총회 정보를 안내해 드립니다.</p>
-            </a>
-          </li>
-          <li>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <a href="https://company.emart.com/ko/investor/stock02.do" title="이마트 주식정보 보러가기">
-              <img src="./image/invest3.jpg" alt="주식정보사진">
-              <div></div>
-              <h3>주식정보</h3>
-                <p>이마트의 주가정보 및 실시간 차트를 안내해 드립니다.</p>
-            </a>
-          </li>
-          <li>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <a href="https://company.emart.com/ko/investor/finance.do" title="이마트 재무정보 보러가기">
-              <img src="./image/invest4.jpg" alt="재무정보사진">
-              <div></div>
-              <h3>재무정보</h3>
-                <p>이마트 재무 현황  재무재표를 안내해 드립니다.</p>
-            </a>
-          </li>
-        </ul>
-      </article>
-      
-    </section>
+    <article id="c_apply">
+      <h2>입사 지원하기</h2>
+      <form name="career" method="post" action="career_sub.php">
+        <input type="hidden" name="num" value="<?=$num?>">
+        <table>
+          <colgroup>
+            <col width="150">
+            <col width="1050">
+          </colgroup>
+          <tr>
+            <th>이름</th>
+            <td><input type="text" name="name" value="<?=$data['name']?>"></td>
+          </tr>
+          <tr>
+            <th>이메일</th>
+            <td><input type="text" name="email" value="<?=$data['email']?>"></td>
+          </tr>
+          <tr>
+            <th>전화번호</th>
+            <td><input type="text" name="phone" value="<?=$data['phone']?>"></td>
+          </tr>
+          <tr>
+            <th>공고명</th>
+            <td>
+              <select name="subject">
+                <option value="">선택하세요</option>
+                <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)" <?php echo ($data['subject'] == "[노브랜드]전략 경력 구성원 채용 (~03.02)") ? "selected" : "";?> >[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
+                <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)") ? "selected" : "";?> >[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
+                <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)") ? "selected" : "";?> >[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
+                <option value="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)" <?php echo ($data['subject'] == "[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)") ? "selected" : "";?> >[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)</option>
+                <option value="[스타벅스]바리스타 채용 신입 (~04.10)" <?php echo ($data['subject'] == "[스타벅스]바리스타 채용 신입 (~04.10)") ? "selected" : "";?> >[스타벅스]바리스타 채용 신입 (~04.10)</option>
+                <option value="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)" <?php echo ($data['subject'] == "[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)") ? "selected" : "";?> >[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>학력사항</th>
+            <td>
+              <label><input type="radio" name="education" value="고졸 <?=$data['education'] == "고졸" ? "checked" : "";?>" >고졸</label>
+              <label><input type="radio" name="education" value="대학 2~3년제 <?=$data['education'] == "대학 2~3년제" ? "checked" : "";?>" >대학 2~3년제</label>
+              <label><input type="radio" name="education" value="대학 4년제 <?=$data['education'] == "대학 4년제" ? "checked" : "";?>" >대학 4년제</label>
+              <label><input type="radio" name="education" value="석&middot;박사 <?=$data['education'] == "석&middot;박사" ? "checked" : "";?>" >석&middot;박사</label>
+            </td>
+          </tr>
+          <tr>
+            <th>경력사항</th>
+            <td>
+              <label><input type="radio" name="experience" value="인턴 <?=$data['experience'] == "인턴" ? "checked" : "";?>" >인턴</label>
+              <label><input type="radio" name="experience" value="신입 <?=$data['experience'] == "신입" ? "checked" : "";?>" >신입</label>
+              <label><input type="radio" name="experience" value="경력 <?=$data['experience'] == "경력" ? "checked" : "";?>" >경력</label>
+            </td>
+          </tr>
+          <tr>
+            <th>자격증</th>
+            <td>
+              <label><input type="radio" name="certificate" value="인턴 <?=$data['certificate'] == "있음" ? "checked" : "";?>" >있음</label>
+              <label><input type="radio" name="certificate" value="신입 <?=$data['certificate'] == "없음" ? "checked" : "";?>" >없음</label>
+            </td>
+          </tr>
+          <tr>
+            <th>자기소개서</th>
+            <td><input type="file" name="file" value="<?=$data['file']?>"></td>
+          </tr>
+        </table>
+        <p><input type="submit" value="지원하기"></p>
+      </form>
+    </article>
   </main>
-
   <!-- 푸터 영역 -->
   <footer>
     <div class="f_inner">
@@ -217,14 +237,11 @@
           <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
           <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
           <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
-          <option value="https://www.google.co.kr">신세계사이먼</option>
+          <option value="https://www.premiumoutlets.co.kr">신세계사이먼</option>
           <option value="http://www.ssg.com">SSG.COM</option>
         </select>
       </div>
     </div>
-    <a href="#about_m" title="맨 위로 가기" class="top_btn">
-      <i class="fa-solid fa-arrow-up"></i>
-    </a>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
@@ -237,5 +254,5 @@
       }
     }
   </script>
-</body>
+  </body>
 </html>

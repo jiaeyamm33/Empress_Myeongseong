@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
   <link rel="stylesheet" href="./css/main.css" type="text/css">
+
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -21,7 +23,7 @@
 
     for(let i in mobile) {
       if(navigator.userAgent.match(mobile[i]) != null) {
-        location.href = "m_index.html";
+        location.href = "mindex.html";
         break;
       }
     }
@@ -65,11 +67,12 @@
         </ul>
       </nav>
     </div> <!-- h_inner -->
-
+    
     <div class="h_inner2">
       <nav class="lnb">
         <div class="lnb_box">
           <ul class="sub">
+            <li><a href="about.html" title="기업개요">기업개요</a></li>
             <li><a href="about.html#vsci" title="비전">비전</a></li>
             <li><a href="about.html#vsci" title="CI소개">CI소개</a></li>
             <li><a href="about.html#history" title="연혁">연혁</a></li>
@@ -113,8 +116,8 @@
         </div> <!-- lnb_box -->
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
-
   </header>
+  
 
   <!-- 메인콘텐츠 영역 -->
   <main>

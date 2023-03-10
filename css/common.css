@@ -6,8 +6,13 @@ header{
   height: 100px;
   position: fixed;
   z-index: 9999999;
-  background: #ffffff70;
+  border-bottom: 1px solid #dadada;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+  background: #fff;
+  top: 0;
+  left: 0;
 }
+
 .h_inner{
   width: 1200px;
   height: 100px;
@@ -37,7 +42,7 @@ header .gnb > ul > li:hover a {
 }
 header .gnb > ul > li > a{
   font-size: var(--f-size02);
-  color: var(--t-color02);
+  color: var(--t-color01);
   font-weight: 400;
   line-height: 100px;
 }
@@ -76,8 +81,8 @@ header .lnb{
 
 header .h_inner2 {
   width: 100%;
-  background: #ffffff70;
-  height: 270px;
+  background: #fff;
+  height: 300px;
   display: none;
 }
 

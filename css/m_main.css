@@ -6,6 +6,11 @@ section{
   overflow: hidden;
   box-sizing: border-box;
 }
+
+header {
+  background: #ffffff30;
+}
+
 section > h2{display: none;}
 .inner, #news{
   width: 100%;
@@ -13,6 +18,8 @@ section > h2{display: none;}
   padding: 100px 50px;
   box-sizing: border-box;
 }
+
+
 img{display: block;}
 
 /* 1. 메인 사진 */

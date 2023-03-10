@@ -8,8 +8,11 @@ header{
   height: 100px;
   position: fixed;
   z-index: 9999;
-  background: #ffffff70;
+  border-bottom: 1px solid #dadada;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+  background: #fff;
 }
+
 .h_inner{
   width: 100%;
   height: 100px;
@@ -19,15 +22,12 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+
 header h1{
   margin-left: 20px;
   width: 100px;
 }
 header h1 img{width: 100%;}
-header .gnb > ul{
-  display: flex;
-  justify-content: space-evenly;
-}
 
 header .toggle {
  display: flex;
@@ -46,45 +46,28 @@ header .toggle span {
  transition: 0.3s;
  cursor: pointer;
 }
-
-.gnb {
-  height: 100%;
+ 
+header nav {
+  box-sizing: border-box;
   width: 100%;
   z-index: 7777777;
-  position: fixed;
+  position: absolute;
+  right: -100vw;
   top: 100px;
   background: #fff;
   border-top: 3px solid var(--t-color03);
+  transition: 0.5s;
+  height: calc(var(--vh, 100vh) - 100px);
+  overflow-y: scroll;
+
+}
+
+.back {
+  background: #fff;
 }
 
 .b-over {
-  overflow-y: hidden;
-}
-
-.gnb .m_logo {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100px;
-  padding-left: 40px;
-  border-bottom: 3px solid var(--t-color03);
-}
-
-.gnb .m_logo h2 {
-  width: 100px;
-}
-
-.gnb .m_logo h2 img {
-  width: 100%;
-}
-
-.gnb .m_logo a {
-  line-height: 120px;
-  vertical-align: center;
-}
-
-.gnb .m_logo img {
-  width: 100px;
+  overflow: hidden;
 }
 
 .gnb #gnblist {
@@ -117,10 +100,11 @@ header .toggle span {
 }
 
 .gnb .m_lnb {
+  box-sizing: border-box;
   border-top: 3px solid var(--t-color03);
   width: 100%;
   font-size: 1.2rem;
-  padding: 30px 0px 0px 10%;
+  padding: 30px 0px 30px 10%;
 }
 
 .gnb .m_lnb li {
@@ -129,6 +113,10 @@ header .toggle span {
 
 .gnb .m_lnb li a {
   color: var(--t-color04);
+}
+
+.gnb .m_lnb li a i.fa-solid {
+  padding-right: 10px;
 }
 
 .subro {
@@ -158,15 +146,16 @@ header .toggle span {
 
 .first {
   transform: rotate(45deg);
+  top: 0px;
   position: absolute;
-  top: 5px;
-  right: 10%;
+  right: 0px;
 }
 
 .three {
   transform: rotate(-45deg);
-  top: -20px;
-  right: 10px;
+  top: 0px;
+  right: 0px;
+  position: absolute;
 }
 
 
@@ -176,6 +165,7 @@ footer{
   background: var(--t-color04);
   padding: 50px 0 30px 0;
   color: #fff;
+  box-sizing: border-box;
 }
 
 footer select{
@@ -231,7 +221,7 @@ address dd{margin-right: 0.5rem;}
 }
 
 .block {
-  display: block!important;
+  right: 0;
 }
 
 .none {

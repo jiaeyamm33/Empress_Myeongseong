@@ -1,22 +1,7 @@
-/* 헤더 영역 글씨 별도 */
-
-header .gnb > ul > li > a {
-    color: var(--t-color01);
-}
 
 section {
     margin: 0px auto;
 }
-
-header {
-    background-color: #fff;
-    border-bottom: 1px solid var(--t-color01);
-}
-
-header .h_inner2 {
-    background: #fff;
-}
-
 /* 맨처음 기업개요 이미지 */
 
 #about_m {

@@ -24,3 +24,5 @@ a{
   color: var(--t-color01);
   text-decoration: none;
 }
+
+.color_y{color: var(--t-color03);}
