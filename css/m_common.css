@@ -165,6 +165,7 @@ footer{
   background: var(--t-color04);
   padding: 50px 0 30px 0;
   color: #fff;
+  box-sizing: border-box;
 }
 
 footer select{
