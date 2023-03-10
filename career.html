@@ -15,6 +15,33 @@
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <!-- <script>
+
+    // $(function(){
+
+    //   let dh = $(document).height();
+    //   let bh = $('#c_process').offset().top;
+    //   let a = (bh/dh*100);
+    //   console.log(dh);
+    //   console.log(bh);
+    //   console.log(a);
+
+    //   $(window).scroll(function(){
+    //     let sPos = $(this).scrollTop();
+    //     console.log(sPos);
+    //     // if(=){
+    //     //   alert('adsfadfa');
+    //     // }else{
+
+    //     // }
+    //   });
+      
+
+    // });
+
+
+  </script> -->
 </head>
 <body>
   <header>
@@ -240,46 +267,50 @@
     </main>
     <script>
       let progress = document.querySelectorAll(".progress");
-      let progressStartvlaue=0,
-          progressStartvlaue1=0,
-          progressStartvlaue2=0,
-          progressStartvlaue3=0,
+      
+
+      let onoff = false;
+
+      window.addEventListener('scroll',function(){
+        let dh = document.documentElement.scrollTop;
+        let p=document.getElementById('c_process');
+        let ph=p.offsetTop-600;
+        // console.log(dh);
+        console.log(ph);
+        if(dh >= ph && onoff==false) {
+          onoff = true;
+          let progressStartvlaue=0,
           progressEndValue1=90, //1번째 원 각도
           progressEndValue2=180, //2번째 원 각도
           progressEndValue3=270, //3번째 원 각도
           progressEndValue4=360; //4번째 원 각도
       
       let progress1 = setInterval(()=>{
-        progressStartvlaue++;
         progress[0].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
         if(progressStartvlaue == progressEndValue1){
           clearInterval(progress1);
         }
       },1)
       let progress2 = setInterval(()=>{
-        progressStartvlaue1++;
-        progress[1].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue1*1}deg, var(--t-color04) 0deg)`;
-        if(progressStartvlaue1 == progressEndValue2){
+        progress[1].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
+        if(progressStartvlaue == progressEndValue2){
           clearInterval(progress2);
         }
-      },3)
+      },1)
       let progress3 = setInterval(()=>{
-        progressStartvlaue2++;
-        progress[2].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue2*1}deg, var(--t-color04) 0deg)`;
-        if(progressStartvlaue2 == progressEndValue3){
+        progress[2].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
+        if(progressStartvlaue == progressEndValue3){
           clearInterval(progress3);
         }
-      },5)
+      },1)
       let progress4 = setInterval(()=>{
-        progressStartvlaue3++;
-        progress[3].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue3*1}deg, var(--t-color04) 0deg)`;
-        if(progressStartvlaue3 == progressEndValue4){
+        progressStartvlaue++; // 카운트 증가 코드
+        progress[3].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
+        if(progressStartvlaue == progressEndValue4){
           clearInterval(progress4);
         }
       },1)
-
-      window.addEventListener('scroll',function(){
-        
+        }
       })
     </script>
   </body>
