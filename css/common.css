@@ -6,7 +6,9 @@ header{
   height: 100px;
   position: fixed;
   z-index: 9999999;
-  background: #ffffff70;
+  border-bottom: 1px solid #dadada;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+  background: #fff;
 }
 .h_inner{
   width: 1200px;
@@ -76,7 +78,7 @@ header .lnb{
 
 header .h_inner2 {
   width: 100%;
-  background: #ffffff70;
+  background: #ffffff30;
   height: 300px;
   display: none;
 }

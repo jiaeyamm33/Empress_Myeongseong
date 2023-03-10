@@ -8,7 +8,9 @@ header{
   height: 100px;
   position: fixed;
   z-index: 9999;
-  background: #ffffff70;
+  border-bottom: 1px solid #dadada;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+  background: #fff;
 }
 
 .h_inner{
