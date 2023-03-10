@@ -84,11 +84,14 @@ $(window).scroll(function() {
   let pb = $('#pb').offset().top;
   let esg = $('#esg').offset().top;
 
+  // 헤더 색상 변경
   if (pb<=ws) {
     $('header').css('background','#fff');
+    $('header .h_inner2').css('background','#fff');
     $('header .gnb > ul > li > a').css('color','#333');
   } else {
     $('header').css('background','#ffffff30');
+    $('header .h_inner2').css('background','#ffffff30');
     $('header .gnb > ul > li > a').css('color','#fff');
   }
 
