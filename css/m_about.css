@@ -10,6 +10,7 @@ header .h_inner2 {
 
 section h3, article h3 {
     padding-left: 1rem;
+    font-size: var(--f-size03);
 }
 
 /* 맨처음 기업개요 이미지 */
@@ -54,10 +55,6 @@ section h3, article h3 {
 #vsci {
     padding-top: 70px;
     width: 100%;
-}
-
-#vsci h3 {
-    font-size: var(--f-size04);
 }
 
 #vsci article {
@@ -128,10 +125,6 @@ padding: 1.5rem 0px;
     padding: 100px 0px;
 }
 
-#history h3 {
-    font-size: var(--f-size04);
-}
-
 #history p {
     font-size: 1rem;
     line-height: 1.7rem;
@@ -149,7 +142,7 @@ padding: 1.5rem 0px;
     border: none;
     text-indent: 1rem;
     padding: 10px 0px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--t-color04);
     width: 270px;
     border-bottom: 3px solid var(--t-color04);
@@ -186,7 +179,6 @@ padding: 1.5rem 0px;
 /* 관계사 현황 */
 
 #relc h3 {
-    font-size: var(--f-size04);
     padding-bottom: 30px;
 }
 
@@ -251,7 +243,6 @@ padding: 1.5rem 0px;
 }
 
 #news h3 {
-    font-size: var(--f-size04);
     margin: 30px 0px;
 }
 
@@ -319,7 +310,6 @@ padding: 1.5rem 0px;
 }
 
 #comeway article h3 {
-    font-size: var(--f-size04);
     color: var(--t-color02);
 }
 
@@ -387,6 +377,12 @@ padding: 1.5rem 0px;
 
 #comeway .c_info i.fa-location-dot {
     text-indent: -30px;
+}
+
+#comeway #map {
+    width: 85%;
+    height: 300px;
+    margin: 40px auto;
 }
 
 .on {
