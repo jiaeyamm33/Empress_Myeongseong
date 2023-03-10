@@ -109,7 +109,6 @@
     </div>
     </header>
 
-
   <!-- 메인콘텐츠 영역 -->
   <main>
     <!-- 1. 메인 사진? 이름 뭐라함 -->
@@ -319,19 +318,34 @@
       },
     });
 
+    // 헤더 색상 변경
     $(window).scroll(function() {
-  let ws = $(this).scrollTop();
-  let pb = $('#pb').offset().top;
-  let esg = $('#esg').offset().top;
+      let ws = $(this).scrollTop();
+      let pb = $('#pb').offset().top;
 
-  if (pb<=ws) {
-    $('header').css('background','#fff');
-    $('header .gnb > ul > li > a').css('color','#333');
-  } else {
-    $('header').css('background','#ffffff30');
-    $('header .gnb > ul > li > a').css('color','#fff');
-  }
-})
+      if (pb<=ws) {
+        $('header').css('background','#fff');
+        $('header .gnb > ul > li > a').css('color','#333');
+      } else {
+        $('header').css('background','#ffffff30');
+        $('header .gnb > ul > li > a').css('color','#fff');
+      }
+    })
+
+    // 매장 찾기
+    let optionValue = (target) => {
+      let value = target.value;
+      // console.log(value);
+      if(value==1){
+        $('.store_info li:last-child').find('p:last-of-type').text('02-2145-1234');
+      }else if(value==2){
+        $('.store_info li:last-child').find('p:last-of-type').text('02-3408-1234');
+      }else if(value==3){
+        $('.store_info li:last-child').find('p:last-of-type').text('02-6438-1234');
+      }else if(value==4){
+        $('.store_info li:last-child').find('p:last-of-type').text('031-369-7123');
+      }
+    }
 
     // 푸터 패밀리 사이트 스크립트
     function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨
