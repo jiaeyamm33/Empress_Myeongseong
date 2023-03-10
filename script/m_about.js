@@ -1,5 +1,11 @@
 $(function(){
 
+  $(document).ready(function(){
+    //ios 넘침현상 제거
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+
+  })
+
 
  let tab_mnu = $('#relc .logis li .tab');
  console.log(tab_mnu);
@@ -44,10 +50,6 @@ $(function(){
         } 
     })
 
-    let suba = $('.gnb #gnblist li:first-of-type .sub li a'); 
-
-    suba.click(function() {
-      $('.gnb').css('display', 'none');
 
 })    
 
@@ -70,4 +72,3 @@ $(function(){
    })
 })
 
-})

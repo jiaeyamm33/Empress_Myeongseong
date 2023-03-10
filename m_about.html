@@ -15,7 +15,7 @@
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script> -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
   <script src="./script/m_common.js" defer></script>
 
 </head>
@@ -32,82 +32,81 @@
        <span>&nbsp;</span>
        <span>&nbsp;</span>
       </div>
-    </div>
-
-  </header>
-  <main>
+      <nav class="gnb">
+        <ul id="gnblist">
+          <li>
+            <a href="#none" title="기업개요">기업개요<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="m_about.html#vsci" title="비전">비전</a></li>
+              <li><a href="m_about.html#vsci" title="CI소개">CI소개</a></li>
+              <li><a href="m_about.html#history" title="연혁">연혁</a></li>
+              <li><a href="m_about.html#relc" title="사업구조">관계사 현황</a></li>
+              <li><a href="m_about.html#news" title="홍보센터">홍보센터</a></li>
+              <li><a href="m_about.html#comeway" title="오시는 길">오시는 길</a></li>
+              </ul>
+          </li>
     
-    <nav class="gnb hidden">
-    <ul id="gnblist">
-      <li>
-        <a href="#none" title="기업개요">기업개요<i class="fa-solid fa-angle-down"></i></a>
-        <ul class="sub">
-          <li><a href="m_about.html#vsci" title="비전">비전</a></li>
-          <li><a href="m_about.html#vsci" title="CI소개">CI소개</a></li>
-          <li><a href="m_about.html#history" title="연혁">연혁</a></li>
-          <li><a href="m_about.html#relc" title="사업구조">관계사 현황</a></li>
-          <li><a href="m_about.html#news" title="홍보센터">홍보센터</a></li>
-          <li><a href="m_about.html#comeway" title="오시는 길">오시는 길</a></li>
-          </ul>
-      </li>
-
-      <li class="mainm">
-        <a href="#none" title="이마트 웨이">이마트 웨이<i class="fa-solid fa-angle-down"></i></a>
-        <ul class="sub">
-          <li><a href="#" title="이마트 웨이">이마트 웨이</a></li>
-          <li><a href="#" title="이마트 피플">이마트 피플</a></li>
-          <li><a href="#" title="매장찾기">매장찾기</a></li>
+          <li class="mainm">
+            <a href="#none" title="이마트 웨이">이마트 웨이<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="이마트 웨이">이마트 웨이</a></li>
+              <li><a href="#" title="이마트 피플">이마트 피플</a></li>
+              <li><a href="#" title="매장찾기">매장찾기</a></li>
+            </ul>
+          </li>
+    
+          <li class="mainm">
+            <a href="#none" title="ESG경영">ESG경영<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="개요">개요</a></li>
+              <li><a href="#" title="사회공헌">사회공헌</a></li>
+              <li><a href="#" title="친환경 경영">친환경 경영</a></li>
+              <li><a href="#" title="동반성장">동반성장</a></li>
+              <li><a href="#" title="경영철학">경영철학</a></li>
+              <li><a href="#" title="지속가능경영보고서">지속가능경영보고서</a></li>
+            </ul>
+          </li>
+    
+          <li class="mainm">
+            <a href="#none" title="투자정보">투자정보<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="invest.html" title="경영정보">경영정보</a></li>
+              <li><a href="invest.html" title="공시정보">공시정보</a></li>
+              <li><a href="invest.html" title="주식정보">주식정보</a></li>
+              <li><a href="invest.html" title="채무정보">채무정보</a></li>
+              <li><a href="invest.html" title="IR자료실">IR자료실</a></li>
+            </ul>
+          </li>
+    
+          <li class="mainm">
+            <a href="#none" title="채용정보">채용정보<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="career.html" title="채용프로세스">채용프로세스</a></li>
+              <li><a href="career.html" title="채용">채용</a></li>
+              <li><a href="career.html" title="나의 지원 현황">나의 지원 현황</a></li>
+            </ul>
+          </li>
         </ul>
-      </li>
-
-      <li class="mainm">
-        <a href="#none" title="ESG경영">ESG경영<i class="fa-solid fa-angle-down"></i></a>
-        <ul class="sub">
-          <li><a href="#" title="개요">개요</a></li>
-          <li><a href="#" title="사회공헌">사회공헌</a></li>
-          <li><a href="#" title="친환경 경영">친환경 경영</a></li>
-          <li><a href="#" title="동반성장">동반성장</a></li>
-          <li><a href="#" title="경영철학">경영철학</a></li>
-          <li><a href="#" title="지속가능경영보고서">지속가능경영보고서</a></li>
+    
+        <ul class="m_lnb">
+          <li><a href="m_signin.html" title="로그인"><i class="fa-solid fa-user"></i> 로그인</a>
+            <a href="m_join.html" title="회원가입">| 회원가입</a></li>
+          <li>
+            <a href="#" title="공지사항"><i class="fa-solid fa-bell"></i> 공지사항</a>
+          </li>
+          <li>
+            <a href="#" title="고객센터"><i class="fa-solid fa-phone"></i> 고객센터</a>
+          </li>
+          <li>
+            <a href="#" title="이용약관"><i class="fa-solid fa-circle-question"></i> 이용약관</a>
+          </li>
         </ul>
-      </li>
+      </nav>
+    </div>
+    </header>
 
-      <li class="mainm">
-        <a href="#none" title="투자정보">투자정보<i class="fa-solid fa-angle-down"></i></a>
-        <ul class="sub">
-          <li><a href="invest.html" title="경영정보">경영정보</a></li>
-          <li><a href="invest.html" title="공시정보">공시정보</a></li>
-          <li><a href="invest.html" title="주식정보">주식정보</a></li>
-          <li><a href="invest.html" title="채무정보">채무정보</a></li>
-          <li><a href="invest.html" title="IR자료실">IR자료실</a></li>
-        </ul>
-      </li>
-
-      <li class="mainm">
-        <a href="#none" title="채용정보">채용정보<i class="fa-solid fa-angle-down"></i></a>
-        <ul class="sub">
-          <li><a href="career.html" title="채용프로세스">채용프로세스</a></li>
-          <li><a href="career.html" title="채용">채용</a></li>
-          <li><a href="career.html" title="나의 지원 현황">나의 지원 현황</a></li>
-        </ul>
-      </li>
-    </ul>
-
-    <ul class="m_lnb">
-      <li><a href="m_signin.html" title="로그인">로그인</a>
-        <a href="m_join.html" title="회원가입">| 회원가입</a></li>
-      <li>
-        <a href="#" title="공지사항">공지사항</a>
-      </li>
-      <li>
-        <a href="#" title="고객센터">고객센터</a>
-      </li>
-      <li>
-        <a href="#" title="이용약관">이용약관</a>
-      </li>
-    </ul>
-  </nav>
-
+    
+  <main>
     <section id="about_m">
       <div class="m_p">
         <p><span>E</span><br>M<br>A<br>R<br>T</p>
@@ -308,8 +307,7 @@
             <img src="./image/manage_04.png" alt="시그나이트 파트너스 로고">
           </a>
           <a href="https://www.signitepartners.com/"  title="시그나이트 파트너스">시그나이트<br> 파트너스</a>
-        </li>
-          </div>
+        </div>
         </li>
       </ul>
     </section>
@@ -353,7 +351,7 @@
         </div>
         </article>
     </section>
-<!--     
+    
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
     <script>
       var container = document.getElementById('map');
@@ -372,7 +370,7 @@ var marker = new kakao.maps.Marker({
 });
 
 marker.setMap(map);
-    </script> -->
+    </script>
   </main>
   <!-- 푸터 영역 -->
   <footer>

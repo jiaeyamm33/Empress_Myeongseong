@@ -21,8 +21,13 @@ let gnbli = $('.gnb #gnblist li a');
   $('.gnb').toggleClass('block');
   $('body').toggleClass('b-over');
 
+ })
 
-
+ $('header .gnb li .sub li a').click(function(){
+  $('.gnb').removeClass('block');
+  $('#toggle span:first-child').removeClass('first');
+  $('#toggle span:nth-child(2)').removeClass('none');
+  $('#toggle span:nth-child(3)').removeClass('three');
  })
 
  
