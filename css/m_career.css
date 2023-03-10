@@ -225,11 +225,6 @@
   font-size: 14px;
 }
 
-<<<<<<< HEAD
-.job_info {
-  padding: 0px 0px 70px 0px;
-}
-=======
 /* 지원하기 */
 #c_apply{
   width: 100%;
@@ -286,4 +281,3 @@
   font-size: var(--f-size02);
   cursor: pointer;
 }
->>>>>>> 5008bcd3ac94563fbc05edc9d3aec7e7c053f25e
