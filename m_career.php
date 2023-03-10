@@ -1,3 +1,22 @@
+<?php
+include('career_conn.php');
+
+$data = [
+  'name' => '',
+  'email' => '',
+  'phone' => '',
+  'subject' => '',
+  'education' => '',
+  'experience' => '',
+  'certificate' => '',
+  'file' => ''
+];
+
+$num = $_GET['num'];
+$num = mysqli_real_escape_string($conn, $num);
+$query = "SELECT * FROM career WHERE num = '$num'";
+
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,26 +27,11 @@
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/main.css" type="text/css">
-
-  
+  <link rel="stylesheet" href="./css/career.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="./script/main.js" defer></script>
-  <script>
-    let mobile = ['Android','iPhone','iPad','SAMSUNG','BlackBerry','Window CE','MOT','SonyEricsson','Nokia', 'vivo', 'Xiaomi'];
-
-    if(document.URL.match('move_pc_screen')) mobile = null;
-
-    for(let i in mobile) {
-      if(navigator.userAgent.match(mobile[i]) != null) {
-        location.href = "mindex.html";
-        break;
-      }
-    }
-  </script>
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -67,12 +71,11 @@
         </ul>
       </nav>
     </div> <!-- h_inner -->
-    
+
     <div class="h_inner2">
       <nav class="lnb">
         <div class="lnb_box">
           <ul class="sub">
-            <li><a href="about.html" title="기업개요">기업개요</a></li>
             <li><a href="about.html#vsci" title="비전">비전</a></li>
             <li><a href="about.html#vsci" title="CI소개">CI소개</a></li>
             <li><a href="about.html#history" title="연혁">연혁</a></li>
@@ -117,184 +120,75 @@
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
   </header>
-  
-
-  <!-- 메인콘텐츠 영역 -->
   <main>
-    <!-- 메인 내비 -->
-    <nav class="m_nav">
-      <ul>
-        <li><a href="#m_con" title="메인" class="mn_on"></a></li>
-        <li><a href="#pb" title="pb브랜드"></a></li>
-        <li><a href="#esg" title="esg경영"></a></li>
-        <li><a href="#news" title="뉴스"></a></li>
-        <li><a href="#s_c" title="매장찾기&채용"></a></li>
-      </ul>
-    </nav>
-
-    <!-- 1. 메인 사진? 이름 뭐라함 -->
-    <section id="m_con">
-      <h2>메인</h2>
-      <div class="m_flip">
-        <div class="m_front card">
-          <img src="./image/logo.png" alt="로고">
-        </div>
-        <div class="m_back card">
-          <a href="https://emart.ssg.com/" title="이마트몰" target="_blank">
-            <img src="./image/emartmall.png" alt="로고">
-            <span>이마트몰로 바로가기 <i class="fas fa-arrow-circle-right"></i></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. PB 브랜드 -->
-    <section id="pb">
-      <h2>PB 브랜드</h2>
-      <article class="inner">
-        <h2>Private Brand</h2>
-        <p><span class="color_y">PB</span> 브랜드</p>
-        <ul class="pb_list">
-          <li>
-            <a href="https://emart.ssg.com/specialStore/nobrand/main.ssg" title="노브랜드" target="_blank"><img src="./image/nobrand.png" alt="노브랜드"></a>
-          </li>
-          <li>
-            <a href="https://emart.ssg.com/specialStore/ssgpeacock/main.ssg" title="피코크" target="_blank"><img src="./image/peacock.png" alt="피코크"></a>
-          </li>
-          <li>
-            <a href="https://emart.ssg.com/service/traders/dvstore.ssg" title="트레이더스" target="_blank"><img src="./image/traders.png" alt="트레이더스"></a>
-          </li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- 3. esg경영 -->
-    <section id="esg">
-      <h2>esg경영</h2>
-      <article class="inner">
-        <h2>ESG<br><small>Management</small></h2>
-        <p>지속 가능한 경영,<br>에코이마트가 약속합니다</p>
-        <p>이마트는 친환경 녹색경영실천에 앞장섭니다</p>
-        <ul class="esg_list">
-          <li>
-            <img src="./image/esg_01.png" alt="사회공헌">
-            <h3>사회공헌</h3>
-            <p>이마트와 함께 하는 가슴<br>따뜻한 이야기</p>
-          </li>
-          <li>
-            <img src="./image/esg_02.png" alt="친환경 경영">
-            <h3>친환경 경영</h3>
-            <p>푸른미래를 생각하는<br>그린 이마트</p>
-          </li>
-          <li>
-            <img src="./image/esg_03.png" alt="동반성장">
-            <h3>동반성장</h3>
-            <p>협력회사의 경쟁력 강화하는<br>실질적 지원</p>
-          </li>
-          <li>
-            <img src="./image/esg_04.png" alt="투명경영">
-            <h3>투명경영</h3>
-            <p>투명한 기업문 정착을 위한<br>이마트의 노력</p>
-          </li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- 4. 늬우스 -->
-    <section id="news">
-      <h2>NEWS</h2>
-      <article class="news_big">
-        <a href="#" title="뉴스 링크">
-          <img src="./image/news_01.jpg" alt="뉴스 이미지">
-          <span>30주년</span>
-          <span>이벤트</span>
-          <h3>국내 최초 할인점 창동 이마트에서 만난 서른 살의 이마트</h3>
-        </a>
-      </article>
-      <article class="news_list">
-        <ul>
-          <li>
-            <a href="#" title="뉴스 링크">
-              <img src="./image/news_02.jpg" alt="뉴스 이미지">
-              <h3>60만 신규 회원이 증명한 잠재력, '넥스트' 트레이더스</h3>
-              <p>2023. 02. 17</p>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="뉴스 링크">
-              <img src="./image/news_03.jpg" alt="뉴스 이미지">
-              <h3>돌아온 이마트 포항점, 위기 속에서 성장의 전환점을 맞다</h3>
-              <p>2023. 02. 17</p>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="뉴스 링크">
-              <img src="./image/news_04.jpg" alt="뉴스 이미지">
-              <h3>위기를 기회로! 이마트 포항점 리뉴얼</h3>
-              <p>2023. 02. 17</p>
-            </a>
-          </li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- 매장찾기, 채용정보 -->
-    <section id="s_c">
-      <h2>매장찾기, 채용정보</h2>
-      <!-- 5. 매장찾기 -->
-      <article id="store">
-        <div class="s_box">
-          <h2>매장 점포 휴점일과<br>영업시간을 알아보세요</h2>
-          <form id="store_info" action="store.php" method="post">
-            <select name="store" id="store_info" onchange="optionValue(this)">
-              <option value="1">명일점</option>
-              <option value="2">성수점</option>
-              <option value="3">왕십리점</option>
-              <option value="4">오산점</option>
-            </select>
-          </form>
-          <div class="store_info">
-            <ul>
-              <li>
-                <img src="./image/clock.png" alt="영업시간">
-                <p>영업시간</p>
-                <p>10:00~23:00</p>
-              </li>
-              <li>
-                <img src="./image/warehouse.png" alt="휴점일">
-                <p>휴점일</p>
-                <p><span class="color_y">둘째주, 넷째주 일요일</span></p>
-              </li>
-              <li>
-                <img src="./image/phone.png" alt="고객센터">
-                <p>고객센터</p>
-                <p>02-2145-1234</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <img src="./image/store.jpg" alt="매장 이미지">
-      </article>
-      <!-- 6. 채용 -->
-      <article id="career">
-        <div class="c_inner">
-          <div class="c_title">
-            <h2>Ride on DT</h2>
-            <p>지속적으로 성장하는 혁신 기업</p>
-          </div>
-          <div class="c_link">
-            <div class="c_box">
-              <p><a href="career.html" title="입사지원바로가기">입사지원바로가기</a></p>
-            </div>
-            <div class="c_box">
-              <p><a href="career.html" title="채용공고보러가기">채용공고보러가기</a></p>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
+    <article id="c_apply">
+      <h2>입사 지원하기</h2>
+      <form name="career" method="post" action="career_sub.php">
+        <input type="hidden" name="num" value="<?=$num?>">
+        <table>
+          <colgroup>
+            <col width="150">
+            <col width="1050">
+          </colgroup>
+          <tr>
+            <th>이름</th>
+            <td><input type="text" name="name" value="<?=$data['name']?>"></td>
+          </tr>
+          <tr>
+            <th>이메일</th>
+            <td><input type="text" name="email" value="<?=$data['email']?>"></td>
+          </tr>
+          <tr>
+            <th>전화번호</th>
+            <td><input type="text" name="phone" value="<?=$data['phone']?>"></td>
+          </tr>
+          <tr>
+            <th>공고명</th>
+            <td>
+              <select name="subject">
+                <option value="">선택하세요</option>
+                <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)" <?php echo ($data['subject'] == "[노브랜드]전략 경력 구성원 채용 (~03.02)") ? "selected" : "";?> >[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
+                <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)") ? "selected" : "";?> >[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
+                <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)") ? "selected" : "";?> >[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
+                <option value="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)" <?php echo ($data['subject'] == "[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)") ? "selected" : "";?> >[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)</option>
+                <option value="[스타벅스]바리스타 채용 신입 (~04.10)" <?php echo ($data['subject'] == "[스타벅스]바리스타 채용 신입 (~04.10)") ? "selected" : "";?> >[스타벅스]바리스타 채용 신입 (~04.10)</option>
+                <option value="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)" <?php echo ($data['subject'] == "[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)") ? "selected" : "";?> >[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>학력사항</th>
+            <td>
+              <label><input type="radio" name="education" value="고졸 <?=$data['education'] == "고졸" ? "checked" : "";?>" >고졸</label>
+              <label><input type="radio" name="education" value="대학 2~3년제 <?=$data['education'] == "대학 2~3년제" ? "checked" : "";?>" >대학 2~3년제</label>
+              <label><input type="radio" name="education" value="대학 4년제 <?=$data['education'] == "대학 4년제" ? "checked" : "";?>" >대학 4년제</label>
+              <label><input type="radio" name="education" value="석&middot;박사 <?=$data['education'] == "석&middot;박사" ? "checked" : "";?>" >석&middot;박사</label>
+            </td>
+          </tr>
+          <tr>
+            <th>경력사항</th>
+            <td>
+              <label><input type="radio" name="experience" value="인턴 <?=$data['experience'] == "인턴" ? "checked" : "";?>" >인턴</label>
+              <label><input type="radio" name="experience" value="신입 <?=$data['experience'] == "신입" ? "checked" : "";?>" >신입</label>
+              <label><input type="radio" name="experience" value="경력 <?=$data['experience'] == "경력" ? "checked" : "";?>" >경력</label>
+            </td>
+          </tr>
+          <tr>
+            <th>자격증</th>
+            <td>
+              <label><input type="radio" name="certificate" value="인턴 <?=$data['certificate'] == "있음" ? "checked" : "";?>" >있음</label>
+              <label><input type="radio" name="certificate" value="신입 <?=$data['certificate'] == "없음" ? "checked" : "";?>" >없음</label>
+            </td>
+          </tr>
+          <tr>
+            <th>자기소개서</th>
+            <td><input type="file" name="file" value="<?=$data['file']?>"></td>
+          </tr>
+        </table>
+        <p><input type="submit" value="지원하기"></p>
+      </form>
+    </article>
   </main>
-
   <!-- 푸터 영역 -->
   <footer>
     <div class="f_inner">
@@ -360,5 +254,5 @@
       }
     }
   </script>
-</body>
+  </body>
 </html>
