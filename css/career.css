@@ -173,6 +173,7 @@
 #c_process{
   width: 1200px;
   margin: 0px auto;
+  margin-bottom: 50px;
 }
 #c_process > .c_txt02{
   margin-bottom: 56px;

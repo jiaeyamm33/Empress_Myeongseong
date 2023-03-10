@@ -140,6 +140,7 @@
 #c_process{
   width: 90%;
   margin: 0px auto;
+  margin-bottom: 40px;
 }
 #c_process > .c_txt02{
   margin-bottom: 40px;
