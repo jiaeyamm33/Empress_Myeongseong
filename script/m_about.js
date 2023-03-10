@@ -7,12 +7,12 @@ $(function(){
   })
 
 
- let tab_mnu = $('#relc .logis li .tab');
- console.log(tab_mnu);
- tab_mnu.click(function() {
-  $(this).toggleClass('on').parent().siblings().find('a').removeClass('on');
-  $(this).next().slideToggle();
-  $(this).parent().siblings().find('.tab').next().hide();
+  let tab_mnu = $('#relc .logis li .tab');
+  console.log(tab_mnu);
+  tab_mnu.click(function() {
+    $(this).addClass('on').parent().siblings().find('a').removeClass('on');
+    
+    $(this).next().slideDown().parents().siblings().find('.hidden').slideUp();
   })
 
   $('#ht').change(function(){

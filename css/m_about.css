@@ -4,11 +4,6 @@ header .gnb > ul > li > a {
  color: var(--t-color01);
 }
 
-section, article {
-    box-sizing: border-box;
-}
-
-
 header .h_inner2 {
  background: #fff;
 }

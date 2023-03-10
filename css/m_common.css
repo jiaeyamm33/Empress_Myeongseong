@@ -221,6 +221,9 @@ address dd{margin-right: 0.5rem;}
 .hidden {
   display: none;
 }
+.h_on{
+  display: block;
+}
 
 .block {
   right: 0;
