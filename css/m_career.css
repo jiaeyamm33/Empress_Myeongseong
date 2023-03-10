@@ -205,7 +205,9 @@
   font-size: 14px;
   line-height: 40px;
   margin-top: 16px;
-  text-indent: 16px;
+  margin-left: 16px;
+  /* text-indent: 16px; */
+  word-wrap: break-word;
 }
 .c_txt04 span{
   font-size: 14px;

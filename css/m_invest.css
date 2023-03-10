@@ -1,0 +1,96 @@
+@charset "utf-8";
+main{
+  overflow-x: hidden;
+}
+section{
+  height: auto;
+  width: 100%;
+  background-image: url(../image/invest.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+section article{
+  width: 90%;
+  margin: 0px auto;
+}
+section > article > h2{
+  color: var(--t-color02);
+  font-size:54px;
+  font-weight: 100;
+  margin-top: 200px;
+}
+.i_box01 {
+  display: inline-block;
+  width: 220px;
+  height: 20px;
+  box-sizing: border-box;
+  transition: all linear 0.3s;
+  border-radius: 0px 0px 20px 0px;
+  border-bottom: 1px solid var(--t-color02);
+  border-right: 1px solid var(--t-color02);
+  margin-top: 40px;
+}
+.i_box01:first-of-type{
+  margin-right: 32px;
+}
+.i_box01 a {
+  /* display: inline-block; */
+  /* line-height: 0px; */
+}
+.i_box01 p {
+  text-indent: 8px;
+  font-size: 20px;
+  color: var(--t-color02);
+  font-weight: 400;
+  transform: translateY(-4px);
+  transition: all linear 0.3s;
+}
+.i_box01 p > i{
+  margin-left: 24px;
+}
+section > article >ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+section > article >ul > li{
+  border-radius: 8px;
+  border: 1px solid var(--t-color02);
+  box-sizing: border-box;
+  transition: 0.5s;
+  object-fit: cover;
+  margin-bottom: 16px;
+  /* position: relative; */
+  overflow: hidden;
+  text-align: center;
+}
+section article ul li a img{
+  width: 100%;
+  border-radius: 8px;
+}
+section article ul li a{
+  color: #fff;
+  display: inline-block;
+}
+section article ul li a h3{
+  font-size: 20px;
+  text-align: center;
+  padding: 24px;
+  transform: translateY(-290px);
+  /* margin-top: -290px; */
+  transition: 0.3s;
+  /* z-index: 10; */
+}
+section article ul li a p{
+  font-size: 16px;
+  padding: 88px 24px 16px 24px;
+  line-height: 24px;
+  margin-top: -250px;
+  /* transform: translateY(-250px); */
+  /* display: none; */
+  /* transition: 1s; */
+  /* position: absolute; */
+}

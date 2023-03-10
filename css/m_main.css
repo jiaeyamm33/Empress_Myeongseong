@@ -253,18 +253,18 @@ img{display: block;}
   border-color: #FCB416;
   outline: none;
 }
-.store_info ul{
+.s_info ul{
   display: flex;
   justify-content: space-between;
   text-align: center;
   margin-top: 130px;
 }
-.store_info ul li p:first-of-type{
+.s_info ul li p:first-of-type{
   font-size: var(--f-size01);
   line-height: 36px;
 }
-.store_info ul li p:last-of-type{font-size: var(--f-size);}
-.store_info ul li img{
+.s_info ul li p:last-of-type{font-size: var(--f-size);}
+.s_info ul li img{
   width: 60px;
   margin: 0 auto;
 }
