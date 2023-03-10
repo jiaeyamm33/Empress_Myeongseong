@@ -20,6 +20,7 @@ let gnbli = $('.gnb #gnblist li a');
 
   $('.gnb').toggleClass('block');
   $('body').toggleClass('b-over');
+  $('header').toggleClass('back');
 
  })
 
