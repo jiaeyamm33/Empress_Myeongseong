@@ -77,7 +77,7 @@ header .lnb{
 header .h_inner2 {
   width: 100%;
   background: #ffffff70;
-  height: 270px;
+  height: 300px;
   display: none;
 }
 
@@ -108,7 +108,7 @@ header .lnb .lnb_box ul li, header .lnb .lnb_box ul li a {
 }
 
 header .lnb .lnb_box ul:nth-of-type(2) {
-  text-indent: 20px;
+  text-indent: 15px;
 }
 
 header .lnb .lnb_box ul:nth-of-type(3) {
