@@ -103,6 +103,11 @@ $(window).scroll(function() {
   }
 });
 
+let tbm = $('header #toggle');
+
+tbm.click(function() {
+  $('header').toggleClass('back');
+})
 
 // 매장찾기
 $('.store_info li img').hover(function(){
