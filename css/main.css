@@ -148,7 +148,14 @@ img{display: block;}
 .m_flip:hover .m_back{
   transform: rotateY(0deg);
 }
-.card:hover .fas{animation: arrow 1s infinite ease-in-out;}
+.m_back  .fas{
+  opacity: 0;
+  transition: 1s;
+}
+.m_flip:hover .fas{
+  animation: arrow 1s infinite ease-in-out;
+  opacity: 1;
+}
 @keyframes arrow {
 	0% {
     transform: translateX(0);
@@ -407,17 +414,17 @@ img{display: block;}
   border-color: #FCB416;
   outline: none;
 }
-.store_info ul{
+.s_info ul{
   display: flex;
   justify-content: space-around;
   text-align: center;
 }
-.store_info ul li p:first-of-type{
+.s_info ul li p:first-of-type{
   font-size: var(--f-size02);
   line-height: 36px;
 }
-.store_info ul li p:last-of-type{font-size: var(--f-size01);}
-.store_info ul li img{
+.s_info ul li p:last-of-type{font-size: var(--f-size01);}
+.s_info ul li img{
   width: 80px;
   margin: 0 auto;
 }
