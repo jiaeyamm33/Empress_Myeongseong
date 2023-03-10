@@ -27,6 +27,7 @@ $query = "SELECT * FROM career WHERE num = '$num'";
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/career.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -120,14 +121,15 @@ $query = "SELECT * FROM career WHERE num = '$num'";
     </div> <!-- h_inner2 -->
   </header>
   <main>
-    <article>
+    <article id="c_apply">
+      <h2>입사 지원하기</h2>
       <form name="career" method="post" action="career_sub.php">
         <input type="hidden" name="num" value="<?=$num?>">
-        <colgroup>
-          <col width="150">
-          <col width="1050">
-        </colgroup>
         <table>
+          <colgroup>
+            <col width="150">
+            <col width="1050">
+          </colgroup>
           <tr>
             <th>이름</th>
             <td><input type="text" name="name" value="<?=$data['name']?>"></td>
@@ -147,47 +149,43 @@ $query = "SELECT * FROM career WHERE num = '$num'";
                 <option value="">선택하세요</option>
                 <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)" <?php echo ($data['subject'] == "[노브랜드]전략 경력 구성원 채용 (~03.02)") ? "selected" : "";?> >[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
                 <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)") ? "selected" : "";?> >[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
-                <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)") ? "selected" : "";?> >[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
-                <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)") ? "selected" : "";?> >[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
-                <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)") ? "selected" : "";?> >[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
-                <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)") ? "selected" : "";?> >[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
+                <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)" <?php echo ($data['subject'] == "[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)") ? "selected" : "";?> >[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
+                <option value="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)" <?php echo ($data['subject'] == "[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)") ? "selected" : "";?> >[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)</option>
+                <option value="[스타벅스]바리스타 채용 신입 (~04.10)" <?php echo ($data['subject'] == "[스타벅스]바리스타 채용 신입 (~04.10)") ? "selected" : "";?> >[스타벅스]바리스타 채용 신입 (~04.10)</option>
+                <option value="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)" <?php echo ($data['subject'] == "[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)") ? "selected" : "";?> >[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)</option>
               </select>
             </td>
           </tr>
           <tr>
             <th>학력사항</th>
             <td>
-                <label><input type="radio" name="education" value="고졸 <?=$data['education'] == "고졸" ? "checked" : "";?>" >고졸</label>
-                <label><input type="radio" name="education" value="대학 2~3년제 <?=$data['education'] == "대학 2~3년제" ? "checked" : "";?>" >대학 2~3년제</label>
-                <label><input type="radio" name="education" value="대학 4년제 <?=$data['education'] == "대학 4년제" ? "checked" : "";?>" >대학 4년제</label>
-                <label><input type="radio" name="education" value="석&middot;박사 <?=$data['education'] == "석&middot;박사" ? "checked" : "";?>" >석&middot;박사</label>
+              <label><input type="radio" name="education" value="고졸 <?=$data['education'] == "고졸" ? "checked" : "";?>" >고졸</label>
+              <label><input type="radio" name="education" value="대학 2~3년제 <?=$data['education'] == "대학 2~3년제" ? "checked" : "";?>" >대학 2~3년제</label>
+              <label><input type="radio" name="education" value="대학 4년제 <?=$data['education'] == "대학 4년제" ? "checked" : "";?>" >대학 4년제</label>
+              <label><input type="radio" name="education" value="석&middot;박사 <?=$data['education'] == "석&middot;박사" ? "checked" : "";?>" >석&middot;박사</label>
             </td>
           </tr>
           <tr>
             <th>경력사항</th>
             <td>
-                <label><input type="radio" name="experience" value="인턴 <?=$data['experience'] == "인턴" ? "checked" : "";?>" >인턴</label>
-                <label><input type="radio" name="experience" value="신입 <?=$data['experience'] == "신입" ? "checked" : "";?>" >신입</label>
-                <label><input type="radio" name="experience" value="경력 <?=$data['experience'] == "경력" ? "checked" : "";?>" >경력</label>
+              <label><input type="radio" name="experience" value="인턴 <?=$data['experience'] == "인턴" ? "checked" : "";?>" >인턴</label>
+              <label><input type="radio" name="experience" value="신입 <?=$data['experience'] == "신입" ? "checked" : "";?>" >신입</label>
+              <label><input type="radio" name="experience" value="경력 <?=$data['experience'] == "경력" ? "checked" : "";?>" >경력</label>
             </td>
           </tr>
           <tr>
             <th>자격증</th>
             <td>
-                <label><input type="radio" name="certificate" value="인턴 <?=$data['certificate'] == "있음" ? "checked" : "";?>" >있음</label>
-                <label><input type="radio" name="certificate" value="신입 <?=$data['certificate'] == "없음" ? "checked" : "";?>" >없음</label>
+              <label><input type="radio" name="certificate" value="인턴 <?=$data['certificate'] == "있음" ? "checked" : "";?>" >있음</label>
+              <label><input type="radio" name="certificate" value="신입 <?=$data['certificate'] == "없음" ? "checked" : "";?>" >없음</label>
             </td>
           </tr>
           <tr>
             <th>자기소개서</th>
             <td><input type="file" name="file" value="<?=$data['file']?>"></td>
           </tr>
-          <tr>
-            <th>
-              <p><input type="submit" value="지원하기"></p>
-            </th>
-          </tr>
         </table>
+        <p><input type="submit" value="지원하기"></p>
       </form>
     </article>
   </main>
