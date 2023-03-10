@@ -13,7 +13,7 @@ include 'career_conn.php';
   <title>이마트 지원현황</title>
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
-  <!-- <link rel="stylesheet" href="./css/common.css" type="text/css"> -->
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
   <link rel="stylesheet" href="./css/career.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>

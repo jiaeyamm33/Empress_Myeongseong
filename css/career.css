@@ -3,6 +3,8 @@
 header {
   background-color: #fff;
   border-bottom: 1px solid var(--t-color01);
+  top: 0;
+  left: 0;
 }
 header .gnb a{
   color: #333 !important;
@@ -259,10 +261,8 @@ header .gnb a{
 /* 지원현황 */
 #c_list{
   width: 1200px;
-  height: 1000px;
-  margin: 250px auto;
+  margin: 200px auto;
   text-align: center;
-  background: #eee;
 }
 #c_list h2{
   font-size: var(--f-size04);
@@ -288,11 +288,85 @@ header .gnb a{
   padding-bottom: 10px;
 }
 .c_on{color: var(--t-color01);}
-table:first-of-type tr{
+#c_list table{
+  margin-bottom: 50px;
+}
+#c_list .title{
   background: var(--t-color04);
   color: var(--t-color02);
   border-top: 2px solid #FCB416;
   font-size: var(--f-size02);
   font-weight: 200;
   line-height: 36px;
+}
+#c_list td{
+  font-size: var(--f-size01);
+  padding: 10px 0;
+}
+#c_list input{
+  height: 30px;
+  border-radius: 5px;
+}
+#c_list input[type=text]{
+  width: 200px;
+  border: 1px solid #333;
+}
+#c_list input[type=submit]{
+  width: 60px;
+  background: #fff;
+  border: 1px solid #FCB416;
+  cursor: pointer;
+}
+
+/* 지원하기 */
+#c_apply{
+  width: 1200px;
+  margin: 200px auto;
+  text-align: center;
+}
+#c_apply h2{
+  font-size: var(--f-size04);
+  line-height: 100px;
+}
+#c_apply table{
+  margin-bottom: 50px;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+}
+#c_apply th{
+  font-size: var(--f-size01);
+  line-height: 30px;
+  background: var(--t-color03);
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+#c_apply td{
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  padding-left: 20px;
+  font-size: var(--f-size);
+}
+#c_apply input[type=text]{
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #757575;
+}
+#c_apply select{
+  width: 305px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #757575;
+}
+#c_apply input[type=radio]{
+  accent-color: var(--t-color03);
+}
+#c_apply input[type=submit]{
+  width: 400px;
+  height: 50px;
+  border-radius: 5px;
+  background: var(--t-color03);
+  border: none;
+  font-size: var(--f-size02);
+  cursor: pointer;
 }
