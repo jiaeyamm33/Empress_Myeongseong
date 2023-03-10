@@ -4,53 +4,62 @@
   width: 100%;
   height: 100vh;
   background: var(--t-color03);
+  position: relative;
 }
 #career article{
-  width: 90%;
+  width: 100%;
   margin: 0px auto;
-  height: 700px;
   text-align: center;
 }
 #career h2{
   font-size: 72px;
   color: var(--t-color02);
-  transform: translateY(300px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.c_box_wrap {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 40%);
+  height: 200px;
+
+}
+
 .c_box01 {
   display: inline-block;
-  width: 220px;
+  padding: 0px 50px 30px 10px;
   height: 20px;
-  transform: translateY(340px);
   box-sizing: border-box;
-  transition: all linear 0.3s;
+  color: var(--t-color03);
   border-radius: 0px 0px 20px 0px;
   border-bottom: 1px solid var(--t-color04);
   border-right: 1px solid var(--t-color04);
 }
-.c_box01:hover{
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
+
+.c_box_wrap .c_box01 a {
+  font-size: 18px;
+  padding-bottom: 40px;
 }
-.c_box01:first-of-type{
-  margin-bottom: 24px;
+
+.c_box_wrap .c_box01 a i.fa-solid {
+  transform: translateX(35px);
 }
-.c_box01 a {
-  display: inline-block;
-  line-height: 0px;
-}
+
 .c_box01 p {
-  font-size: 20px;
-  color: var(--t-color04);
-  font-weight: 400;
-  transform: translateY(-4px);
-  transition: all linear 0.3s;
+  height: 20px;
+  padding-bottom: 20px;
 }
-.c_box01:hover p{
-  color: #fff;
+
+.c_box01:first-of-type {
+  margin-top: -10px;
+  margin-bottom: 25px;
 }
-.c_box01 p > i{
-  margin-left: 24px;
-}
+
 /* 채용공고서식 */
 #job{
   width: 90%;
@@ -58,15 +67,17 @@
 }
 .c_txt01{
   font-size: 20px;
-  margin-top: 40px;
+  margin-top: 64px;
+  text-align: center;
 }
 .c_txt02{
-  margin-top: 16px;
+  margin: 24px 0px 10px 0px;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
 }
 .c_txt03{
-  margin-top: 16px;
+  margin-top: 32px;
   font-size: 14px;
   text-align: right;
 }
@@ -140,9 +151,10 @@
 #c_process{
   width: 90%;
   margin: 0px auto;
+  margin-bottom: 40px;
 }
 #c_process > .c_txt02{
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 #c_process ul{
   width: 90%;
@@ -177,12 +189,12 @@
 #c_process ul li p:first-of-type{
   margin-top: -60px;
   color: var(--t-color03);
-  font-size: 24px;
+  font-size: 20px;
   
 }
 #c_process ul li p:last-of-type{
   margin-top: 8px;
-  font-size: 16px;
+  font-size: 15px;
 }
 #c_process ul li > span{
   position: absolute;
@@ -204,7 +216,7 @@
 }
 .c_txt04{
   font-size: 14px;
-  line-height: 40px;
+  line-height: 25px;
   margin-top: 16px;
   margin-left: 16px;
   /* text-indent: 16px; */

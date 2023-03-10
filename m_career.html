@@ -72,7 +72,6 @@
             <ul class="sub">
               <li><a href="m_invest.html" title="투자정보">투자정보</a></li>
               <li><a href="m_invest.html" title="경영정보">경영정보</a></li>
-              <li><a href="m_invest.html" title="경영정보">경영정보</a></li>
               <li><a href="m_invest.html" title="공시정보">공시정보</a></li>
               <li><a href="m_invest.html" title="주식정보">주식정보</a></li>
               <li><a href="m_invest.html" title="채무정보">채무정보</a></li>
@@ -113,6 +112,7 @@
     <section id="career">
       <article>
         <h2>CAREER</h2>
+        <div class="c_box_wrap">
         <div class="c_box01">
           <a href="https://career.emart.com/" title="이마트 채용정보 보러가기">
             <p>
@@ -128,6 +128,7 @@
             </p>
           </a>
         </div>
+      </div>
       </article>
     </section>
           <!-- 채용공고 -->
@@ -234,115 +235,164 @@
             <p>최종입사</p>
           </li>
         </ul>
+        <div class="job_info">
         <h3>서류전형</h3>
-        <p class="c_txt04">&middot; 지원자격 : 고졸이상 학력 소지자중 교대근무, 주말근무, 야간근무 가능한 자</p>
-        <p class="c_txt04">&middot; 점포에서 필요로 하는 인재상에 적합한 대상자 선발</p>
-        <p class="c_txt04">* 진열판매 및 캐셔사원 채용은 상시지원 받고 있으므로, 채용이 있을경우를 대비하여, 사전에 지원서 접수가 가능합니다.</p>
+        <p class="c_txt04">&middot; 지원자격 : 고졸이상 학력 소지자중 교대근무,<br> &nbsp;&nbsp;&nbsp;주말근무, 야간근무 가능한 자</p>
+        <p class="c_txt04">&middot; 점포에서 필요로 하는 인재상에 적합한<br>  &nbsp;&nbsp;&nbsp;대상자 선발</p>
+        <p class="c_txt04">* 진열판매 및 캐셔사원 채용은 상시지원을 <br> &nbsp;&nbsp;&nbsp;받고 있으므로, 채용이 있을경우를 대비하여, <br>&nbsp;&nbsp;&nbsp;사전에 지원서 접수가 가능합니다.</p>
         <h3>면접전형</h3>
         <p class="c_txt04">&middot; 기본 인성 및 자질을 종합 평가하는 인물면접</p>
         <h3>채용검진</h3>
         <p class="c_txt04">&middot; 업무 수행을 위한 기본 건강상태 확인 (지정병원)</p>
+        </div>
       </article>
   </main>
   <script>
-    let progress = document.querySelector(".progress1");
-    let progress_1 = document.querySelector(".progress2");
-    let progress_2 = document.querySelector(".progress3");
-    let progress_3 = document.querySelector(".progress4");
-    let progressStartvlaue=0,
-        progressStartvlaue1=0,
-        progressStartvlaue2=0,
-        progressStartvlaue3=0,
-        progressEndValue1=90,
-        progressEndValue2=180,
-        progressEndValue3=270,
-        progressEndValue4=360;
+    let progress = document.querySelectorAll(".progress");
+    
+
+    let onoff = false;
+
+    window.addEventListener('scroll',function(){
+      let dh = document.documentElement.scrollTop;
+      let p=document.getElementById('c_process');
+      let ph=p.offsetTop-100;
+      // console.log(dh);
+      console.log(ph);
+      if(dh >= ph && onoff==false) {
+        onoff = true;
+        let progressStartvlaue=0,
+        progressEndValue1=90, //1번째 원 각도
+        progressEndValue2=180, //2번째 원 각도
+        progressEndValue3=270, //3번째 원 각도
+        progressEndValue4=360; //4번째 원 각도
     
     let progress1 = setInterval(()=>{
-      progressStartvlaue++;
-      progress.style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
+      progress[0].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
       if(progressStartvlaue == progressEndValue1){
         clearInterval(progress1);
       }
-    },1)
+    },2)
     let progress2 = setInterval(()=>{
-      progressStartvlaue1++;
-      progress_1.style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue1*1}deg, var(--t-color04) 0deg)`;
-      if(progressStartvlaue1 == progressEndValue2){
+      progress[1].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
+      if(progressStartvlaue == progressEndValue2){
         clearInterval(progress2);
       }
-    },1)
+    },2)
     let progress3 = setInterval(()=>{
-      progressStartvlaue2++;
-      progress_2.style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue2*1}deg, var(--t-color04) 0deg)`;
-      if(progressStartvlaue2 == progressEndValue3){
+      progress[2].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
+      if(progressStartvlaue == progressEndValue3){
         clearInterval(progress3);
       }
-    },1)
+    },2)
     let progress4 = setInterval(()=>{
-      progressStartvlaue3++;
-      progress_3.style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue3*1}deg, var(--t-color04) 0deg)`;
-      if(progressStartvlaue2 == progressEndValue4){
+      progressStartvlaue++; // 카운트 증가 코드
+      progress[3].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
+      if(progressStartvlaue == progressEndValue4){
         clearInterval(progress4);
       }
-    },1)
+    },2)
+      }
+    })
   </script>
-  <footer>
-    <div class="f_inner">
-      <div class="flnb_top">
-      <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
-      <select onchange="siteUrl(this)">
-        <option value="">FAMILY SITE</option>
-        <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
-        <option value="https://www.shinsegaepoint.com/">신세계포인트</option>
-        <option value="https://emart.ssg.com/">이마트몰</option>
-        <option value="http://culture.emart.com/main">문화센터</option>
-        <option value="http://store.traders.co.kr/index.jsp">이마트 트레이더스</option>
-        <option value="http://www.emarteveryday.co.kr">이마트 에브리데이</option>
-        <option value="https://www.emart24.co.kr">이마트24</option>
-        <option value="https://www.shinsegaegroupinside.com">신세계그룹</option>
-        <option value="http://www.shinsegae.com/">신세계백화점</option>
-        <option value="http://www.sikorea.co.kr/">신세계인터내셔날</option>
-        <option value="http://www.shinsegaefood.com/main.sf">신세계푸드</option>
-        <option value="http://www.shinsegae-con.co.kr">신세계건설</option>
-        <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
-        <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
-        <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
-        <option value="https://www.google.co.kr">신세계사이먼</option>
-        <option value="http://www.ssg.com">SSG.COM</option>
-      </select>
+<!-- 푸터 영역 -->
+<footer>
+  <div class="f_inner">
+    <div class="flnb_top">
+    <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
+    <select onchange="siteUrl(this)">
+      <option value="">FAMILY SITE</option>
+      <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
+      <option value="https://www.shinsegaepoint.com/">신세계포인트</option>
+      <option value="https://emart.ssg.com/">이마트몰</option>
+      <option value="http://culture.emart.com/main">문화센터</option>
+      <option value="http://store.traders.co.kr/index.jsp">이마트 트레이더스</option>
+      <option value="http://www.emarteveryday.co.kr">이마트 에브리데이</option>
+      <option value="https://www.emart24.co.kr">이마트24</option>
+      <option value="https://www.shinsegaegroupinside.com">신세계그룹</option>
+      <option value="http://www.shinsegae.com/">신세계백화점</option>
+      <option value="http://www.sikorea.co.kr/">신세계인터내셔날</option>
+      <option value="http://www.shinsegaefood.com/main.sf">신세계푸드</option>
+      <option value="http://www.shinsegae-con.co.kr">신세계건설</option>
+      <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
+      <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
+      <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
+      <option value="https://www.google.co.kr">신세계사이먼</option>
+      <option value="http://www.ssg.com">SSG.COM</option>
+    </select>
+  </div>
+    <div class="f_info">
+      <ul class="f_link">
+        <li><a href="#" title="고객센터">고객센터</a></li>
+        <li><a href="#" title="이용약관">이용약관</a></li>
+        <li><a href="#" title="공정거래자율준수">공정거래자율준수</a></li>
+        <li><a href="#" title="윤리신고센터">윤리신고센터</a></li>
+        <li><a href="#" title="개인정보처리방침"><span class="color_y">개인정보처리방침</span></a></li>
+        <li><a href="#" title="영상정보운영방침"><span class="color_y">영상정보운영방침</span></a></li>
+      </ul>
+      <address>
+        <dl>
+          <dt>상호 : </dt>
+          <dd>이마트(주)</dd>
+          <dt>주소 : </dt>
+          <dd>서울특별시 성동구 뚝섬로 377(성수동2가)</dd>
+          <dt>대표자 : </dt>
+          <dd>강희석</dd>
+          <dt>사업자등록번호 : </dt>
+          <dd>206-86-50913</dd>
+          <dt>통신판매업 신고번호 : </dt>
+          <dd>제 2011-서울성동-0345호</dd>
+          <dt>이마트대표전화 : </dt>
+          <dd>02-380-5678</dd>
+          <dt>㈜에스에스지닷컴 : </dt>
+          <dd>1577-3419</dd>
+        </dl>
+      </address>
     </div>
-      <div class="f_info">
-        <ul class="f_link">
-          <li><a href="#" title="고객센터">고객센터</a></li>
-          <li><a href="#" title="이용약관">이용약관</a></li>
-          <li><a href="#" title="공정거래자율준수">공정거래자율준수</a></li>
-          <li><a href="#" title="윤리신고센터">윤리신고센터</a></li>
-          <li><a href="#" title="개인정보처리방침"><span class="color_y">개인정보처리방침</span></a></li>
-          <li><a href="#" title="영상정보운영방침"><span class="color_y">영상정보운영방침</span></a></li>
-        </ul>
-        <address>
-          <dl>
-            <dt>상호 : </dt>
-            <dd>이마트(주)</dd>
-            <dt>주소 : </dt>
-            <dd>서울특별시 성동구 뚝섬로 377(성수동2가)</dd>
-            <dt>대표자 : </dt>
-            <dd>강희석</dd>
-            <dt>사업자등록번호 : </dt>
-            <dd>206-86-50913</dd>
-            <dt>통신판매업 신고번호 : </dt>
-            <dd>제 2011-서울성동-0345호</dd>
-            <dt>이마트대표전화 : </dt>
-            <dd>02-380-5678</dd>
-            <dt>㈜에스에스지닷컴 : </dt>
-            <dd>1577-3419</dd>
-          </dl>
-        </address>
-      </div>
-    </div>
-    <a href="#" title="맨 위로 가기" class="top_btn">
-      <i class="fa-solid fa-arrow-up-to-line"></i></a>
-  </footer>
+  </div>
+  <a href="#" title="맨 위로 가기" class="top_btn">
+    <i class="fa-solid fa-arrow-up-to-line"></i></a>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.5,
+    spaceBetween: 40,
+    loop: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+  $(window).scroll(function() {
+let ws = $(this).scrollTop();
+let pb = $('#pb').offset().top;
+let esg = $('#esg').offset().top;
+
+if (pb<=ws) {
+  $('header').css('background','#fff');
+  $('header .gnb > ul > li > a').css('color','#333');
+} else {
+  $('header').css('background','#ffffff30');
+  $('header .gnb > ul > li > a').css('color','#fff');
+}
+})
+
+  // 푸터 패밀리 사이트 스크립트
+  function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨
+    if(select.value!='none') { //옵션을 선택하면
+      window.open(select.value); //선택한 사이트가 열리게 하고
+      select.value='none'; //기존값을 지운다
+    }else { //선택을 하지 않으면
+      return; //프로그램을 종료한다
+    }
+  }
+</script>
 </body>
 </html>
