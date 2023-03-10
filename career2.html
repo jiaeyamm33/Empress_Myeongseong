@@ -239,48 +239,12 @@
       </article>
     </main>
     <script>
-      let progress = document.querySelectorAll(".progress");
-      let progressStartvlaue=0,
-          progressStartvlaue1=0,
-          progressStartvlaue2=0,
-          progressStartvlaue3=0,
-          progressEndValue1=90, //1번째 원 각도
-          progressEndValue2=180, //2번째 원 각도
-          progressEndValue3=270, //3번째 원 각도
-          progressEndValue4=360; //4번째 원 각도
-      
-      let progress1 = setInterval(()=>{
-        progressStartvlaue++;
-        progress[0].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
-        if(progressStartvlaue == 90){
-          clearInterval(progress1);
-        }
-      },1)
-      let progress2 = setInterval(()=>{
-        progressStartvlaue1++;
-        progress[1].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue1*1}deg, var(--t-color04) 0deg)`;
-        if(progressStartvlaue1 == 180){
-          clearInterval(progress2);
-        }
-      },3)
-      let progress3 = setInterval(()=>{
-        progressStartvlaue2++;
-        progress[2].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue2*1}deg, var(--t-color04) 0deg)`;
-        if(progressStartvlaue2 == progressEndValue3){
-          clearInterval(progress3);
-        }
-      },5)
-      let progress4 = setInterval(()=>{
-        progressStartvlaue3++;
-        progress[3].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue3*1}deg, var(--t-color04) 0deg)`;
-        if(progressStartvlaue3 == progressEndValue4){
-          clearInterval(progress4);
-        }
-      },1)
-
-      window.addEventListener('scroll',function(){
+      let progress = document.querySelectorAll('.progress');
+      // console.log(progress);
+      // console.log(progress[0]);
+      let progress1=setInterval(function(){
         
-      })
+      },1)
     </script>
   </body>
 </html>
