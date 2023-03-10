@@ -6,6 +6,11 @@ section{
   margin: 0 auto;
   overflow: hidden;
 }
+
+header {
+  background: #ffffff30;
+}
+
 section > h2{display: none;}
 .inner, #news{
   width: 1200px;

@@ -8,11 +8,6 @@ section {
     margin: 0px auto;
 }
 
-header {
-    background-color: #fff;
-    border-bottom: 1px solid var(--t-color01);
-}
-
 header .h_inner2 {
     background: #fff;
 }
