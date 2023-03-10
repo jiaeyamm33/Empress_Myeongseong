@@ -290,26 +290,26 @@
         if(progressStartvlaue == progressEndValue1){
           clearInterval(progress1);
         }
-      },1)
+      },2)
       let progress2 = setInterval(()=>{
         progress[1].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
         if(progressStartvlaue == progressEndValue2){
           clearInterval(progress2);
         }
-      },1)
+      },2)
       let progress3 = setInterval(()=>{
         progress[2].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
         if(progressStartvlaue == progressEndValue3){
           clearInterval(progress3);
         }
-      },1)
+      },2)
       let progress4 = setInterval(()=>{
         progressStartvlaue++; // 카운트 증가 코드
         progress[3].style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
         if(progressStartvlaue == progressEndValue4){
           clearInterval(progress4);
         }
-      },1)
+      },2)
         }
       })
     </script>
