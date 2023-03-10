@@ -84,6 +84,14 @@ $(window).scroll(function() {
   let pb = $('#pb').offset().top;
   let esg = $('#esg').offset().top;
 
+  if (pb<=ws) {
+    $('header').css('background','#fff');
+    $('header .gnb > ul > li > a').css('color','#333');
+  } else {
+    $('header').css('background','#ffffff30');
+    $('header .gnb > ul > li > a').css('color','#fff');
+  }
+
   // pb 아래에서 위로
   if (pb==ws) {
     $('.pb_list li').css('top','0');
