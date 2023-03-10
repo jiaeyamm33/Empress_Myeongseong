@@ -166,5 +166,48 @@
         <p class="c_txt04">&middot; 업무 수행을 위한 기본 건강상태 확인 (지정병원)</p>
       </article>
   </main>
+  <script>
+    let progress = document.querySelector(".progress1");
+    let progress_1 = document.querySelector(".progress2");
+    let progress_2 = document.querySelector(".progress3");
+    let progress_3 = document.querySelector(".progress4");
+    let progressStartvlaue=0,
+        progressStartvlaue1=0,
+        progressStartvlaue2=0,
+        progressStartvlaue3=0,
+        progressEndValue1=90,
+        progressEndValue2=180,
+        progressEndValue3=270,
+        progressEndValue4=360;
+    
+    let progress1 = setInterval(()=>{
+      progressStartvlaue++;
+      progress.style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue*1}deg, var(--t-color04) 0deg)`;
+      if(progressStartvlaue == progressEndValue1){
+        clearInterval(progress1);
+      }
+    },1)
+    let progress2 = setInterval(()=>{
+      progressStartvlaue1++;
+      progress_1.style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue1*1}deg, var(--t-color04) 0deg)`;
+      if(progressStartvlaue1 == progressEndValue2){
+        clearInterval(progress2);
+      }
+    },1)
+    let progress3 = setInterval(()=>{
+      progressStartvlaue2++;
+      progress_2.style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue2*1}deg, var(--t-color04) 0deg)`;
+      if(progressStartvlaue2 == progressEndValue3){
+        clearInterval(progress3);
+      }
+    },1)
+    let progress4 = setInterval(()=>{
+      progressStartvlaue3++;
+      progress_3.style.background =`conic-gradient(var(--t-color03) ${progressStartvlaue3*1}deg, var(--t-color04) 0deg)`;
+      if(progressStartvlaue2 == progressEndValue4){
+        clearInterval(progress4);
+      }
+    },1)
+  </script>
 </body>
 </html>
