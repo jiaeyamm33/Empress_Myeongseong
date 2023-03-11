@@ -10,7 +10,7 @@ header .h_inner2{
 header .gnb a{
   color: #333!important;
 }
-h2{
+.join1 > h2{
   display: none;
 }
 h3{

@@ -13,7 +13,7 @@ header .gnb a{
 .join1>article{
   width: 100%;
 }
-h2{
+.join1 > h2{
   display: none;
 }
 h3{
