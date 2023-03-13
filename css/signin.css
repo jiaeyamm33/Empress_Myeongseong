@@ -5,10 +5,10 @@ section{
 header{
   border-bottom: 1px solid #dadada;
   box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
-  background: #fff;
+  background: #fff!important;
 }
 header .h_inner2{
-  background: #fff;
+  background: #fff!important;
 }
 header .gnb a{
   color: #333!important;
@@ -19,7 +19,10 @@ header .gnb a{
   position: relative;
   margin: 0 auto;
 }
-.login1 h2, .login1 h3{
+.login1 th:first-child{
+  display: none;
+}
+.login1 h2{
   display: none;
 }
 .login1 article{
@@ -72,6 +75,9 @@ input[type=text],input[type=password]{
   display: block;
   margin-top: 10px;
 }
+.log_art2 h3{
+  display: none;
+}
 .login2 .txt2{
   position: relative;
   cursor: pointer;
@@ -111,4 +117,77 @@ input[id="cb1"]:checked + label::after {
 }
 input[id="cb1"] {
 	display: none;
+}
+.come{
+  font-size: 24px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 420px;
+}
+.come::after{
+  width: 480px;
+  position: relative;
+  height: 2px;
+  display: block;
+  content: "";
+  top: 20px;
+  background: #FCB416;
+  margin: 0 auto;
+}
+.login_win{
+  width: 320px;
+  position: relative;
+  top: 290px;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: left;
+  vertical-align: baseline;
+}
+.login_win p{
+  margin-bottom: 10px;
+}
+.login_win p:nth-child(2):after,.login_win p:nth-child(4):after,.login_win p:nth-child(6):after,.login_win p:nth-child(8):after{
+  content: "";
+  position: relative;
+  display: block;
+  background: #333;
+  height: 1px;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.btn_01{
+  padding-top: 20px;
+  text-align: center;
+  display: flex;
+}
+.btn_01 a{
+  width: 150px;
+  height: 32px;
+  border: 1px solid #FCB416;
+  display: inline;
+  line-height: 32px;
+}
+.btn_01 a:first-child{
+  margin-right: 20px;
+}
+.d1{
+  background: rgba(255, 0, 0, 0.2);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 180px;
+}
+.name{
+  position: relative;
+  top: 200px;
+  margin: 0 auto;
+  display: block;
+  font-size: 32px;
+  text-align: center;
 }
