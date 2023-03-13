@@ -2,13 +2,13 @@
 // 메인 내비 이동
 let mn = $('.m_nav li');
 mn.click(function(){
-  $('.m_nav li a').removeClass('mn_on');
+  $('.m_nav li').find('a').removeClass('mn_on');
   $(this).find('a').addClass('mn_on');
 
   let id_name = $(this).find('a').attr('href');
   let secOffset = $(id_name).offset().top;
 
-  $('html, body').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
+  $('html').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
 
   return false;
 });
@@ -25,13 +25,17 @@ $('section').each(function(){
     console.log(boxMax);
     console.log(sec_n);
     
-    if(!winEvent) {
-      winEvent = window.event;
+    if(!winEvent) { //만약에 이벤트가 발생하지 않는다면
+      winEvent = window.event; //이벤트는 없다
     }
-    if(winEvent.wheelDelta) {
-      delta = winEvent.wheelDelta;
-    } else if(winEvent.detail) {
-      delta = -winEvent.detail / 3;
+    if(winEvent.wheelDelta) { //만약에 이벤트에서 휠데이터값이 있다면
+      delta = winEvent.wheelDelta; //데이터값을 저장
+      if(window.opera) {
+        delta = -delta;
+      }
+    }          
+    else if(winEvent.detail) { //그렇지 않으면
+      delta = -winEvent.detail; 
     }
     
     if(delta < 0) {
@@ -56,7 +60,7 @@ $('section').each(function(){
       }
     }
     
-    $('html, body').stop().animate({scrollTop : moveTop + 'px'}, 300);
+    $('html').stop().animate({scrollTop : moveTop + 'px'}, 300);
 
     // gnb 색상 변경
     $('.m_nav a').each(function(i){
@@ -67,6 +71,7 @@ $('section').each(function(){
     });
   });
 });
+
 
 // 메인 로고 애니메이션
 // const m_f = document.querySelector('.card');
