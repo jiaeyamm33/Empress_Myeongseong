@@ -395,6 +395,7 @@ section {
     text-align: center;
     background: var(--t-color03);
     /* z-index: 99999; */
+    display: none;
 }
 .top_btn > i{
     font-size: 18px;
