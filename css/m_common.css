@@ -217,7 +217,14 @@ address{
 }
 address dt, address dd{display: inline-block;}
 address dd{margin-right: 0.5rem;}
-
+footer .version{
+  width: 90%;
+  margin: 0px auto;
+  padding: 0px 0px 0px 5%;
+}
+footer .version a{
+  color: var(--t-color02);
+}
 .hidden {
   display: none;
 }

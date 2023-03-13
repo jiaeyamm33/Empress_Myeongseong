@@ -5,12 +5,13 @@
   height: 100vh;
   background: #fcb416;
 }
+#career > h2{display: none;}
 #career article {
   width: 1200px;
   margin: 0px auto;
   height: 1024px;
 }
-#career h2 {
+#career article h2 {
   font-size: 128px;
   color: #fff;
   transform: translateY(320px);

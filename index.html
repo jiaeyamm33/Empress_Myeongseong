@@ -24,6 +24,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="./script/main.js" defer></script>
+  
 
   <script>
     let mobile = ['Android','iPhone','iPad','SAMSUNG','BlackBerry','Window CE','MOT','SonyEricsson','Nokia', 'vivo', 'Xiaomi'];
@@ -32,7 +33,7 @@
 
     for(let i in mobile) {
       if(navigator.userAgent.match(mobile[i]) != null) {
-        location.href = "m_index.html";
+        location.href = "http://jiaeyammas.dothome.co.kr/empress_myeongseong/m_index.html";
         break;
       }
     }

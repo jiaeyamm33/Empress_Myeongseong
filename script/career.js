@@ -40,20 +40,16 @@ se1.addEventListener("click",()=>{
 // 인턴공고보기
 const nnew=document.querySelectorAll('.list01 .nnew');
 se2.addEventListener("click",()=>{
-  // console.log(c);
-  // console.log(asd);
   for(let i=0; i<c.length; i++){
     c[i].style.display="none";
   }
-  for(let m=0; m<jnew.length; m++){
+  for(let m=0; m<nnew.length; m++){
     nnew[m].style.display="block";
   }
 }); 
 // 신입공고보기
 const jnew=document.querySelectorAll('.list01 .new');
 se3.addEventListener("click",()=>{
-  // console.log(c);
-  // console.log(asd);
   for(let i=0; i<c.length; i++){
     c[i].style.display="none";
   }
@@ -64,25 +60,20 @@ se3.addEventListener("click",()=>{
 // 경력공고보기
 const nonew=document.querySelectorAll('.list01 .nonew');
 se4.addEventListener("click",()=>{
-  // console.log(c);
-  // console.log(asd);
   for(let i=0; i<c.length; i++){
     c[i].style.display="none";
   }
   for(let k=0; k<nonew.length; k++){
-    // nonew[0].parentNode.style.width="800px";
     nonew[k].style.display="block";
   }
 }); 
 // 경력무관보기
 const anyone=document.querySelectorAll('.list01 .anyone');
 se5.addEventListener("click",()=>{
-  // console.log(c);
-  // console.log(asd);
   for(let i=0; i<c.length; i++){
     c[i].style.display="none";
   }
-  for(let l=0; l<nonew.length; l++){
+  for(let l=0; l<anyone.length; l++){
     anyone[l].style.display="block";
   }
 }); 
