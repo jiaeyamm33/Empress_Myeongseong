@@ -73,26 +73,6 @@ $('section').each(function(){
 });
 
 
-// 메인 로고 애니메이션
-// const m_f = document.querySelector('.card');
-// const heartBeat = m_f
-// .animate([
-//   {transform: 'scale(1)'},
-//   {transform: 'scale(1.001)', offset: 0.2 },
-//   {transform: 'scale(0.99)', offset: 0.4 },
-//   {transform: 'scale(1.004)', offset: 0.6 },
-//   {transform: 'scale(0.995)', offset: 0.8 },
-//   {transform: 'scale(1)'}
-// ], {
-//   duration: 1000,
-//   iterations: Infinity
-// });
-// const stopheartBeat = ()=>{heartBeat.pause();}
-// const startheartBeat = ()=>{heartBeat.play();}
-// m_f.addEventListener('mouseover', stopheartBeat, false);
-// m_f.addEventListener('mouseout', startheartBeat, false);
-
-
 // 스크롤 이벤트
 $(window).scroll(function() {
   let ws = $(this).scrollTop();

@@ -19,7 +19,7 @@ let gnbli = $('.gnb #gnblist li a');
   $('#toggle span:nth-child(3)').toggleClass('three');
 
   $('.gnb').toggleClass('block');
-  $('body').toggleClass('b-over');
+  // $('body').toggleClass('b-over'); // 스크롤이 안먹혀서 주석처리했읍니다,,
   $('header').toggleClass('back');
 
  })

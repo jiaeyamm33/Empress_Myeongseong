@@ -346,12 +346,14 @@
   -moz-appearance: none; 
   appearance: none;
   background: url('../image/arrow_down.png') no-repeat 96% 50% #fff;
+  color: var(--t-color01);
   width: 200px;
   height: 35px;
   border-radius: 5px;
   border: 1px solid #FCB416;
   cursor: pointer;
   text-indent: 10px;
+  padding-right: 30px;
 }
 #c_list #search_box::-ms-expand{ 
   display:none;

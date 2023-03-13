@@ -61,7 +61,7 @@ header nav {
   transition: 0.5s;
   height: calc(var(--vh, 100vh) - 100px);
   overflow-y: scroll;
-
+  padding-bottom: 50px;
 }
 
 .back {

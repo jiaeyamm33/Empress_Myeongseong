@@ -106,7 +106,7 @@
         </ul>
       </nav>
     </div>
-    </header>
+  </header>
 
   <!-- 메인콘텐츠 영역 -->
   <main>
@@ -211,7 +211,7 @@
               <li>
                 <img src="./image/warehouse.png" alt="휴점일">
                 <p>휴점일</p>
-                <p><span class="color_y">둘째주,<br>넷째주 일요일</span></p>
+                <p class="color_y">둘째주,<br>넷째주 일요일</p>
               </li>
               <li>
                 <img src="./image/phone.png" alt="고객센터">
@@ -234,7 +234,7 @@
               <p><a href="m_career.php" title="입사지원바로가기">입사지원바로가기</a></p>
             </div>
             <div class="c_box">
-              <p><a href="career.html" title="채용공고보러가기">채용공고보러가기</a></p>
+              <p><a href="m_career.html" title="채용공고보러가기">채용공고보러가기</a></p>
             </div>
           </div>
         </div>
@@ -246,7 +246,7 @@
   <footer>
     <div class="f_inner">
       <div class="flnb_top">
-      <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
+      <h2><a href="m_index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
       <select onchange="siteUrl(this)">
         <option value="">FAMILY SITE</option>
         <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
@@ -333,7 +333,22 @@
         $('header').css('background','#ffffff30');
         $('header .gnb > ul > li > a').css('color','#fff');
       }
-    })
+    });
+
+    // 메인 로고 애니메이션
+    const m_f = document.querySelector('.m_logo');
+    const heartBeat = m_f
+    .animate([
+      {transform: 'scale(1)'},
+      {transform: 'scale(1.001)', offset: 0.2 },
+      {transform: 'scale(0.99)', offset: 0.4 },
+      {transform: 'scale(1.004)', offset: 0.6 },
+      {transform: 'scale(0.995)', offset: 0.8 },
+      {transform: 'scale(1)'}
+    ], {
+      duration: 1000,
+      iterations: Infinity
+    });
 
     // 매장 찾기
     let optionValue = (target) => {
