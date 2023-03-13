@@ -22,7 +22,7 @@ $('main section').each(function(){
     var boxMax = $('section').length;
     var winEvent = '';
     var sec_n = $(this).index();
-    console.log(boxMax);
+    // console.log(boxMax);
     
     if(!winEvent) { //만약에 이벤트가 발생하지 않는다면
       winEvent = window.event; //이벤트는 없다
@@ -127,12 +127,12 @@ $(window).scroll(function() {
 });
 
 // 매장찾기
-$('.store_info li img').hover(function(){
+$('.s_info li img').hover(function(){
   let src = $(this).attr('src').replace('png','gif');
   $(this).attr('src', src);
 });
 
-$('.store_info li img').mouseleave(function(){
+$('.s_info li img').mouseleave(function(){
   let src = $(this).attr('src').replace('gif','png');
   $(this).attr('src', src);
 });

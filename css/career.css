@@ -359,17 +359,23 @@
   font-size: var(--f-size01);
   padding: 10px 0;
 }
-#c_list input{
-  height: 30px;
-  border-radius: 5px;
-}
-#c_list input[type=text]{
-  width: 200px;
-  border: 1px solid #333;
-}
 #c_list input[type=submit]{
   width: 60px;
+  height: 35px;
+  border-radius: 5px;
   background: #fff;
+  border: 1px solid #FCB416;
+  cursor: pointer;
+  margin: -1px 0;
+}
+#c_list input[type=submit]:hover{
+  background: #FCB416;
+  border: 1px solid #FCB416;
+  color: var(--t-color02);
+}
+#c_list #search_box{
+  height: 35px;
+  border-radius: 5px;
   border: 1px solid #FCB416;
   cursor: pointer;
 }
