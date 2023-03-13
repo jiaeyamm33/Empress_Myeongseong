@@ -71,6 +71,7 @@
 #job{
   width: 1200px;
   margin: 0px auto;
+  position: relative;
 }
 .c_txt01{
   font-size: 40px;
@@ -87,18 +88,78 @@
 .c_txt03{
   font-size: 16px;
   text-align: right;
+  margin-bottom: 16px;
 }
 .c_txt03 i{
   padding-left: 8px;
   color: var(--t-color03);
+  /* transition: 0.2s; */
 }
-#job ul{
+#job .select_wrap{
+  position: absolute;
+  right: 0px;
+}
+#job .select_menu{
+  cursor: pointer;
+  width: 200px;
+  position: relative;
+  /* float: right; */
+  /* left: 10px; */
+  /* border: 1px solid var(--t-color03); */
+  /* border-radius: 8px; */
+}
+#job .select{
+  background: var(--t-color03);
+  /* border: 1px solid var(--t-color03); */
+  padding: 16px;
+  font-size: 14px;
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+#job .option_list{
+  position: absolute;
+  width: 100%;
+  background: var(--t-color02);
+  border:1px solid var(--t-color03);
+  /* border-radius: 0px 0px 8px 0px; */
+  padding: 0px 16px;
+  box-sizing: border-box;
+  transition: 0.2s linear 0.2s;
+  z-index: 999;
+  overflow-y: auto;
+  max-height: 88px;
+  /* overflow: hidden; */
+  /* display: none; */
+  height: 0px;
+}
+#job .option_list::-webkit-scrollbar{
+  width: 4px;
+  background-color: #eee;
+}
+#job .option_list::-webkit-scrollbar-thumb{
+  background-color: var(--t-color04);
+}
+#job .option_list.active{
+  height: 88px;
+}
+#job .option{
+  font-size: 14px;
+  padding: 8px 0px;
+  transition: 0.3s ease-in-out;
+}
+#job .option:hover{
+  /* background: var(--t-color04); */
+  color: var(--t-color03);
+}
+#job .list01{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 64px;
   /* list-style:inside; */
 }
-#job ul li{
+#job .list01 li{
   width: 387px;
   height: 240px;
   border: 1px solid #333;
@@ -120,20 +181,20 @@
   height: 259px;
   border-radius: 8px;
 } */
-#job ul li:hover{
+#job .list01 li:hover{
   border: 1px solid var(--t-color03);
   box-sizing: border-box;
   background: #F8F5E4;
   /* filter: grayscale(2); */
 }
-#job ul li h3{
+#job .list01 li h3{
   color: var(--t-color03);
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   margin-top: 16px;
 }
-#job ul li h4{
+#job .list01 li h4{
   color: var(--t-color04);
   font-size: 18px;
   font-weight: 400;
@@ -141,31 +202,31 @@
   margin-top: 8px;
   padding-bottom: 88px;
 }
-#job ul li:first-child h4{
+#job .list01 li:first-child h4{
   padding-bottom: 117px !important;
 }
-#job ul li a span{
+#job .list01 li a span{
   display: inline-block;
   height: 30px;
   text-align: center;
   line-height: 30px;
   border-radius: 50px;
 }
-#job ul li a span:first-of-type{
+#job .list01 li a span:first-of-type{
   width: 80px;
   background: var(--t-color03);
   color: var(--t-color02);
   font-size: 16px;
   font-weight: 400;
 }
-#job ul li a span:nth-of-type(2){
+#job .list01 li a span:nth-of-type(2){
   width: 72px;
   background: var(--t-color04);
   color: var(--t-color02);
   font-size: 16px;
   margin: 0px 8px 0px 8px;
 }
-#job ul li a span:last-of-type{
+#job .list01 li a span:last-of-type{
   font-size: 16px;
 }
 

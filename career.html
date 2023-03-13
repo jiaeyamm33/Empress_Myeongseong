@@ -13,8 +13,9 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+  <script src="./script/career.js" defer></script>
+  <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
 
   <!-- <script>
 
@@ -158,8 +159,22 @@
         <a href="career.php">
           <p class="c_txt03">지원하기<i class="fa-solid fa-circle-chevron-right"></i></p>
         </a>
-        <ul>
-          <li>
+        <div class="select_wrap">
+        <div class="select_menu">
+          <div class="select">
+            <span>선택</span>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="option_list">
+            <div class="option">전체</div>
+            <div class="option">신입</div>
+            <div class="option">경력</div>
+            <div class="option">경력무관</div>
+          </div>
+        </div>
+        </div>
+        <ul class="list01">
+          <li class="c anyone">
             <a href="#" title="자세한 채용정보 보러가기">
               <h3>노브랜드</h3>
               <h4>전략 경영 구성원 채용</h4>
@@ -168,7 +183,7 @@
               <span>~2023-00-00</span>
             </a>
           </li>
-          <li>
+          <li class="c nonew">
             <a href="#" title="자세한 채용정보 보러가기">
               <h3>Digital Transform</h3>
               <h4>Back-end Engineer 채용<br>경력직</h4>
@@ -177,7 +192,7 @@
               <span>~2023-00-00</span>
             </a>
           </li>
-          <li>
+          <li class="c new">
             <a href="#" title="자세한 채용정보 보러가기">
               <h3>Digital Transform</h3>
               <h4>Front-end Engineer 채용<br>신입</h4>
@@ -186,7 +201,7 @@
               <span>~2023-00-00</span>
             </a>
           </li>
-          <li>
+          <li class="c new">
             <a href="#" title="자세한 채용정보 보러가기">
               <h3>이마트 에브리데이</h3>
               <h4>와인전문 판매 전문직 채용<br>신입</h4>
@@ -195,7 +210,7 @@
               <span>~2023-00-00</span>
             </a>
           </li>
-          <li>
+          <li class="c new">
             <a href="#" title="자세한 채용정보 보러가기">
               <h3>스타벅스</h3>
               <h4>바리스타 채용<br>신입</h4>
@@ -204,7 +219,7 @@
               <span>~2023-00-00</span>
             </a>
           </li>
-          <li>
+          <li class="c nonew">
             <a href="#" title="자세한 채용정보 보러가기">
               <h3>조선호텔앤리조트</h3>
               <h4>마케팅 전략 채용<br>경력</h4>
@@ -340,7 +355,7 @@
       window.addEventListener('scroll',function(){
         let dh = document.documentElement.scrollTop;
         let p=document.getElementById('c_process');
-        let ph=p.offsetTop-600;
+        let ph=p.offsetTop-400;
         // console.log(dh);
         console.log(ph);
         if(dh >= ph && onoff==false) {
