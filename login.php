@@ -1,22 +1,19 @@
-<!DOCTYPE html>
+<?php
+  include('./dbconn.php'); // DB연결을 위한 같은 경로의 dbconn.php를 인클루드합니다.
+?>
+
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>투자정보</title>
-  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, intitial-scale=1">
+	<link rel="stylesheet" href="./css/signin.css" type="text/css">
+	<link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/invest.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <script src="./script/prefixfree.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
-  <!-- 헤더 영역 -->
-  <header>
+<header>
     <div class="h_inner">
       <h1>
         <a href="index.html" title="상단 바로가기">
@@ -57,7 +54,6 @@
       <nav class="lnb">
         <div class="lnb_box">
           <ul class="sub">
-            <li><a href="about.html" title="기업개요">기업개요</a></li>
             <li><a href="about.html#vsci" title="비전">비전</a></li>
             <li><a href="about.html#vsci" title="CI소개">CI소개</a></li>
             <li><a href="about.html#history" title="연혁">연혁</a></li>
@@ -91,7 +87,7 @@
           <ul class="sub">
             <li><a href="career.html" title="채용프로세스">채용프로세스</a></li>
             <li><a href="career.html" title="채용">채용</a></li>
-            <li><a href="career_list.php" title="나의 지원 현황">나의 지원 현황</a></li>
+            <li><a href="career.html" title="나의 지원 현황">나의 지원 현황</a></li>
           </ul>
 
           <ul class="sub">
@@ -102,76 +98,68 @@
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
   </header>
-  
-  <main>
-    <section>
-      <h2 class="hidden">투자정보</h2>
-      <article>
-        <h2>투자정보</h2>
-        <div class="i_box01">
-          <a href="https://company.emart.com/ko/investor/irpresentation_list.do" title="IR자료실 보러가기">
-            <p>
-              IR자료실 보러가기<i class="fa-solid fa-circle-chevron-right"></i>
-            </p>
-          </a>
-        </div>
-        <ul>
-          <li>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <a href="https://company.emart.com/ko/investor/governance_01.do" title="이마트 경영정보 보러가기">
-              <img src="./image/invest1.jpg" alt="경영사진">
-              <div></div>
-              <h3>경영정보</h3>
-                <p>이마트는 주주가 믿고 투자할 수 있는 합리적이고 투명한 경영 활동을 통해 기업 가치를 극대화하겠습니다.</p>
-            </a>
-          </li>
-          <li>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <a href="https://company.emart.com/ko/investor/list_stock.do" title="이마트 공시정보 보러가기">
-              <img src="./image/invest2.jpg" alt="공시정보사진">
-              <div></div>
-              <h3>공시정보</h3>
-                <p>이마트의 결산 공시 및 주주총회 정보를 안내해 드립니다.</p>
-            </a>
-          </li>
-          <li>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <a href="https://company.emart.com/ko/investor/stock02.do" title="이마트 주식정보 보러가기">
-              <img src="./image/invest3.jpg" alt="주식정보사진">
-              <div></div>
-              <h3>주식정보</h3>
-                <p>이마트의 주가정보 및 실시간 차트를 안내해 드립니다.</p>
-            </a>
-          </li>
-          <li>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <a href="https://company.emart.com/ko/investor/finance.do" title="이마트 재무정보 보러가기">
-              <img src="./image/invest4.jpg" alt="재무정보사진">
-              <div></div>
-              <h3>재무정보</h3>
-                <p>이마트 재무 현황  재무재표를 안내해 드립니다.</p>
-            </a>
-          </li>
-        </ul>
-      </article>
-      
-    </section>
-  </main>
 
-  <!-- 푸터 영역 -->
-  <footer>
+<?php if(!isset($_SESSION['ss_mb_id'])) { // 로그인 세션이 없을 경우 로그인 화면 ?>
+<section class="login1">
+<h2>로그인</h2>
+<article class="log_art1">
+<h3 class="txt1">로그인</h3>
+<form name="login" method="post" action="./login_check.php">
+  <table>
+    <tr>
+      <th>아이디</th>
+      <th><input type="text" name="mb_id" placeholder="이메일 아이디 입력" maxlength="16"></th>
+    </tr>
+    <tr>
+      <th>비밀번호</th>
+      <th><input type="password" name="mb_password" placeholder="패스워드 입력" maxlength="16"></th>
+    </tr>
+    <td colspan="2">
+      <input type="submit" value="로그인" class="login_btn" id="btn1">
+    </td>
+  </table>
+	<div class="login2">
+            <input type="checkbox" id="cb1">
+            <label for="cb1"></label>
+            <label for="cb1"><span class="txt2">아이디 저장</span></label>
+            <a href="#none"><span class="txt3">ID/PW 찾기</span></a>
+            <a href="./register.php" title="회원가입하기" class="txt4">회원가입</a>
+          </div>
+          <ul>
+            <li>
+              <a href="#none" title="네이버 로그인">
+                <img src="./image/sign_icon01.png" alt="카카오로그인">
+                <span class=btn2>네이버 로그인</span>
+              </a>
+            </li>
+            <li>
+              <a href="#none" title="카카오 로그인">
+                <img src="./image/sign_icon02.png" alt="카카오로그인">
+                <span class="btn2">카카오 로그인</span>
+              </a>
+            </li>
+            <li>
+              <a href="#none" title="카카오 로그인">
+                <img src="./image/sign_icon03.png" alt="카카오로그인">
+                <span class="btn2">애플 로그인</span>
+              </a>
+            </li>
+            <li>
+              <a href="#none" title="카카오 로그인">
+                <img src="./image/sign_icon04.png" alt="카카오로그인">
+                <span class="btn2">SSG 로그인</span>
+              </a>
+            </li>
+          </ul>
+</article>
+      <article class="log_art2">
+        <h3>배너</h3>
+        <a href="#" title="인턴사원 모집">
+          <img src="./image/sign_banner.jpg" alt="배너">
+        </a>
+      </article>
+</section>
+<footer>
     <div class="f_inner">
       <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
       <div class="f_info">
@@ -223,9 +211,6 @@
         </select>
       </div>
     </div>
-    <a href="#about_m" title="맨 위로 가기" class="top_btn">
-      <i class="fa-solid fa-arrow-up"></i>
-    </a>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
@@ -238,5 +223,52 @@
       }
     }
   </script>
+
+<?php } else { // 로그인 세션이 있을 경우 로그인 완료 화면 ?>
+
+<h2 class="come">이마트에 오신것을 환영합니다!</h2>
+
+<?php
+	$mb_id = $_SESSION['ss_mb_id'];
+
+  $sql = "select * from member where mb_id = TRIM('$mb_id')"; //데이터 조회
+  $result = mysqli_query($conn, $sql); //조회한 결과를 변수에 담고
+  $mb = mysqli_fetch_assoc($result); //회원정보를 반복문을 통해 변수에 담는다.
+
+  mysqli_close($conn); //데이터 가져왔으니 더이상 필요없어서 종료함.
+?>
+<div class="d1"></div>
+<p class="name"><?php echo $mb['mb_name'] ?>님</p>
+<div class="login_win">
+    <p>아이디</p>
+    <p class="last"><?php echo $mb['mb_id'] ?></p>
+    <!-- <tr>
+			<th>이름</th>
+			<td class="name">님</td>  
+		</tr> -->
+			<p>이메일</p>
+			<p><?php echo $mb['mb_email'] ?></p>
+			<!-- <th>성별</th>
+			<td></td>
+		</tr>
+		<tr>
+			<th>직업</th>
+			<td></td>
+		</tr>
+		<tr>
+			<th>관심언어</th>
+			<td></td>
+		</tr>
+    <tr> -->
+			<p>회원가입일</p>
+			<p class="last"><?php echo $mb['mb_datetime'] ?></p>
+			<p>회원정보 수정일</p>
+			<p class="last"><?php echo $mb['mb_modify_datetime'] ?></p>
+      <p class="btn_01">
+        <a href="./register.php?mode=modify" title="회원정보수정">회원정보수정</a>
+        <a href="./logout.php" title="로그아웃">로그아웃</a>
+      </p>
+</div>
+<?php } ?>
 </body>
 </html>
