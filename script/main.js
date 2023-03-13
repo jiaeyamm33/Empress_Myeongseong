@@ -15,7 +15,7 @@ mn.click(function(){
 
 $('main section').each(function(){
     // 개별적으로 Wheel 이벤트 적용
-  $(this).on('mousewheel',function(e){
+  $(this).on('mousewheel',function(event){
     
     var delta = 0;
     var moveTop = null;
@@ -69,6 +69,7 @@ $('main section').each(function(){
     });
   });
 });
+
 
 // 메인 로고 애니메이션
 // const m_f = document.querySelector('.card');
