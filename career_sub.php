@@ -10,7 +10,7 @@ $education = $_POST['education'];
 $experience = $_POST['experience'];
 $certificate = $_POST['certificate'];
 $file = $_FILES['file'];
-$cdate = date("Y-m-d");
+$cdate = date('Y-m-d');
 
 //입력한 데이터의 보안성을 위해 한번더 저장
 $name = mysqli_real_escape_string($conn, $name);
@@ -21,17 +21,24 @@ $education = mysqli_real_escape_string($conn, $education);
 $experience = mysqli_real_escape_string($conn, $experience);
 $certificate = mysqli_real_escape_string($conn, $certificate);
 
-$query = "INSERT INTO career(name, email, phone, subject, education, experience, certificate, file) VALUES('$name', '$email', '$phone', '$subject', '$education', '$experience', '$certificate', '$file')";
+if(($name != '') && ($email != '') && ($phone != '') && ($subject != '') && ($education != '') && ($experience != '') && ($certificate != '')){
 
-if(!$mb_id || !$md_password) {
-  echo "<script>alert('아이디 또는 비밀번호를 입력해주세요.'); location.replace('./login.php');</script>";
-  exit;
+  $query = "INSERT INTO career(name, email, phone, subject, education, experience, certificate, file) VALUES('$name', '$email', '$phone', '$subject', '$education', '$experience', '$certificate', '$file')";
+  mysqli_query($conn, $query);
+
+  echo "
+  <script>
+    alert('지원이 완료되었습니다.');
+    location.href='career_list.php';
+  </script>";
+} else {
+  $error = '';
+  echo "
+  <script>
+    alert('필수 입력사항이 입력되지 않았습니다. 다시 확인해주세요.');
+    history.back();
+  </script>";
 }
-
-mysqli_query($conn, $query);
 
 ?>
 
-<script>
-  location.href="career_list.php";
-</script>

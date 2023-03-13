@@ -108,7 +108,7 @@ include 'career_conn.php';
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
   </header>
-  
+
   <main>
     <article id="c_list">
       <h2>나의 지원현황</h2>
@@ -119,51 +119,52 @@ include 'career_conn.php';
         <li>관심공고</li>
       </ul>
       <form name="search" method="post" action="career_search.php">
-        <table>
-          <colgroup>
-            <col width="50">
-            <col width="100">
-            <col width="100">
-            <col width="650">
-            <col width="150">
-            <col width="150">
-          </colgroup>
-          <tr class="title">
-            <th>No</th>
-            <th>지원일</th>
-            <th>이름</th>
-            <th>공고명/지원분야</th>
-            <th>경력사항</th>
-            <th>상태</th>
-          </tr>
-          <?php
-            $query = 'select * from career order by num desc';
-            $result = mysqli_query($conn, $query);
-            while($data = mysqli_fetch_array($result)){?>
+      <table>
+        <colgroup>
+          <col width="50">
+          <col width="100">
+          <col width="100">
+          <col width="650">
+          <col width="150">
+          <col width="150">
+        </colgroup>
+        <tr class="title">
+          <th>No</th>
+          <th>지원일</th>
+          <th>이름</th>
+          <th>공고명/지원분야</th>
+          <th>경력사항</th>
+          <th>상태</th>
+        </tr>
+        <?php
+          $search_box = $_POST['search_box'];
+          $query = "select * from career where subject='$search_box'";
+          $result = mysqli_query($conn, $query);
+          while($data = mysqli_fetch_array($result)){?>
 
-            <tr>
-              <td><?=$data['num']?></td>
-              <td><?=$data['cdate']?></td>
-              <td><?=$data['name']?></td>
-              <td><?=$data['subject']?></td>
-              <td><?=$data['experience']?></td>
-              <td><?=$data['status']?></td>
-            </tr>
-            <?php } ?>
-        </table>
-        <select name="search_box" id="search_box">
-          <option value="공고명">공고명</option>
-          <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)">[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
-          <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)">[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
-          <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)">[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
-          <option value="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)">[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)</option>
-          <option value="[스타벅스]바리스타 채용 신입 (~04.10)">[스타벅스]바리스타 채용 신입 (~04.10)</option>
-          <option value="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)">[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)</option>
-        </select>
-        <input type="submit" value="검색">
-      </form>
-    </article>
-  </main>
+          <tr>
+          <td><?=$data['num']?></td>
+          <td><?=$data['cdate']?></td>
+          <td><?=$data['name']?></td>
+          <td><?=$data['subject']?></td>
+          <td><?=$data['experience']?></td>
+          <td><?=$data['status']?></td>
+        </tr>
+        <?php } ?>
+    </table>
+    
+    <select id="search_box" name="search_box" style="width:300px;">
+      <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)" <?if($search_box=="[노브랜드]전략 경력 구성원 채용 (~03.02)"){echo "selected";}?>>[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
+      <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?if($search_box=="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)"){echo "selected";}?>>[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
+      <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)" <?if($search_box=="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)"){echo "selected";}?>>[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
+      <option value="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)" <?if($search_box=="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)"){echo "selected";}?>>[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)</option>
+      <option value="[스타벅스]바리스타 채용 신입 (~04.10)" <?if($search_box=="[스타벅스]바리스타 채용 신입 (~04.10)"){echo "selected";}?>>[스타벅스]바리스타 채용 신입 (~04.10)</option>
+      <option value="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)" <?if($search_box=="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)"){echo "selected";}?>>[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)</option>
+    </select>
+    <input type="submit" value="검색">
+  </form>
+</article>
+</main>
 
   <!-- 푸터 영역 -->
   <footer>
