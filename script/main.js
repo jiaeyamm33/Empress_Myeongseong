@@ -13,15 +13,17 @@ mn.click(function(){
   return false;
 });
 
-$('main section').each(function(){
+$('section').each(function(){
   $(this).on('mousewheel',function(e){
     
-    var delta = 0;
-    var moveTop = null;
-    var boxMax = $('section').length;
-    var winEvent = '';
-    var sec_n = $(this).index();
-    // console.log(boxMax);
+    let delta = 0;
+    let moveTop = null;
+    let boxMax = $('section').length;
+    let winEvent = '';
+    let sec_n = $(this).index();
+    let f_h = $('footer').height();
+    console.log(boxMax);
+    console.log(sec_n);
     
     if(!winEvent) {
       winEvent = window.event;
@@ -32,25 +34,26 @@ $('main section').each(function(){
       delta = -winEvent.detail / 3;
     }
     
-    // 마우스휠을 위에서 아래로 이동(처음에서 다음박스로 이동)
     if(delta < 0) {
-        // 마지막 BOX 보다 순서값이 작은 경우에 실행
-        if($(this).index() < boxMax) {
-            if($(this).next() != undefined) {
-              moveTop =$(this).next().offset().top;
-                sec_n++;
-            }
+      if($(this).index() < boxMax) {
+        if($(this).next() != undefined) {
+          moveTop = $(this).next().offset().top;
+          sec_n++;
         }
+      }
+      else {
+        moveTop = $('footer').prev().offset().top+150+'px';
+        return false;
+      }
     }
-    // 마우스휠을 아래에서 위로 이동( 뒤에서 앞으로 이동)
+    
     else {
-        // 첫번째 article보다 순서값이 큰 경우에 실행
-        if($(this).index() > 0) {
-            if($(this).prev() != undefined) {
-                moveTop =$(this).prev().offset().top;
-                sec_n--;
-            }
+      if($(this).index() > 0) {
+        if($(this).prev() != undefined) {
+          moveTop = $(this).prev().offset().top;
+          sec_n--;
         }
+      }
     }
     
     $('html, body').stop().animate({scrollTop : moveTop + 'px'}, 300);
