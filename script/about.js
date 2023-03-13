@@ -1,5 +1,8 @@
 $(function(){
 
+  $('.top_btn').click(function() {
+    $('html, body').animate({scrollTop:'0px'}, 700);
+  });
 
  let tab_mnu = $('#relc .logis li .tab');
 
@@ -68,6 +71,17 @@ $(function(){
 })
 
 })
+
+window.addEventListener('scroll', ()=> {
+  console.log(window, scrollY);
+  let ws = window.scrollY;
+  console.log(ws);
+  if(ws>=1500) {
+      document.querySelector('.top_btn').style.display = 'block';
+  } else {
+      document.querySelector('.top_btn').style.display = 'none';
+  }
+ });
 
 
 // let historyCon = [
