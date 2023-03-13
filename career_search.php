@@ -18,7 +18,7 @@ include 'career_conn.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <scrip src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -153,7 +153,8 @@ include 'career_conn.php';
         <?php } ?>
     </table>
     
-    <select id="search_box" name="search_box" style="width:300px;">
+    <select id="search_box" name="search_box">
+      <option value="전체보기">전체보기</option>
       <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)" <?if($search_box=="[노브랜드]전략 경력 구성원 채용 (~03.02)"){echo "selected";}?>>[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
       <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?if($search_box=="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)"){echo "selected";}?>>[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
       <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)" <?if($search_box=="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)"){echo "selected";}?>>[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
@@ -233,6 +234,6 @@ include 'career_conn.php';
         return; //프로그램을 종료한다
       }
     }
-  </script>
+  </scriplocation.href=>
   </body>
 </html>
