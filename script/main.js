@@ -1,62 +1,74 @@
 
-
-// 원페이지 스크롤
-window.addEventListener('wheel', function(e){
-	e.preventDefault();
-}, {passive : false});
-
-let $html = $('html');
-let page = 1;
-let lastPage = $('section').length+1;
-
-$html.animate({scrollTop:0},10);
-
-$(window).on('wheel', function(e){
-
-  if($html.is(':animated')) return;
-
-  if(e.originalEvent.deltaY > 0){
-    if(page == lastPage) return;
-
-    page++;
-  }else if(e.originalEvent.deltaY < 0){
-    if(page == 1) return;
-
-    page--;
-  }
-
-  let posTop = (page-1) * $(window).height();
-
-  $html.animate({scrollTop : posTop}, 500);
-
-  $('.m_nav a').each(function(i){
-    if(i==page-1){
-      $('.m_nav a').removeClass('mn_on');
-      $(this).addClass('mn_on');
-    }
-  });
-
-  return false;
-});
-
-
 // 메인 내비 이동
 let mn = $('.m_nav li');
 mn.click(function(){
-  $('.m_nav a').removeClass('mn_on');
+  $('.m_nav li').find('a').removeClass('mn_on');
   $(this).find('a').addClass('mn_on');
 
   let id_name = $(this).find('a').attr('href');
-  // console.log(id_name);
-
   let secOffset = $(id_name).offset().top;
-  // console.log(secOffset);
 
-  $('html, body').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
+  $('html').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
 
   return false;
 });
 
+$('main section').each(function(){
+    // 개별적으로 Wheel 이벤트 적용
+  $(this).on('mousewheel',function(e){
+    
+    var delta = 0;
+    var moveTop = null;
+    var boxMax = $('section').length;
+    var winEvent = '';
+    var sec_n = $(this).index();
+    console.log(boxMax);
+    
+    if(!winEvent) { //만약에 이벤트가 발생하지 않는다면
+      winEvent = window.event; //이벤트는 없다
+    }
+    if(winEvent.wheelDelta) { //만약에 이벤트에서 휠데이터값이 있다면
+      delta = winEvent.wheelDelta; //데이터값을 저장
+      if(window.opera) {
+        delta = -delta;
+      }
+    }          
+    else if(winEvent.detail) { //그렇지 않으면
+      delta = -winEvent.detail; 
+    }
+    
+    // 마우스휠을 위에서 아래로 이동(처음에서 다음박스로 이동)
+    if(delta < 0) {
+        // 마지막 BOX 보다 순서값이 작은 경우에 실행
+        if($(this).index() < boxMax) {
+            if($(this).next() != undefined) {
+              moveTop =$(this).next().offset().top;
+                sec_n++;
+            }
+        }
+    }
+    // 마우스휠을 아래에서 위로 이동( 뒤에서 앞으로 이동)
+    else {
+        // 첫번째 article보다 순서값이 큰 경우에 실행
+        if($(this).index() > 0) {
+            if($(this).prev() != undefined) {
+                moveTop =$(this).prev().offset().top;
+                sec_n--;
+            }
+        }
+    }
+    
+    $('html').stop().animate({scrollTop : moveTop + 'px'}, 300);
+
+    // gnb 색상 변경
+    $('.m_nav a').each(function(i){
+      if(i==sec_n-1){
+        $('.m_nav a').removeClass('mn_on');
+        $(this).addClass('mn_on');
+      }
+    });
+  });
+});
 
 // 메인 로고 애니메이션
 // const m_f = document.querySelector('.card');
