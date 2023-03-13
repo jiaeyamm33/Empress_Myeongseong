@@ -23,6 +23,11 @@ $certificate = mysqli_real_escape_string($conn, $certificate);
 
 $query = "INSERT INTO career(name, email, phone, subject, education, experience, certificate, file) VALUES('$name', '$email', '$phone', '$subject', '$education', '$experience', '$certificate', '$file')";
 
+if(!$mb_id || !$md_password) {
+  echo "<script>alert('아이디 또는 비밀번호를 입력해주세요.'); location.replace('./login.php');</script>";
+  exit;
+}
+
 mysqli_query($conn, $query);
 
 ?>
