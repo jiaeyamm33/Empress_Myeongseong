@@ -15,7 +15,7 @@
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
   <script src="./script/m_common.js" defer></script>
 
 </head>
@@ -113,6 +113,7 @@
     
   <main>
     <section id="about_m">
+      <h3 class="hidden">이마트 기업소개</h3>
       <div class="m_p">
         <p><span>E</span><br>M<br>A<br>R<br>T</p>
         <p>A<br>B<br>O<br>U<br>T</p>
@@ -120,6 +121,7 @@
     </section>
 
     <section id="vsci">
+      <h3 class="hidden">비전과 ci</h3>
       <article>
         <h3>VISION</h3>
         <ul class="vslist">
@@ -160,7 +162,7 @@
       <h3>연혁</h3>
       <p>(주)이마트는 <span>국내 최초의 할인점</span>으로서<br> 고객의 행복한 라이프 스타일과<br>  <span>지역사회 발전을 추구</span>하는 가치 창조기업을 지향합니다.</p>
       <article>
-      <h4></h4>
+      <h3 class="hidden">연혁 보기</h3>
       <select name="연혁" id="ht">
         <option value="2020">2020's</option>
         <option value="2010">2010's</option>
@@ -313,8 +315,10 @@
             <img src="./image/manage_04.png" alt="시그나이트 파트너스 로고">
           </a>
           <a href="https://www.signitepartners.com/"  title="시그나이트 파트너스">시그나이트<br> 파트너스</a>
-        </div>
         </li>
+        </ul>
+        </div>
+      </li>
       </ul>
     </section>
     <section id="news">
@@ -329,12 +333,12 @@
           <a href="https://www.shinsegaegroupnewsroom.com/100590/" title="2023. 03. 02">2023. 03. 02</a>
         </div>
         </li>
-        <div id="news_more"></div>
       </ul>
       <a href="#none" title="더보기" id="more">더보기</a>
       <div id="newsmore"></div>
     </section>
     <section id="comeway">
+      <h3 class="hidden">이마트 오시는 길</h3>
         <article>
           <h3>오시는 길</h3>
           <div id="map"></div>
@@ -342,7 +346,7 @@
             <dl>
               <dt><i class="fas fa-location-dot"></i> 장소</dt>
               <dd>서울특별시 성동구 뚝섬로377(성수동2가)</dd>
-              <dt></i>
+              <dt>
                 <i class="fas fa-phone"></i> 
                대표번호</dt>
               <dd>02) 380-5678</dd>
@@ -354,11 +358,10 @@
               <dd>2호선 성수역 3번 출구에서 도보 800m</dd>
             </dl>
           </div>
-        </div>
         </article>
     </section>
     
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
     <script>
       var mapContainer = document.getElementById('map');
       var mapOption = {

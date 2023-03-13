@@ -359,10 +359,9 @@
           <a href="https://www.shinsegaegroupnewsroom.com/100391/" title="2023. 02. 28">2023. 02. 28</a>
         </div>
         </li>
-        <div id="news_more"></div>
-      </ul>
-      <a href="#none" title="더보기" id="more">더보기</a>
-      <div id="newsmore"></div>
+        </ul>
+        <a href="#none" title="더보기" id="more">더보기</a>
+        <div id="newsmore"></div>
     </section>
     <section id="comeway">
         <h3 class="hidden">이마트 오시는길</h3>
@@ -390,7 +389,7 @@
         </article>
     </section>
     
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc57306d887bed6f149b80eac9622fa6"></script>
     <script>
       var mapContainer = document.getElementById('map');
       var mapOption = {
@@ -400,22 +399,22 @@
   
       var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-var imageSrc = './image/marker.png', // 마커이미지의 주소입니다    
-    imageSize = new kakao.maps.Size(64, 69); // 마커이미지의 크기입니다
-; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      var imageSrc = './image/marker.png', // 마커이미지의 주소입니다    
+          imageSize = new kakao.maps.Size(64, 69); // 마커이미지의 크기입니다
+ // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
       
 // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize),
-    markerPosition = new kakao.maps.LatLng(37.539940, 127.052857); // 마커가 표시될 위치입니다
+      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize),
+          markerPosition = new kakao.maps.LatLng(37.539940, 127.052857); // 마커가 표시될 위치입니다
 
 // 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-    position: markerPosition, 
-    image: markerImage // 마커이미지 설정 
+      var marker = new kakao.maps.Marker({
+          position: markerPosition, 
+          image: markerImage // 마커이미지 설정 
 });
 
 // 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);  
+      marker.setMap(map);  
     </script>
   </main>
   <!-- 푸터 영역 -->
