@@ -19,13 +19,14 @@ let gnbli = $('.gnb #gnblist li a');
   $('#toggle span:nth-child(3)').toggleClass('three');
 
   $('.gnb').toggleClass('block');
-  // $('body').toggleClass('b-over'); // 스크롤이 안먹혀서 주석처리했읍니다,,
+  $('body').toggleClass('b-over');
   $('header').toggleClass('back');
 
  })
 
  $('header .gnb li .sub li a').click(function(){
   $('.gnb').removeClass('block');
+  $('body').removeClass('b-over');
   $('#toggle span:first-child').removeClass('first');
   $('#toggle span:nth-child(2)').removeClass('none');
   $('#toggle span:nth-child(3)').removeClass('three');

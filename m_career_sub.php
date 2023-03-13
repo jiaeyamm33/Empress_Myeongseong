@@ -21,12 +21,23 @@ $education = mysqli_real_escape_string($conn, $education);
 $experience = mysqli_real_escape_string($conn, $experience);
 $certificate = mysqli_real_escape_string($conn, $certificate);
 
-$query = "INSERT INTO career(name, email, phone, subject, education, experience, certificate, file) VALUES('$name', '$email', '$phone', '$subject', '$education', '$experience', '$certificate', '$file')";
+if(($name != '') && ($email != '') && ($phone != '') && ($subject != '') && ($education != '') && ($experience != '') && ($certificate != '')){
 
-mysqli_query($conn, $query);
+  $query = "INSERT INTO career(name, email, phone, subject, education, experience, certificate, file) VALUES('$name', '$email', '$phone', '$subject', '$education', '$experience', '$certificate', '$file')";
+  mysqli_query($conn, $query);
+
+  echo "
+  <script>
+    alert('지원이 완료되었습니다.');
+    location.href='m_career_list.php';
+  </script>";
+} else {
+  $error = '';
+  echo "
+  <script>
+    alert('필수 입력사항이 입력되지 않았습니다. 다시 확인해주세요.');
+    history.back();
+  </script>";
+}
 
 ?>
-
-<script>
-  location.href="m_career_list.php";
-</script>
