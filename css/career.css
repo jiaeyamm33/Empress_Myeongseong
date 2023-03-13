@@ -148,14 +148,17 @@
   padding: 8px 0px;
   transition: 0.3s ease-in-out;
 }
-#job .option:hover{
+#job .option:hover,#job .option.selected{
   /* background: var(--t-color04); */
   color: var(--t-color03);
 }
 #job .list01{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap:19px;
+  /* flex-direction: row; */
+  width: 1200px;
+  /* justify-content: space-between; */
   margin-top: 64px;
   /* list-style:inside; */
 }
