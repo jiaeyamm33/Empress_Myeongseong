@@ -1,4 +1,7 @@
 /* 헤더 영역 글씨 별도 */
+body {
+    overflow-x: hidden;
+}
 
 header .gnb > ul > li > a {
  color: var(--t-color01);
