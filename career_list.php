@@ -58,11 +58,12 @@ include 'career_conn.php';
         </ul>
       </nav>
     </div> <!-- h_inner -->
-
+    
     <div class="h_inner2">
       <nav class="lnb">
         <div class="lnb_box">
           <ul class="sub">
+            <li><a href="about.html" title="기업개요">기업개요</a></li>
             <li><a href="about.html#vsci" title="비전">비전</a></li>
             <li><a href="about.html#vsci" title="CI소개">CI소개</a></li>
             <li><a href="about.html#history" title="연혁">연혁</a></li>
@@ -96,7 +97,7 @@ include 'career_conn.php';
           <ul class="sub">
             <li><a href="career.html" title="채용프로세스">채용프로세스</a></li>
             <li><a href="career.html" title="채용">채용</a></li>
-            <li><a href="career.html" title="나의 지원 현황">나의 지원 현황</a></li>
+            <li><a href="career_list.php" title="나의 지원 현황">나의 지원 현황</a></li>
           </ul>
 
           <ul class="sub">
@@ -106,8 +107,8 @@ include 'career_conn.php';
         </div> <!-- lnb_box -->
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
-
   </header>
+  
   <main>
     <article id="c_list">
       <h2>나의 지원현황</h2>
@@ -155,6 +156,7 @@ include 'career_conn.php';
       </form>
     </article>
   </main>
+
   <!-- 푸터 영역 -->
   <footer>
     <div class="f_inner">
@@ -203,11 +205,14 @@ include 'career_conn.php';
           <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
           <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
           <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
-          <option value="https://www.premiumoutlets.co.kr">신세계사이먼</option>
+          <option value="https://www.google.co.kr">신세계사이먼</option>
           <option value="http://www.ssg.com">SSG.COM</option>
         </select>
       </div>
     </div>
+    <a href="#about_m" title="맨 위로 가기" class="top_btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트

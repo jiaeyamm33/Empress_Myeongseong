@@ -319,6 +319,15 @@
   font-size: var(--f-size04);
   line-height: 100px;
 }
+#c_apply .c_down{
+  display: block;
+  margin: 10px 0;
+  font-size: var(--f-size02);
+  text-align: right;
+}
+#c_apply .fa-folder-open{
+  color: var(--t-color03);
+}
 #c_apply table{
   margin-bottom: 50px;
   border-top: 3px solid #333;
