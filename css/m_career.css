@@ -293,15 +293,15 @@
   font-size: 14px;
 }
 
-/* 지원현황 */
-#c_list{
+/* 지원현황, 지원하기 */
+#c_list, #c_apply{
   width: 100%;
   margin: 150px auto;
   padding: 5%;
   box-sizing: border-box;
   text-align: center;
 }
-#c_list h2{
+#c_list h2, #c_apply h2{
   font-size: var(--f-size04);
 }
 #c_list > p{
@@ -322,6 +322,7 @@
   color: #ACAEBF;
   padding-bottom: 10px;
 }
+.c_tab li{cursor: pointer;}
 .c_on{color: var(--t-color01);}
 #c_list table{
   width: 100%;
@@ -340,32 +341,32 @@
   font-size: 12px;
   padding: 10px 0;
 }
-#c_list input{
-  height: 30px;
-  border-radius: 5px;
-}
-#c_list input[type=text]{
+#c_list #search_box{
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none;
+  background: url('../image/arrow_down.png') no-repeat 96% 50% #fff;
   width: 200px;
-  border: 1px solid #333;
-}
-#c_list input[type=submit]{
-  width: 60px;
-  background: #fff;
+  height: 35px;
+  border-radius: 5px;
   border: 1px solid #FCB416;
   cursor: pointer;
+  text-indent: 10px;
+}
+#c_list #search_box::-ms-expand{ 
+  display:none;
+  }
+#c_list input[type=submit]{
+  width: 60px;
+  height: 35px;
+  color: var(--t-color01);
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #FCB416;
+  cursor: pointer;
+  margin: -1px 0;
 }
 
-/* 지원하기 */
-#c_apply{
-  width: 100%;
-  margin: 150px auto;
-  padding: 5%;
-  box-sizing: border-box;
-  text-align: center;
-}
-#c_apply h2{
-  font-size: var(--f-size04);
-}
 #c_apply .c_down{
   font-size: var(--f-size01);
   float: right;

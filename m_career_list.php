@@ -17,6 +17,7 @@ include 'career_conn.php';
   <link rel="stylesheet" href="./css/m_career.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
+  <script src="./script/m_common.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
@@ -121,7 +122,7 @@ include 'career_conn.php';
         <li class="c_on">지원현황</li>
         <li>관심공고</li>
       </ul>
-      <form name="search" method="post" action="career_list.php">
+      <form name="search" method="post" action="m_career_search.php">
         <table>
           <colgroup>
             <col width="5%">
@@ -154,7 +155,15 @@ include 'career_conn.php';
             </tr>
             <?php } ?>
         </table>
-        <input type="text" id="search_txt" name="search_txt">
+        <select name="search_box" id="search_box">
+          <option value="공고명">공고명</option>
+          <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)">[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
+          <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)">[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
+          <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)">[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
+          <option value="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)">[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)</option>
+          <option value="[스타벅스]바리스타 채용 신입 (~04.10)">[스타벅스]바리스타 채용 신입 (~04.10)</option>
+          <option value="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)">[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)</option>
+        </select>
         <input type="submit" value="검색">
       </form>
     </article>
@@ -216,7 +225,12 @@ include 'career_conn.php';
       </div>
     </div>
     <a href="#" title="맨 위로 가기" class="top_btn">
-      <i class="fa-solid fa-arrow-up-to-line"></i></a>
+      <i class="fa-solid fa-arrow-up-to-line"></i>
+    </a>
+    <div class="version">
+      <a href="http://jiaeyammas.dothome.co.kr/empress_myeongseong/index.html?move_pc_screen=1" title="PC버전보기">PC버전보기</a>
+      <!-- 모바일 사용자가 주소창에 ?move_pc_screen=1값을 지우면 다시 pc화면을 볼 수 있음. -->
+    </div>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
