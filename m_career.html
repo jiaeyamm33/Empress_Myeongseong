@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="./script/m_common.js" defer></script>
+  <script src="./script/career.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
@@ -109,6 +110,7 @@
   <main>
     <!-- 첫화면 -->
     <section id="career">
+      <h2>채용</h2>
       <article>
         <h2>CAREER</h2>
         <div class="c_box_wrap">
@@ -137,8 +139,23 @@
             <a href="m_career.php">
               <p class="c_txt03">지원하기<i class="fa-solid fa-circle-chevron-right"></i></p>
             </a>
-            <ul>
-              <li>
+            <div class="select_wrap">
+              <div class="select_menu">
+                <div class="select">
+                  <span>선택</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <ul class="option_list">
+                  <li class="option">전체</li>
+                  <li class="option">인턴</li>
+                  <li class="option">신입</li>
+                  <li class="option">경력</li>
+                  <li class="option">경력무관</li>
+                </ul>
+              </div>
+              </div>
+            <ul class="list01">
+              <li class="c anyone">
                 <a href="#" title="자세한 채용정보 보러가기">
                   <h3>노브랜드</h3>
                   <h4>전략 경영 구성원 채용</h4>
@@ -147,7 +164,7 @@
                   <span>~2023-00-00</span>
                 </a>
               </li>
-              <li>
+              <li class="c nonew">
                 <a href="#" title="자세한 채용정보 보러가기">
                   <h3>Digital Transform</h3>
                   <h4>Back-end Engineer 채용<br>경력직</h4>
@@ -156,7 +173,7 @@
                   <span>~2023-00-00</span>
                 </a>
               </li>
-              <li>
+              <li class="c new">
                 <a href="#" title="자세한 채용정보 보러가기">
                   <h3>Digital Transform</h3>
                   <h4>Front-end Engineer 채용<br>신입</h4>
@@ -165,7 +182,7 @@
                   <span>~2023-00-00</span>
                 </a>
               </li>
-              <li>
+              <li class="c new">
                 <a href="#" title="자세한 채용정보 보러가기">
                   <h3>이마트 에브리데이</h3>
                   <h4>와인전문 판매 전문직 채용<br>신입</h4>
@@ -174,7 +191,7 @@
                   <span>~2023-00-00</span>
                 </a>
               </li>
-              <li>
+              <li class="c new">
                 <a href="#" title="자세한 채용정보 보러가기">
                   <h3>스타벅스</h3>
                   <h4>바리스타 채용<br>신입</h4>
@@ -183,7 +200,7 @@
                   <span>~2023-00-00</span>
                 </a>
               </li>
-              <li>
+              <li class="c nonew">
                 <a href="#" title="자세한 채용정보 보러가기">
                   <h3>조선호텔앤리조트</h3>
                   <h4>마케팅 전략 채용<br>경력</h4>
@@ -354,35 +371,6 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.5,
-    spaceBetween: 40,
-    loop: true,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  });
-
-  $(window).scroll(function() {
-let ws = $(this).scrollTop();
-let pb = $('#pb').offset().top;
-let esg = $('#esg').offset().top;
-
-if (pb<=ws) {
-  $('header').css('background','#fff');
-  $('header .gnb > ul > li > a').css('color','#333');
-} else {
-  $('header').css('background','#ffffff30');
-  $('header .gnb > ul > li > a').css('color','#fff');
-}
-})
-
   // 푸터 패밀리 사이트 스크립트
   function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨
     if(select.value!='none') { //옵션을 선택하면
