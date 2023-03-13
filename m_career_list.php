@@ -1,19 +1,22 @@
+<?php 
+
+include 'career_conn.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이마트</title>
+  <title>이마트 지원현황</title>
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/m_common.css" type="text/css">
-  <link rel="stylesheet" href="./css/m_main.css" type="text/css">
-  <!-- 스와이퍼 css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/m_career.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
-  <script src="./script/m_common.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
@@ -27,9 +30,9 @@
         </a>
       </h1>
       <div class="toggle" id="toggle">
-       <span>&nbsp;</span>
-       <span>&nbsp;</span>
-       <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
       </div>
       <nav class="gnb">
         <ul id="gnblist">
@@ -73,6 +76,7 @@
             <ul class="sub">
               <li><a href="m_invest.html" title="투자정보">투자정보</a></li>
               <li><a href="m_invest.html" title="경영정보">경영정보</a></li>
+              <li><a href="m_invest.html" title="경영정보">경영정보</a></li>
               <li><a href="m_invest.html" title="공시정보">공시정보</a></li>
               <li><a href="m_invest.html" title="주식정보">주식정보</a></li>
               <li><a href="m_invest.html" title="채무정보">채무정보</a></li>
@@ -84,7 +88,7 @@
             <a href="#none" title="채용정보">채용정보<i class="fa-solid fa-angle-down"></i></a>
             <ul class="sub">
               <li><a href="m_career.html" title="채용정보">채용정보</a></li>
-              <li><a href="m_career.html#c_process" title="채용프로세스">채용프로세스</a></li>
+              <li><a href="m_career.html" title="채용프로세스">채용프로세스</a></li>
               <li><a href="m_career.html" title="채용">채용</a></li>
               <li><a href="m_career_list.php" title="나의 지원 현황">나의 지원 현황</a></li>
             </ul>
@@ -106,140 +110,54 @@
         </ul>
       </nav>
     </div>
-    </header>
-
-  <!-- 메인콘텐츠 영역 -->
+  </header>
+  
   <main>
-    <!-- 1. 메인 사진? 이름 뭐라함 -->
-    <section id="m_con">
-      <h2>메인</h2>
-      <div class="m_logo">
-        <a href="https://emart.ssg.com/" title="이마트몰" target="_blank"><img src="./image/logo.png" alt="로고"></a>
-      </div>
-    </section>
+    <article id="c_list">
+      <h2>나의 지원현황</h2>
+      <p>나의 지원현황을 확인하세요.</p>
+      <a href="m_career.html" title="채용공고 보러가기" class="c_btn01">채용공고 보러가기 <i class="fas fa-arrow-circle-right"></i></a>
+      <ul class="c_tab">
+        <li class="c_on">지원현황</li>
+        <li>관심공고</li>
+      </ul>
+      <form name="search" method="post" action="career_list.php">
+        <table>
+          <colgroup>
+            <col width="5%">
+            <col width="15%">
+            <col width="10%">
+            <col width="40%">
+            <col width="20%">
+            <col width="10%">
+          </colgroup>
+          <tr class="title">
+            <th>No</th>
+            <th>지원일</th>
+            <th>이름</th>
+            <th>공고명/지원분야</th>
+            <th>경력사항</th>
+            <th>상태</th>
+          </tr>
+          <?php
+            $query = 'select * from career order by num desc';
+            $result = mysqli_query($conn, $query);
+            while($data = mysqli_fetch_array($result)){?>
 
-    <!-- 2. PB 브랜드 -->
-    <section id="pb">
-      <h2>PB 브랜드</h2>
-      <article class="inner">
-        <h2>Private Brand</h2>
-        <p><span class="color_y">PB</span> 브랜드</p>
-        <ul class="pb_list">
-          <li>
-            <a href="https://emart.ssg.com/specialStore/nobrand/main.ssg" title="노브랜드" target="_blank"><img src="./image/nobrand_m.png" alt="노브랜드"></a>
-          </li>
-          <li>
-            <a href="https://emart.ssg.com/specialStore/ssgpeacock/main.ssg" title="피코크" target="_blank"><img src="./image/peacock_m.png" alt="피코크"></a>
-          </li>
-          <li>
-            <a href="https://emart.ssg.com/service/traders/dvstore.ssg" title="트레이더스" target="_blank"><img src="./image/traders.png" alt="트레이더스"></a>
-          </li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- 3. esg경영 -->
-    <section id="esg">
-      <h2>esg경영</h2>
-      <article class="inner">
-        <h2>ESG<br><small>Management</small></h2>
-        <p>지속 가능한 경영,<br>에코이마트가 약속합니다</p>
-        <p>이마트는 친환경 녹색경영실천에 앞장섭니다</p>
-        <div class="swiper mySwiper">
-          <ul class="esg_list swiper-wrapper">
-            <li class="swiper-slide">
-              <img src="./image/esg_01.png" alt="사회공헌">
-              <h3>사회공헌</h3>
-              <p>이마트와 함께 하는 가슴<br>따뜻한 이야기</p>
-            </li>
-            <li class="swiper-slide">
-              <img src="./image/esg_02.png" alt="친환경 경영">
-              <h3>친환경 경영</h3>
-              <p>푸른미래를 생각하는<br>그린 이마트</p>
-            </li>
-            <li class="swiper-slide">
-              <img src="./image/esg_03.png" alt="동반성장">
-              <h3>동반성장</h3>
-              <p>협력회사의 경쟁력 강화하는<br>실질적 지원</p>
-            </li>
-            <li class="swiper-slide">
-              <img src="./image/esg_04.png" alt="투명경영">
-              <h3>투명경영</h3>
-              <p>투명한 기업문 정착을 위한<br>이마트의 노력</p>
-            </li>
-          </ul>
-          <div class="swiper-pagination"></div>
-        </div>
-      </article>
-    </section>
-
-    <!-- 4. 늬우스 -->
-    <section id="news">
-      <h2>NEWS</h2>
-      <article class="news_big">
-        <a href="#" title="뉴스 링크">
-          <img src="./image/news_01.jpg" alt="뉴스 이미지">
-          <h3>국내 최초 할인점 창동 이마트에서 만난 서른 살의 이마트</h3>
-          <p>2023.02.17</p>
-        </a>
-        <a href="m_about.html#news" title="뉴스 바로가기" class="more_btn">더보기</a>
-      </article>
-    </section>
-
-    <!-- 매장찾기, 채용정보 -->
-    <section id="s_c">
-      <h2>매장찾기, 채용정보</h2>
-      <!-- 5. 매장찾기 -->
-      <article id="store">
-        <div class="s_box">
-          <h2>매장 점포 휴점일과<br>영업시간을 알아보세요</h2>
-          <form id="store_info" action="store.php" method="post">
-            <select name="store" id="store_info" onchange="optionValue(this)">
-              <option value="1">명일점</option>
-              <option value="2">성수점</option>
-              <option value="3">왕십리점</option>
-              <option value="4">오산점</option>
-            </select>
-          </form>
-          <div class="s_info">
-            <ul>
-              <li>
-                <img src="./image/clock.png" alt="영업시간">
-                <p>영업시간</p>
-                <p>10:00~23:00</p>
-              </li>
-              <li>
-                <img src="./image/warehouse.png" alt="휴점일">
-                <p>휴점일</p>
-                <p><span class="color_y">둘째주,<br>넷째주 일요일</span></p>
-              </li>
-              <li>
-                <img src="./image/phone.png" alt="고객센터">
-                <p>고객센터</p>
-                <p>02-2145-1234</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </article>
-      <!-- 6. 채용 -->
-      <article id="career">
-        <div class="c_inner">
-          <div class="c_title">
-            <h2>Ride on DT</h2>
-            <p>지속적으로 성장하는 혁신 기업</p>
-          </div>
-          <div class="c_link">
-            <div class="c_box">
-              <p><a href="m_career.php" title="입사지원바로가기">입사지원바로가기</a></p>
-            </div>
-            <div class="c_box">
-              <p><a href="career.html" title="채용공고보러가기">채용공고보러가기</a></p>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
+            <tr>
+              <td><?=$data['num']?></td>
+              <td><?=$data['cdate']?></td>
+              <td><?=$data['name']?></td>
+              <td><?=$data['subject']?></td>
+              <td><?=$data['experience']?></td>
+              <td><?=$data['status']?></td>
+            </tr>
+            <?php } ?>
+        </table>
+        <input type="text" id="search_txt" name="search_txt">
+        <input type="submit" value="검색">
+      </form>
+    </article>
   </main>
 
   <!-- 푸터 영역 -->
@@ -300,52 +218,7 @@
     <a href="#" title="맨 위로 가기" class="top_btn">
       <i class="fa-solid fa-arrow-up-to-line"></i></a>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1.5,
-      spaceBetween: 40,
-      loop: true,
-
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    });
-
-    // 헤더 색상 변경
-    $(window).scroll(function() {
-      let ws = $(this).scrollTop();
-      let pb = $('#pb').offset().top;
-
-      if (pb<=ws) {
-        $('header').css('background','#fff');
-        $('header .gnb > ul > li > a').css('color','#333');
-      } else {
-        $('header').css('background','#ffffff30');
-        $('header .gnb > ul > li > a').css('color','#fff');
-      }
-    })
-
-    // 매장 찾기
-    let optionValue = (target) => {
-      let value = target.value;
-      console.log(value);
-      if(value==1){
-        $('.s_info li:last-child').find('p:last-of-type').text('02-2145-1234');
-      }else if(value==2){
-        $('.s_info li:last-child').find('p:last-of-type').text('02-3408-1234');
-      }else if(value==3){
-        $('.s_info li:last-child').find('p:last-of-type').text('02-6438-1234');
-      }else if(value==4){
-        $('.s_info li:last-child').find('p:last-of-type').text('031-369-7123');
-      }
-    }
-
     // 푸터 패밀리 사이트 스크립트
     function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨
       if(select.value!='none') { //옵션을 선택하면
@@ -356,5 +229,5 @@
       }
     }
   </script>
-</body>
+  </body>
 </html>

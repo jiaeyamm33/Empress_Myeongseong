@@ -129,12 +129,12 @@ let optionValue = (target) => {
   let value = target.value;
   // console.log(value);
   if(value==1){
-    $('.store_info li:last-child').find('p:last-of-type').text('02-2145-1234');
+    $('.s_info li:last-child').find('p:last-of-type').text('02-2145-1234');
   }else if(value==2){
-    $('.store_info li:last-child').find('p:last-of-type').text('02-3408-1234');
+    $('.s_info li:last-child').find('p:last-of-type').text('02-3408-1234');
   }else if(value==3){
-    $('.store_info li:last-child').find('p:last-of-type').text('02-6438-1234');
+    $('.s_info li:last-child').find('p:last-of-type').text('02-6438-1234');
   }else if(value==4){
-    $('.store_info li:last-child').find('p:last-of-type').text('031-369-7123');
+    $('.s_info li:last-child').find('p:last-of-type').text('031-369-7123');
   }
 }

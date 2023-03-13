@@ -32,11 +32,10 @@
 
 .c_box01 {
   display: inline-block;
-  padding: 0px 30px 30px 10px;
+  padding: 0px 50px 30px 10px;
   height: 20px;
   box-sizing: border-box;
-  transition: all linear 0.3s;
-
+  color: var(--t-color03);
   border-radius: 0px 0px 20px 0px;
   border-bottom: 1px solid var(--t-color04);
   border-right: 1px solid var(--t-color04);
@@ -48,7 +47,7 @@
 }
 
 .c_box_wrap .c_box01 a i.fa-solid {
-  text-indent: 15px;
+  transform: translateX(35px);
 }
 
 .c_box01 p {
@@ -57,7 +56,8 @@
 }
 
 .c_box01:first-of-type {
-  margin-bottom: 20px;
+  margin-top: -10px;
+  margin-bottom: 25px;
 }
 
 /* 채용공고서식 */
@@ -71,7 +71,7 @@
   text-align: center;
 }
 .c_txt02{
-  margin-top: 24px;
+  margin: 24px 0px 10px 0px;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
@@ -79,7 +79,7 @@
 .c_txt03{
   margin-top: 32px;
   font-size: 14px;
-  text-align: center;
+  text-align: right;
 }
 .c_txt03 i{
   padding-left: 8px;
@@ -154,7 +154,7 @@
   margin-bottom: 40px;
 }
 #c_process > .c_txt02{
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 #c_process ul{
   width: 90%;
@@ -226,6 +226,68 @@
   font-size: 14px;
 }
 
+/* 지원현황 */
+#c_list{
+  width: 100%;
+  margin: 150px auto;
+  padding: 5%;
+  box-sizing: border-box;
+  text-align: center;
+}
+#c_list h2{
+  font-size: var(--f-size04);
+}
+#c_list > p{
+  font-size: var(--f-size01);
+  margin: 30px 0 50px 0;
+}
+.c_btn01{
+  float: right;
+  font-size: var(--f-size);
+}
+.c_btn01 .fas{
+  color: var(--t-color03);
+}
+.c_tab{
+  font-size: var(--f-size01);
+  display: flex;
+  gap: 10px;
+  color: #ACAEBF;
+  padding-bottom: 10px;
+}
+.c_on{color: var(--t-color01);}
+#c_list table{
+  width: 100%;
+  margin-bottom: 50px;
+  table-layout: fixed;
+}
+#c_list .title{
+  background: var(--t-color04);
+  color: var(--t-color02);
+  border-top: 2px solid #FCB416;
+  font-size: var(--f-size);
+  font-weight: 200;
+  line-height: 36px;
+}
+#c_list td{
+  font-size: 12px;
+  padding: 10px 0;
+}
+#c_list input{
+  height: 30px;
+  border-radius: 5px;
+}
+#c_list input[type=text]{
+  width: 200px;
+  border: 1px solid #333;
+}
+#c_list input[type=submit]{
+  width: 60px;
+  background: #fff;
+  border: 1px solid #FCB416;
+  cursor: pointer;
+}
+
 /* 지원하기 */
 #c_apply{
   width: 100%;
@@ -237,6 +299,15 @@
 #c_apply h2{
   font-size: var(--f-size04);
 }
+#c_apply .c_down{
+  font-size: var(--f-size01);
+  float: right;
+  transform: translateY(20px);
+}
+#c_apply .fa-folder-open{
+  color: var(--t-color03);
+}
+#c_apply form{width: 100%;}
 #c_apply table{
   width: 100%;
   margin: 50px auto;
@@ -248,26 +319,27 @@
   font-size: var(--f-size);
   line-height: 30px;
   background: var(--t-color03);
-  padding: 10px 0;
   border-bottom: 1px solid #ccc;
 }
 #c_apply td{
   text-align: left;
   border-bottom: 1px solid #ccc;
-  padding: 0 20px;
-  font-size: var(--f-size);
+}
+#c_apply input{
+  margin: 10px;
 }
 #c_apply input[type=text]{
-  width: 60%;
+  width: 90%;
   height: 30px;
   border-radius: 5px;
   border: 1px solid #757575;
 }
 #c_apply select{
-  width: 60%;
+  width: 90%;
   height: 35px;
   border-radius: 5px;
   border: 1px solid #757575;
+  margin: 10px;
 }
 #c_apply input[type=radio]{
   accent-color: var(--t-color03);

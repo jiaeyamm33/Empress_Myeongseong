@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:url" content="http://jiaeyammas.dothome.co.kr/empress_myeongseong/index.html">
+  <meta property="og:title" content="Empress_Myeongseong_emart">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://jiaeyammas.dothome.co.kr/empress_myeongseong/image/mart1.png">
+  <meta property="og:image:width" content="540">
+  <meta property="og:image:height" content="383">
+  <meta property="og:description" content="명성황후 적응형 웹사이트 제작(이마트)">
+
   <title>이마트</title>
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
@@ -23,7 +31,7 @@
 
     for(let i in mobile) {
       if(navigator.userAgent.match(mobile[i]) != null) {
-        location.href = "mindex.html";
+        location.href = "m_index.html";
         break;
       }
     }
@@ -106,7 +114,7 @@
           <ul class="sub">
             <li><a href="career.html" title="채용프로세스">채용프로세스</a></li>
             <li><a href="career.html" title="채용">채용</a></li>
-            <li><a href="career.html" title="나의 지원 현황">나의 지원 현황</a></li>
+            <li><a href="career_list.php" title="나의 지원 현황">나의 지원 현황</a></li>
           </ul>
 
           <ul class="sub">
@@ -284,7 +292,7 @@
           </div>
           <div class="c_link">
             <div class="c_box">
-              <p><a href="career.html" title="입사지원바로가기">입사지원바로가기</a></p>
+              <p><a href="career.php" title="입사지원바로가기">입사지원바로가기</a></p>
             </div>
             <div class="c_box">
               <p><a href="career.html" title="채용공고보러가기">채용공고보러가기</a></p>
@@ -343,11 +351,14 @@
           <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
           <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
           <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
-          <option value="https://www.premiumoutlets.co.kr">신세계사이먼</option>
+          <option value="https://www.google.co.kr">신세계사이먼</option>
           <option value="http://www.ssg.com">SSG.COM</option>
         </select>
       </div>
     </div>
+    <a href="#about_m" title="맨 위로 가기" class="top_btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
