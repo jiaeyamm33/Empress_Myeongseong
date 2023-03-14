@@ -396,7 +396,7 @@ label[for="cb2"]{
 }
 .btn_box input{
   width: 300px;
-  height: 52px;
+  height: 42px;
   background: #FCB416;
   border: none;
   font-size: 18px;
@@ -409,10 +409,10 @@ label[for="cb2"]{
   background: #484C55;
   color: #fff;
   width: 300px;
-  height: 52px;
+  height: 42px;
   font-size: 18px;
   border-radius: 5px;
-  line-height: 52px;
+  line-height: 42px;
   margin-bottom:20px ;
 }
 input[id="cb1"] + label, input[id="cb2"] + label{

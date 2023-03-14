@@ -10,7 +10,7 @@ header .h_inner2{
 header .gnb a{
   color: #333!important;
 }
-h2{
+.join1 h2{
   display: none;
 }
 .join1{
@@ -146,15 +146,6 @@ label[for="cb2"]{
   border-radius: 5px;
   position: absolute;
   left: 100px;
-}
-input[class="email"]+select{
-  position: absolute;
-  right: 155px;
-  width: 180px;
-  height: 40px;
-  background: #cccccc;
-  border: none;
-  border-radius: 5px;
 }
 .btn_box{
   text-align: center;
@@ -303,7 +294,7 @@ input[id="cb1"] + label {
   background: #D9D9D9;
   position: relative;
   top: 5px;
-  left: -110px;
+  left: 0px;
 }
 input[id="cb1"]:checked + label::after {
   position: absolute;
