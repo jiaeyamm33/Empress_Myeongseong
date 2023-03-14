@@ -117,7 +117,7 @@
     <table>
       <tr>
         <th>아이디</th>
-        <th><input type="text" name="mb_id" placeholder="이메일 아이디 입력" maxlength="16"></th>
+        <th><input type="text" name="mb_id" placeholder="아이디 입력" maxlength="16"></th>
       </tr>
       <tr>
         <th>비밀번호</th>

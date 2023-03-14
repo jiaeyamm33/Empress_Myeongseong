@@ -229,6 +229,10 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 				<p class="name_box"><label for="cb3">&nbsp;</label>
 				<input type="text" name="mb_name" autofocus placeholder="이름" id="cb3" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
         </p>
+        <p class="tel_box">
+          <label for="cb7">&nbsp;</label>
+          <input type="text" name="mb_id" placeholder="아이디" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
+        </p>
 				<p class="email_box">
             <label for="cb4">&nbsp;</label>
 						<input class="email" type="text" name="mb_email" id="cb4" value="<?php echo $mb['mb_email'] ?>" placeholder="이메일">
@@ -240,10 +244,6 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 					<p class="repass_box">
             <label for="cb6">&nbsp;</label>
             <input type="password" name="mb_password_re" placeholder="비밀번호 확인" id="cb6">
-          </p>
-					<p class="tel_box">
-            <label for="cb7">&nbsp;</label>
-            <input type="text" name="mb_id" placeholder="아이디" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
           </p>
 				<!-- <tr>
 					<th>성별</th>
