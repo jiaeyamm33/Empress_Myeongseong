@@ -37,11 +37,11 @@ include 'career_conn.php';
           </li>
 
           <li>
-            <a href="#" title="이마트 웨이">이마트 웨이</a>
+            <a href="#none" title="이마트 웨이">이마트 웨이</a>
           </li>
 
           <li>
-            <a href="#" title="ESG경영">ESG경영</a>
+            <a href="#none" title="ESG경영">ESG경영</a>
           </li>
 
           <li>
@@ -53,7 +53,7 @@ include 'career_conn.php';
           </li>
 
           <li>
-            <a href="signin.html" title="로그인">로그인</a>
+            <a href="login.php" title="로그인">로그인</a>
           </li>
         </ul>
       </nav>
@@ -72,18 +72,18 @@ include 'career_conn.php';
             <li><a href="about.html#comeway" title="오시는 길">오시는 길</a></li>
           </ul>
           <ul class="sub">
-            <li><a href="#" title="이마트 웨이">이마트 웨이</a></li>
-            <li><a href="#" title="이마트 피플">이마트 피플</a></li>
-            <li><a href="#" title="매장찾기">매장찾기</a></li>
+            <li><a href="#none" title="이마트 웨이">이마트 웨이</a></li>
+            <li><a href="#none" title="이마트 피플">이마트 피플</a></li>
+            <li><a href="#none" title="매장찾기">매장찾기</a></li>
           </ul>
 
           <ul class="sub">
-            <li><a href="#" title="개요">개요</a></li>
-            <li><a href="#" title="사회공헌">사회공헌</a></li>
-            <li><a href="#" title="친환경 경영">친환경 경영</a></li>
-            <li><a href="#" title="동반성장">동반성장</a></li>
-            <li><a href="#" title="경영철학">경영철학</a></li>
-            <li><a href="#" title="지속가능경영보고서">지속가능경영보고서</a></li>
+            <li><a href="#none" title="개요">개요</a></li>
+            <li><a href="#none" title="사회공헌">사회공헌</a></li>
+            <li><a href="#none" title="친환경 경영">친환경 경영</a></li>
+            <li><a href="#none" title="동반성장">동반성장</a></li>
+            <li><a href="#none" title="경영철학">경영철학</a></li>
+            <li><a href="#none" title="지속가능경영보고서">지속가능경영보고서</a></li>
           </ul>
 
           <ul class="sub">
@@ -101,8 +101,8 @@ include 'career_conn.php';
           </ul>
 
           <ul class="sub">
-            <li><a href="join.html" title="">회원가입</a></li>
-            <li><a href="notice.html" title="공지사항">공지사항</a></li>
+            <li><a href="register.php" title="">회원가입</a></li>
+            <li><a href="#none" title="공지사항">공지사항</a></li>
           </ul>
         </div> <!-- lnb_box -->
       </nav> <!-- lnb -->
