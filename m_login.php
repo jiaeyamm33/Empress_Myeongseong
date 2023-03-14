@@ -259,7 +259,7 @@
 
   mysqli_close($conn); //데이터 가져왔으니 더이상 필요없어서 종료함.
 ?>
-<div class="d1"></div>
+<div class="d1"><img src="./image/devil_hyun.png" alt="회원사진"></div>
 <p class="name"><?php echo $mb['mb_name'] ?>님</p>
 <div class="login_win">
     <p>아이디</p>

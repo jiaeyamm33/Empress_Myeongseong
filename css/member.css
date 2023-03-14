@@ -378,6 +378,7 @@ input[id="cb1"] {
   position: relative;
   top: 180px;
 }
+.d1 img{width: 100%;}
 .name{
   position: relative;
   top: 200px;

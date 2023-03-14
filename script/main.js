@@ -8,7 +8,7 @@ mn.click(function(){
   let id_name = $(this).find('a').attr('href');
   let secOffset = $(id_name).offset().top;
 
-  $('html, body').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
+  $('html, body').animate({scrollTop:secOffset}, 500);
 
   return false;
 });
@@ -31,6 +31,9 @@ $('section').each(function(){
     }
     if(winEvent.wheelDelta) {
       delta = winEvent.wheelDelta / 120;
+      if(window.opera) {
+        delta = -delta;
+      }
     } else if(winEvent.detail) {
       delta = -winEvent.detail / 3;
     }
@@ -42,6 +45,9 @@ $('section').each(function(){
           sec_n++;
         }
       }
+      else {
+        return false;
+      }
     }
     
     else {
@@ -51,9 +57,13 @@ $('section').each(function(){
           sec_n--;
         }
       }
+      else {
+        alert("첫번째 페이지 입니다.");
+        return false;
+      }
     }
     
-    $('html, body').stop().animate({scrollTop : moveTop + 'px'}, 300);
+    $('html, body').animate({scrollTop : moveTop + 'px'}, 500);
 
     // gnb 색상 변경
     $('.m_nav a').each(function(i){
