@@ -88,6 +88,7 @@ article legend::after{
   top: 0px;
   right: 0;
   cursor: pointer;
+  transform: rotate(45deg);
 }
 .join2 .arrow2{
   position: absolute;
@@ -102,10 +103,10 @@ article legend::after{
   cursor: pointer;
 }
 .a_on{
-  transform: rotate(45deg);
+  transform: rotate(45deg)!important;
 }
 .a_off{
-  transform: rotate(-135deg) translateX(-5px) translateY(-5px);
+  transform: rotate(-135deg) translateX(-5px) translateY(-5px)!important;
 }
 label[for="cb2"]{
   font-size: 16px;
