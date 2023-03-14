@@ -20,23 +20,22 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 ?>
 <html>
 <head>
-	<title>이마트</title>
- <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/m_common.css">
-  <link rel="stylesheet" href="./css/m_career.css">
-  <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/m_join.css">
-
+	<title>Register</title>
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+	 <link href="./css/base.css" rel="stylesheet" type="text/css">
+	 <link href="./css/m_member.css" rel="stylesheet" type="text/css">
+	<link href="./css/m_common.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
+  <script src="./script/m_member.js" defer></script>
   <script src="./script/m_common.js" defer></script>
-  <script src="./script/join.js" defer></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- 제이쿼리 ui -->
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
-  <!-- 헤더 영역 -->
-  <header>
+<header>
     <div class="h_inner">
       <h1>
         <a href="m_index.html" title="상단 바로가기">
@@ -66,22 +65,22 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <li class="mainm">
             <a href="#none" title="이마트 웨이">이마트 웨이<i class="fa-solid fa-angle-down"></i></a>
             <ul class="sub">
-              <li><a href="#none" title="이마트 웨이">이마트 웨이</a></li>
-              <li><a href="#none" title="이마트 피플">이마트 피플</a></li>
-              <li><a href="#none" title="매장찾기">매장찾기</a></li>
+              <li><a href="#" title="이마트 웨이">이마트 웨이</a></li>
+              <li><a href="#" title="이마트 피플">이마트 피플</a></li>
+              <li><a href="#" title="매장찾기">매장찾기</a></li>
             </ul>
           </li>
     
           <li class="mainm">
             <a href="#none" title="ESG경영">ESG경영<i class="fa-solid fa-angle-down"></i></a>
             <ul class="sub">
-              <li><a href="#none" title="개요">ESG경영</a></li>
-              <li><a href="#none" title="개요">개요</a></li>
-              <li><a href="#none" title="사회공헌">사회공헌</a></li>
-              <li><a href="#none" title="친환경 경영">친환경 경영</a></li>
-              <li><a href="#none" title="동반성장">동반성장</a></li>
-              <li><a href="#none" title="경영철학">경영철학</a></li>
-              <li><a href="#none" title="지속가능경영보고서">지속가능경영보고서</a></li>
+              <li><a href="#" title="개요">ESG경영</a></li>
+              <li><a href="#" title="개요">개요</a></li>
+              <li><a href="#" title="사회공헌">사회공헌</a></li>
+              <li><a href="#" title="친환경 경영">친환경 경영</a></li>
+              <li><a href="#" title="동반성장">동반성장</a></li>
+              <li><a href="#" title="경영철학">경영철학</a></li>
+              <li><a href="#" title="지속가능경영보고서">지속가능경영보고서</a></li>
             </ul>
           </li>
     
@@ -109,30 +108,29 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
         </ul>
     
         <ul class="m_lnb">
-          <li><a href="m_login.php" title="로그인"><i class="fa-solid fa-user"></i> 로그인</a>
-            <a href="m_register.php" title="회원가입">&#x007C; 회원가입</a></li>
+          <li><a href="m_signin.html" title="로그인"><i class="fa-solid fa-user"></i> 로그인</a>
+            <a href="m_join.html" title="회원가입">| 회원가입</a></li>
           <li>
-            <a href="#none" title="공지사항"><i class="fa-solid fa-bell"></i> 공지사항</a>
+            <a href="#" title="공지사항"><i class="fa-solid fa-bell"></i> 공지사항</a>
           </li>
           <li>
-            <a href="#none" title="고객센터"><i class="fa-solid fa-phone"></i> 고객센터</a>
+            <a href="#" title="고객센터"><i class="fa-solid fa-phone"></i> 고객센터</a>
           </li>
           <li>
-            <a href="#none" title="이용약관"><i class="fa-solid fa-circle-question"></i> 이용약관</a>
+            <a href="#" title="이용약관"><i class="fa-solid fa-circle-question"></i> 이용약관</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-
 <!-- <h1><?php echo $title ?></h1> -->
 
 
 
-	<section class="join1">
+<section class="join1">
     <h2>회원가입영역</h2>
     <article>
-      <form action="./register_update.php" onsubmit="return fregisterform_submit(this);" method="post">
+      <form action="./m_register_update.php" onsubmit="return fregisterform_submit(this);" method="post">
 	<input type="hidden" name="mode" value="<?php echo $mode ?>">
         <fieldset>
 				<legend class="big1">회원가입</legend>
@@ -228,26 +226,33 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <label for="cb2">동의함</label>
           <span class="agree">*회원정보 동의하기를 눌러주세요</span>
         </fieldset>
-      <fieldset class="join3">
+        <fieldset class="join3">
 				<legend class="txt3">정보입력<span>*필수입력</span></legend>
-				<p class="name_box"><label for="cb3">이름</label>
-				<input type="text" name="mb_name" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
+				<p class="name_box"><label for="cb3">&nbsp;</label>
+				<input type="text" name="mb_name" autofocus placeholder="이름" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
         </p>
 				<p class="email_box">
-            <label for="cb4">이메일</label>
-						<input class="email" type="text" name="mb_email" value="<?php echo $mb['mb_email'] ?>">
+            <label for="cb4">&nbsp;</label>
+						<input class="email" type="text" name="mb_email" value="<?php echo $mb['mb_email'] ?>" placeholder="이메일">
+          <select id="email">
+            <option value="">직접입력하기</option>
+            <option value="naver.com">naver.com</option>
+            <option value="kakao.com">kakao.com</option>
+            <option value="apple.com">apple.com</option>
+            <option value="ssg.com">ssg.com</option>
+          </select>
           </p>
 					<p class="pass_box">
-            <label for="cb5">비밀번호</label>
-            <input type="password" name="mb_password">
+            <label for="cb5">&nbsp;</label>
+            <input type="password" name="mb_password" placeholder="비밀번호">
           </p>
 					<p class="repass_box">
-            <label for="cb6">비밀번호 확인</label>
-            <input type="password" name="mb_password_re">
+            <label for="cb6">&nbsp;</label>
+            <input type="password" name="mb_password_re" placeholder="비밀번호 확인">
           </p>
 					<p class="tel_box">
-            <label for="cb7">아이디</label>
-            <input type="text" name="mb_id" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
+            <label for="cb7">&nbsp;</label>
+            <input type="text" name="mb_id" placeholder="아이디" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
           </p>
 				<!-- <tr>
 					<th>성별</th>
@@ -280,7 +285,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 				</tr> -->
 				<div class="btn_box">
 						<span>
-						<a href="./login.php">취소</a>
+						<a href="./m_login.php">취소</a>
 						</span>
             <input type="submit" value="<?php echo $title ?>">
           </div>
