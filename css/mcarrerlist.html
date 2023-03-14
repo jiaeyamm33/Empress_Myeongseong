@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,7 +10,7 @@
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/career.css" type="text/css">
+  <link rel="stylesheet" href="./css/member.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -31,11 +33,11 @@
           </li>
 
           <li>
-            <a href="#" title="이마트 웨이">이마트 웨이</a>
+            <a href="#none" title="이마트 웨이">이마트 웨이</a>
           </li>
 
           <li>
-            <a href="#" title="ESG경영">ESG경영</a>
+            <a href="#none" title="ESG경영">ESG경영</a>
           </li>
 
           <li>
@@ -47,7 +49,7 @@
           </li>
 
           <li>
-            <a href="signin.html" title="로그인">로그인</a>
+            <a href="login.php" title="로그인">로그인</a>
           </li>
         </ul>
       </nav>
@@ -66,18 +68,18 @@
             <li><a href="about.html#comeway" title="오시는 길">오시는 길</a></li>
           </ul>
           <ul class="sub">
-            <li><a href="#" title="이마트 웨이">이마트 웨이</a></li>
-            <li><a href="#" title="이마트 피플">이마트 피플</a></li>
-            <li><a href="#" title="매장찾기">매장찾기</a></li>
+            <li><a href="#none" title="이마트 웨이">이마트 웨이</a></li>
+            <li><a href="#none" title="이마트 피플">이마트 피플</a></li>
+            <li><a href="#none" title="매장찾기">매장찾기</a></li>
           </ul>
 
           <ul class="sub">
-            <li><a href="#" title="개요">개요</a></li>
-            <li><a href="#" title="사회공헌">사회공헌</a></li>
-            <li><a href="#" title="친환경 경영">친환경 경영</a></li>
-            <li><a href="#" title="동반성장">동반성장</a></li>
-            <li><a href="#" title="경영철학">경영철학</a></li>
-            <li><a href="#" title="지속가능경영보고서">지속가능경영보고서</a></li>
+            <li><a href="#none" title="개요">개요</a></li>
+            <li><a href="#none" title="사회공헌">사회공헌</a></li>
+            <li><a href="#none" title="친환경 경영">친환경 경영</a></li>
+            <li><a href="#none" title="동반성장">동반성장</a></li>
+            <li><a href="#none" title="경영철학">경영철학</a></li>
+            <li><a href="#none" title="지속가능경영보고서">지속가능경영보고서</a></li>
           </ul>
 
           <ul class="sub">
@@ -95,87 +97,78 @@
           </ul>
 
           <ul class="sub">
-            <li><a href="join.html" title="">회원가입</a></li>
-            <li><a href="notice.html" title="공지사항">공지사항</a></li>
+            <li><a href="register.php" title="">회원가입</a></li>
+            <li><a href="#none" title="공지사항">공지사항</a></li>
           </ul>
         </div> <!-- lnb_box -->
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
   </header>
 
-  <main>
-    <article id="c_apply">
-      <h2>입사 지원하기</h2>
-      <a href="#" title="입사지원서 양식 다운로드" class="c_down"><i class="fa-regular fa-folder-open"></i> 입사지원서 양식</a>
-      <form name="career" method="post" action="career_sub.php">
-        <input type="hidden" name="num" value="">
-        <table>
-          <colgroup>
-            <col width="150">
-            <col width="1050">
-          </colgroup>
-          <tr>
-            <th>이름</th>
-            <td><input type="text" name="name" value=""></td>
-          </tr>
-          <tr>
-            <th>이메일</th>
-            <td><input type="text" name="email" value=""></td>
-          </tr>
-          <tr>
-            <th>전화번호</th>
-            <td><input type="text" name="phone" value=""></td>
-          </tr>
-          <tr>
-            <th>공고명</th>
-            <td>
-              <select name="subject">
-                <option value="">선택하세요</option>
-                <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)"  >[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
-                <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)"  >[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
-                <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)"  >[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
-                <option value="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)"  >[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)</option>
-                <option value="[스타벅스]바리스타 채용 신입 (~04.10)"  >[스타벅스]바리스타 채용 신입 (~04.10)</option>
-                <option value="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)"  >[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <th>학력사항</th>
-            <td>
-              <label><input type="radio" name="education" value="고졸 " >고졸</label>
-              <label><input type="radio" name="education" value="대학 2~3년제 " >대학 2~3년제</label>
-              <label><input type="radio" name="education" value="대학 4년제 " >대학 4년제</label>
-              <label><input type="radio" name="education" value="석&middot;박사 " >석&middot;박사</label>
-            </td>
-          </tr>
-          <tr>
-            <th>경력사항</th>
-            <td>
-              <label><input type="radio" name="experience" value="인턴 " >인턴</label>
-              <label><input type="radio" name="experience" value="신입 " >신입</label>
-              <label><input type="radio" name="experience" value="경력 " >경력</label>
-            </td>
-          </tr>
-          <tr>
-            <th>자격증</th>
-            <td>
-              <label><input type="radio" name="certificate" value="인턴 " >있음</label>
-              <label><input type="radio" name="certificate" value="신입 " >없음</label>
-            </td>
-          </tr>
-          <tr>
-            <th>자기소개서</th>
-            <td><input type="file" name="file" value="file "></td>
-          </tr>
-        </table>
-        <p><input type="submit" value="지원하기"></p>
-      </form>
-    </article>
-  </main>
+<section class="login1">
+<h2>로그인</h2>
+<article class="log_art1">
+  <h3 class="txt1">로그인</h3>
+  <form name="login" method="post" action="./login_check.php">
+    <table>
+      <tr>
+        <th>아이디</th>
+        <th><input type="text" name="mb_id" placeholder="이메일 아이디 입력" maxlength="16"></th>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <th><input type="password" name="mb_password" placeholder="패스워드 입력" maxlength="16"></th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="로그인" class="login_btn" id="btn1">
+        </td>
+      </tr>
+    </table>
+    <div class="login2">
+      <input type="checkbox" id="cb1">
+      <label for="cb1"></label>
+      <label for="cb1"><span class="txt2">아이디 저장</span></label>
+      <a href="#none"><span class="txt3">ID/PW 찾기</span></a>
+      <a href="./register.php" title="회원가입하기" class="txt4">회원가입</a>
+    </div>
+    <ul>
+      <li>
+        <a href="#none" title="네이버 로그인">
+          <img src="./image/sign_icon01.png" alt="카카오로그인">
+          <span class=btn2>네이버 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon02.png" alt="카카오로그인">
+          <span class="btn2">카카오 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon03.png" alt="카카오로그인">
+          <span class="btn2">애플 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon04.png" alt="카카오로그인">
+          <span class="btn2">SSG 로그인</span>
+        </a>
+      </li>
+    </ul>
+  </form>
+</article>
 
-  <!-- 푸터 영역 -->
-  <footer>
+      <article class="log_art2">
+        <h3>배너</h3>
+        <a href="#" title="인턴사원 모집">
+          <img src="./image/sign_banner.jpg" alt="배너">
+        </a>
+      </article>
+</section>
+<footer>
     <div class="f_inner">
       <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
       <div class="f_info">
@@ -227,9 +220,6 @@
         </select>
       </div>
     </div>
-    <a href="#about_m" title="맨 위로 가기" class="top_btn">
-      <i class="fa-solid fa-arrow-up"></i>
-    </a>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
@@ -242,5 +232,6 @@
       }
     }
   </script>
-  </body>
+
+</body>
 </html>
