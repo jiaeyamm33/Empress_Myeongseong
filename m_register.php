@@ -22,8 +22,8 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 <head>
 	<title>Register</title>
   <link href="./css/reset.css" rel="stylesheet" type="text/css">
-	<link href="./css/base.css" rel="stylesheet" type="text/css">
-	<link href="./css/m_member.css" rel="stylesheet" type="text/css">
+	 <link href="./css/base.css" rel="stylesheet" type="text/css">
+	 <link href="./css/m_member.css" rel="stylesheet" type="text/css">
 	<link href="./css/m_common.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
