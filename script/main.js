@@ -2,20 +2,24 @@
 // 메인 내비 이동
 let mn = $('.m_nav li');
 mn.click(function(){
-  $('.m_nav li').find('a').removeClass('mn_on');
+  $('.m_nav li a').removeClass('mn_on');
   $(this).find('a').addClass('mn_on');
 
   let id_name = $(this).find('a').attr('href');
   let secOffset = $(id_name).offset().top;
 
-  $('html').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
+  $('html, body').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
 
   return false;
 });
 
 $('main section').each(function(){
+<<<<<<< HEAD
     // 개별적으로 Wheel 이벤트 적용
   $(this).on('mousewheel',function(event){
+=======
+  $(this).on('mousewheel',function(e){
+>>>>>>> 6eb915faea9c722b7149a0fad575ff792adcc4e3
     
     var delta = 0;
     var moveTop = null;
@@ -24,17 +28,13 @@ $('main section').each(function(){
     var sec_n = $(this).index();
     // console.log(boxMax);
     
-    if(!winEvent) { //만약에 이벤트가 발생하지 않는다면
-      winEvent = window.event; //이벤트는 없다
+    if(!winEvent) {
+      winEvent = window.event;
     }
-    if(winEvent.wheelDelta) { //만약에 이벤트에서 휠데이터값이 있다면
-      delta = winEvent.wheelDelta; //데이터값을 저장
-      if(window.opera) {
-        delta = -delta;
-      }
-    }          
-    else if(winEvent.detail) { //그렇지 않으면
-      delta = -winEvent.detail; 
+    if(winEvent.wheelDelta) {
+      delta = winEvent.wheelDelta;
+    } else if(winEvent.detail) {
+      delta = -winEvent.detail / 3;
     }
     
     // 마우스휠을 위에서 아래로 이동(처음에서 다음박스로 이동)
@@ -58,7 +58,7 @@ $('main section').each(function(){
         }
     }
     
-    $('html').stop().animate({scrollTop : moveTop + 'px'}, 300);
+    $('html, body').stop().animate({scrollTop : moveTop + 'px'}, 300);
 
     // gnb 색상 변경
     $('.m_nav a').each(function(i){
