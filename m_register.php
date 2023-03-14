@@ -21,106 +21,108 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 <html>
 <head>
 	<title>이마트</title>
-  <link rel="shortcut icon" href="./image/e_favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/reset.css" type="text/css">
-  <link rel="stylesheet" href="./css/base.css" type="text/css">
-  <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/join.css" type="text/css">
+ <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/m_common.css">
+  <link rel="stylesheet" href="./css/m_career.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/m_join.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- 제이쿼리 ui -->
+  <script src="./script/m_common.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="./script/join.js" defer></script>
-  <script src="./script/common.js" defer></script>
 </head>
 <body>
 <header>
     <div class="h_inner">
       <h1>
-        <a href="index.html" title="상단 바로가기">
+        <a href="m_index.html" title="상단 바로가기">
           <img src="./image/logo.png" alt="상단로고">
         </a>
       </h1>
-
+      <div class="toggle" id="toggle">
+       <span>&nbsp;</span>
+       <span>&nbsp;</span>
+       <span>&nbsp;</span>
+      </div>
       <nav class="gnb">
-        <ul>
+        <ul id="gnblist">
           <li>
-            <a href="about.html" title="기업개요">기업개요</a>
+            <a href="#none" title="기업개요">기업개요<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="m_about.html" title="비전">기업개요</a></li>
+              <li><a href="m_about.html#vsci" title="비전">비전</a></li>
+              <li><a href="m_about.html#vsci" title="CI소개">CI소개</a></li>
+              <li><a href="m_about.html#history" title="연혁">연혁</a></li>
+              <li><a href="m_about.html#relc" title="사업구조">관계사 현황</a></li>
+              <li><a href="m_about.html#news" title="홍보센터">홍보센터</a></li>
+              <li><a href="m_about.html#comeway" title="오시는 길">오시는 길</a></li>
+              </ul>
           </li>
-
-          <li>
-            <a href="#" title="이마트 웨이">이마트 웨이</a>
+    
+          <li class="mainm">
+            <a href="#none" title="이마트 웨이">이마트 웨이<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="이마트 웨이">이마트 웨이</a></li>
+              <li><a href="#" title="이마트 피플">이마트 피플</a></li>
+              <li><a href="#" title="매장찾기">매장찾기</a></li>
+            </ul>
           </li>
-
-          <li>
-            <a href="#" title="ESG경영">ESG경영</a>
+    
+          <li class="mainm">
+            <a href="#none" title="ESG경영">ESG경영<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="개요">ESG경영</a></li>
+              <li><a href="#" title="개요">개요</a></li>
+              <li><a href="#" title="사회공헌">사회공헌</a></li>
+              <li><a href="#" title="친환경 경영">친환경 경영</a></li>
+              <li><a href="#" title="동반성장">동반성장</a></li>
+              <li><a href="#" title="경영철학">경영철학</a></li>
+              <li><a href="#" title="지속가능경영보고서">지속가능경영보고서</a></li>
+            </ul>
           </li>
-
-          <li>
-            <a href="invest.html" title="투자정보">투자정보</a>
+    
+          <li class="mainm">
+            <a href="#none" title="투자정보">투자정보<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="m_invest.html" title="투자정보">투자정보</a></li>
+              <li><a href="m_invest.html" title="경영정보">경영정보</a></li>
+              <li><a href="m_invest.html" title="공시정보">공시정보</a></li>
+              <li><a href="m_invest.html" title="주식정보">주식정보</a></li>
+              <li><a href="m_invest.html" title="채무정보">채무정보</a></li>
+              <li><a href="m_invest.html" title="IR자료실">IR자료실</a></li>
+            </ul>
           </li>
-
-          <li>
-            <a href="career.html" title="채용정보">채용정보</a>
+    
+          <li class="mainm">
+            <a href="#none" title="채용정보">채용정보<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="m_career.html" title="채용정보">채용정보</a></li>
+              <li><a href="m_career.html#c_process" title="채용프로세스">채용프로세스</a></li>
+              <li><a href="m_career.html" title="채용">채용</a></li>
+              <li><a href="m_career_list.php" title="나의 지원 현황">나의 지원 현황</a></li>
+            </ul>
           </li>
-
+        </ul>
+    
+        <ul class="m_lnb">
+          <li><a href="m_login.php" title="로그인"><i class="fa-solid fa-user"></i> 로그인</a>
+            <a href="m_register.php" title="회원가입">| 회원가입</a></li>
           <li>
-            <a href="signin.html" title="로그인">로그인</a>
+            <a href="#" title="공지사항"><i class="fa-solid fa-bell"></i> 공지사항</a>
+          </li>
+          <li>
+            <a href="#" title="고객센터"><i class="fa-solid fa-phone"></i> 고객센터</a>
+          </li>
+          <li>
+            <a href="#" title="이용약관"><i class="fa-solid fa-circle-question"></i> 이용약관</a>
           </li>
         </ul>
       </nav>
-    </div> <!-- h_inner -->
-    
-    <div class="h_inner2">
-      <nav class="lnb">
-        <div class="lnb_box">
-          <ul class="sub">
-            <li><a href="about.html" title="기업개요">기업개요</a></li>
-            <li><a href="about.html#vsci" title="비전">비전</a></li>
-            <li><a href="about.html#vsci" title="CI소개">CI소개</a></li>
-            <li><a href="about.html#history" title="연혁">연혁</a></li>
-            <li><a href="about.html#relc" title="사업구조">관계사 현황</a></li>
-            <li><a href="about.html#news" title="홍보센터">홍보센터</a></li>
-            <li><a href="about.html#comeway" title="오시는 길">오시는 길</a></li>
-          </ul>
-          <ul class="sub">
-            <li><a href="#" title="이마트 웨이">이마트 웨이</a></li>
-            <li><a href="#" title="이마트 피플">이마트 피플</a></li>
-            <li><a href="#" title="매장찾기">매장찾기</a></li>
-          </ul>
-
-          <ul class="sub">
-            <li><a href="#" title="개요">개요</a></li>
-            <li><a href="#" title="사회공헌">사회공헌</a></li>
-            <li><a href="#" title="친환경 경영">친환경 경영</a></li>
-            <li><a href="#" title="동반성장">동반성장</a></li>
-            <li><a href="#" title="경영철학">경영철학</a></li>
-            <li><a href="#" title="지속가능경영보고서">지속가능경영보고서</a></li>
-          </ul>
-
-          <ul class="sub">
-            <li><a href="invest.html" title="경영정보">경영정보</a></li>
-            <li><a href="invest.html" title="공시정보">공시정보</a></li>
-            <li><a href="invest.html" title="주식정보">주식정보</a></li>
-            <li><a href="invest.html" title="채무정보">채무정보</a></li>
-            <li><a href="invest.html" title="IR자료실">IR자료실</a></li>
-          </ul>
-
-          <ul class="sub">
-            <li><a href="career.html" title="채용프로세스">채용프로세스</a></li>
-            <li><a href="career.html" title="채용">채용</a></li>
-            <li><a href="career_list.php" title="나의 지원 현황">나의 지원 현황</a></li>
-          </ul>
-
-          <ul class="sub">
-            <li><a href="register.php" title="">회원가입</a></li>
-            <li><a href="notice.html" title="공지사항">공지사항</a></li>
-          </ul>
-        </div> <!-- lnb_box -->
-      </nav> <!-- lnb -->
-    </div> <!-- h_inner2 -->
+    </div>
   </header>
+
 <!-- <h1><?php echo $title ?></h1> -->
 
 
