@@ -11,7 +11,7 @@ section:not(.footer){
   overflow: hidden;
 }
 section > h2{display: none;}
-.inner, #news{
+.inner{
   width: 1200px;
   height: 100vh;
   margin: 0 auto;
@@ -305,12 +305,13 @@ img{display: block;}
 }
 
 /* 4. 늬우스 */
-#news{position: relative;}
-#news h2{
+#news div{position: relative;}
+#news .inner{padding-top: 15vh;}
+#news h3{
   display: block;
   font-size: var(--f-size04);
   font-weight: 400;
-  margin: 15vh 0 20px 0;
+  margin-bottom: 20px;
 }
 .news_big{
   width: 440px;
@@ -325,13 +326,14 @@ img{display: block;}
   padding: 5px 10px;
   border-radius: 50px;
 }
-.news_big h3{
+.news_big h4{
   font-size: 28px;
   line-height: 40px;
 }
 .news_list{
   width: 680px;
   float: right;
+  margin-top: 55px;
 }
 .news_list li{
   height: 180px;
@@ -344,14 +346,14 @@ img{display: block;}
   float: left;
   margin-right: 30px;
 }
-.news_list h3{
+.news_list h4{
   font-size: 22px;
   padding: 20px 0;
 }
 .news_list p{
   font-size: var(--f-size01);
 }
-#news::after{
+#news .inner::after{
   content: "";
   display: block;
   width: 1200px;
@@ -484,4 +486,12 @@ img{display: block;}
 .c_link div:hover{
   box-shadow: 16px 16px 5px 0 #333;
   background: #fcb31651;
+}
+
+footer{display: none;}
+.footer{
+  width: 100%;
+  background: var(--t-color04);
+  padding: 50px 0;
+  color: #fff;
 }

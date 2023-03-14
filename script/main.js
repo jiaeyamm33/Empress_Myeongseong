@@ -66,7 +66,6 @@ $('section').each(function(){
 });
 
 
-
 // 스크롤 이벤트
 $(window).scroll(function() {
   let ws = $(this).scrollTop();
