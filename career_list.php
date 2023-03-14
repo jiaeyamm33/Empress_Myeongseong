@@ -121,7 +121,7 @@ include 'career_conn.php';
       <form name="search" method="post" action="career_search.php">
         <table>
           <colgroup>
-            <col style="width: 50px;">
+            <col style="width: 50px">
             <col style="width: 100px">
             <col style="width: 100px">
             <col style="width: 650px">
