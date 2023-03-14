@@ -7,18 +7,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, intitial-scale=1">
-	<link rel="stylesheet" href="./css/signin.css" type="text/css">
- <link rel="stylesheet" href="./css/reset.css" type="text/css">
- <link rel="stylesheet" href="./css/base.css" type="text/css">
- <link rel="stylesheet" href="./css/m_common.css" type="text/css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="./css/m_member.css" type="text/css">
+	<link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <link rel="stylesheet" href="./css/m_common.css" type="text/css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="./script/m_common.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -111,12 +107,13 @@
     </div>
   </header>
 
+
 <?php if(!isset($_SESSION['ss_mb_id'])) { // 로그인 세션이 없을 경우 로그인 화면 ?>
 <section class="login1">
 <h2>로그인</h2>
 <article class="log_art1">
 <h3 class="txt1">로그인</h3>
-<form name="login" method="post" action="./login_check.php">
+<form name="login" method="post" action="./m_login_check.php">
   <table>
     <tr>
       <th>아이디</th>
@@ -135,7 +132,7 @@
             <label for="cb1"></label>
             <label for="cb1"><span class="txt2">아이디 저장</span></label>
             <a href="#none"><span class="txt3">ID/PW 찾기</span></a>
-            <a href="./register.php" title="회원가입하기" class="txt4">회원가입</a>
+            <a href="./m_register.php" title="회원가입하기" class="txt4">회원가입</a>
           </div>
           <ul>
             <li>
@@ -171,9 +168,32 @@
         </a>
       </article>
 </section>
-<footer>
+  <!-- 푸터 영역 -->
+  <footer>
     <div class="f_inner">
-      <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
+      <div class="flnb_top">
+      <h2><a href="m_index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
+      <select onchange="siteUrl(this)">
+        <option value="">FAMILY SITE</option>
+        <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
+        <option value="https://www.shinsegaepoint.com/">신세계포인트</option>
+        <option value="https://emart.ssg.com/">이마트몰</option>
+        <option value="http://culture.emart.com/main">문화센터</option>
+        <option value="http://store.traders.co.kr/index.jsp">이마트 트레이더스</option>
+        <option value="http://www.emarteveryday.co.kr">이마트 에브리데이</option>
+        <option value="https://www.emart24.co.kr">이마트24</option>
+        <option value="https://www.shinsegaegroupinside.com">신세계그룹</option>
+        <option value="http://www.shinsegae.com/">신세계백화점</option>
+        <option value="http://www.sikorea.co.kr/">신세계인터내셔날</option>
+        <option value="http://www.shinsegaefood.com/main.sf">신세계푸드</option>
+        <option value="http://www.shinsegae-con.co.kr">신세계건설</option>
+        <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
+        <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
+        <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
+        <option value="https://www.google.co.kr">신세계사이먼</option>
+        <option value="http://www.ssg.com">SSG.COM</option>
+      </select>
+    </div>
       <div class="f_info">
         <ul class="f_link">
           <li><a href="#" title="고객센터">고객센터</a></li>
@@ -201,28 +221,14 @@
             <dd>1577-3419</dd>
           </dl>
         </address>
-        <select onchange="siteUrl(this)">
-          <option value="">FAMILY SITE</option>
-          <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
-          <option value="https://www.shinsegaepoint.com/">신세계포인트</option>
-          <option value="https://emart.ssg.com/">이마트몰</option>
-          <option value="http://culture.emart.com/main">문화센터</option>
-          <option value="http://store.traders.co.kr/index.jsp">이마트 트레이더스</option>
-          <option value="http://www.emarteveryday.co.kr">이마트 에브리데이</option>
-          <option value="https://www.emart24.co.kr">이마트24</option>
-          <option value="https://www.shinsegaegroupinside.com">신세계그룹</option>
-          <option value="http://www.shinsegae.com/">신세계백화점</option>
-          <option value="http://www.sikorea.co.kr/">신세계인터내셔날</option>
-          <option value="http://www.shinsegaefood.com/main.sf">신세계푸드</option>
-          <option value="http://www.shinsegae-con.co.kr">신세계건설</option>
-          <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
-          <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
-          <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
-          <option value="https://www.google.co.kr">신세계사이먼</option>
-          <option value="http://www.ssg.com">SSG.COM</option>
-        </select>
       </div>
     </div>
+    <a href="#" title="맨 위로 가기" class="top_btn">
+      <i class="fa-solid fa-arrow-up-to-line"></i></a>
+      <div class="version">
+        <a href="http://jiaeyammas.dothome.co.kr/empress_myeongseong/index.html?move_pc_screen=1" title="PC버전보기">PC버전보기</a>
+        <!-- 모바일 사용자가 주소창에 ?move_pc_screen=1값을 지우면 다시 pc화면을 볼 수 있음. -->
+      </div>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
@@ -277,7 +283,7 @@
 			<p>회원정보 수정일</p>
 			<p class="last"><?php echo $mb['mb_modify_datetime'] ?></p>
       <p class="btn_01">
-        <a href="./register.php?mode=modify" title="회원정보수정">회원정보수정</a>
+        <a href="./m_register.php?mode=modify" title="회원정보수정">회원정보수정</a>
         <a href="./m_logout.php" title="로그아웃">로그아웃</a>
       </p>
 </div>
