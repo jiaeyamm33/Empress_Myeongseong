@@ -278,7 +278,7 @@
 			<p class="last"><?php echo $mb['mb_modify_datetime'] ?></p>
       <p class="btn_01">
         <a href="./register.php?mode=modify" title="회원정보수정">회원정보수정</a>
-        <a href="./logout.php" title="로그아웃">로그아웃</a>
+        <a href="./m_logout.php" title="로그아웃">로그아웃</a>
       </p>
 </div>
 <?php } ?>
