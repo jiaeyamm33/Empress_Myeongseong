@@ -136,7 +136,6 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <h3 class="txt1">이용약관</h3>
           <ul class="join2">
             <li>
-              <label for="cb1"></label>
               <span class="txt2">서비스 이용약관</span>
               <div class="arrow"></div>
               <div class="ser_box">
@@ -174,7 +173,8 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
               </div>
             </li>
             <li>
-              <label for="cb1"></label><span class="txt2">개인정보 수집・이용 동의서</span><div class="arrow"></div>
+              <span class="txt2">개인정보 수집・이용 동의서</span>
+              <div class="arrow"></div>
               <div class="ser_box">
                   <p>
                     수집하는 개인정보 항목 및 방법
