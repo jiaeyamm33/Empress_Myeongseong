@@ -228,7 +228,8 @@ input[id="cb1"], input[id="cb2"]{
   color: #FF0000;
   margin-left: 20px;
 }
-@media (max-width:767px) {
+
+@media screen and (max-width:767px) {
   /* 모바일 회원가입 */
   .join1 {
     width: 350px;
@@ -465,7 +466,7 @@ input[id="cb1"], input[id="cb2"]{
   text-align: center;
 }
 /* 모바일 로그인 */
-@media (max-width:767px) {
+@media screen and (max-width:767px) {
   .login1 {
       height: 800px;
       width: 350px;
