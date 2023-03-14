@@ -30,7 +30,7 @@ $('section').each(function(){
       winEvent = window.event;
     }
     if(winEvent.wheelDelta) {
-      delta = winEvent.wheelDelta;
+      delta = winEvent.wheelDelta / 120;
     } else if(winEvent.detail) {
       delta = -winEvent.detail / 3;
     }
@@ -63,45 +63,6 @@ $('section').each(function(){
       }
     });
   });
-});
-
-// 원페이지 스크롤
-window.addEventListener('wheel', function(e){
-  e.preventDefault();
-}, {passive : false});
-
-let $html = $('html');
-let page = 1;
-let lastPage = $('section').length+1;
-
-$html.animate({scrollTop:0},10);
-
-$(window).on('wheel', function(e){
-
-  if($html.is(':animated')) return;
-
-  if(e.originalEvent.deltaY > 0){
-    if(page == lastPage) return;
-
-    page++;
-  }else if(e.originalEvent.deltaY < 0){
-    if(page == 1) return;
-
-    page--;
-  }
-
-  let posTop = (page-1) * $(window).height();
-
-  $html.animate({scrollTop : posTop}, 500);
-
-  $('.m_nav a').each(function(i){
-    if(i==page-1){
-      $('.m_nav a').removeClass('mn_on');
-      $(this).addClass('mn_on');
-    }
-  });
-
-  return false;
 });
 
 
