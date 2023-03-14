@@ -25,6 +25,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
+  <link rel="shortcut icon" href="./image/e_favicon.ico" type="image/x-icon">
 	<link href="./css/member.css" rel="stylesheet" type="text/css">
 	<link href="./css/common.css" rel="stylesheet" type="text/css">
 	<link href="./css/reset.css" rel="stylesheet" type="text/css">
