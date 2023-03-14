@@ -1,8 +1,4 @@
-<?php 
 
-include 'career_conn.php';
-
-?>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -10,11 +6,11 @@ include 'career_conn.php';
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이마트 지원현황</title>
+  <title>이마트</title>
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/career.css" type="text/css">
+  <link rel="stylesheet" href="./css/member.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -108,65 +104,71 @@ include 'career_conn.php';
       </nav> <!-- lnb -->
     </div> <!-- h_inner2 -->
   </header>
-  
-  <main>
-    <article id="c_list">
-      <h2>나의 지원현황</h2>
-      <p>나의 지원현황을 확인하세요.</p>
-      <a href="career.html" title="채용공고 보러가기" class="c_btn01">채용공고 보러가기 <i class="fas fa-arrow-circle-right"></i></a>
-      <ul class="c_tab">
-        <li class="c_on">지원현황</li>
-        <li>관심공고</li>
-      </ul>
-      <form name="search" method="post" action="career_search.php">
-        <table>
-          <colgroup>
-            <col style="width: 50px">
-            <col style="width: 100px">
-            <col style="width: 100px">
-            <col style="width: 650px">
-            <col style="width: 150px">
-            <col style="width: 150px">
-          </colgroup>
-          <tr class="title">
-            <th>No</th>
-            <th>지원일</th>
-            <th>이름</th>
-            <th>공고명/지원분야</th>
-            <th>경력사항</th>
-            <th>상태</th>
-          </tr>
-          <?php
-            $query = 'select * from career order by num desc';
-            $result = mysqli_query($conn, $query);
-            while($data = mysqli_fetch_array($result)){?>
 
-            <tr>
-              <td><?=$data['num']?></td>
-              <td><?=$data['cdate']?></td>
-              <td><?=$data['name']?></td>
-              <td><?=$data['subject']?></td>
-              <td><?=$data['experience']?></td>
-              <td><?=$data['status']?></td>
-            </tr>
-            <?php } ?>
-        </table>
-        <select name="search_box" id="search_box">
-          <option value="공고명">공고명</option>
-          <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)">[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
-          <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)">[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
-          <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)">[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
-          <option value="[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)">[이마트 에브리데이]와인전문 판매 전문직 채용 신입 (~03.20)</option>
-          <option value="[스타벅스]바리스타 채용 신입 (~04.10)">[스타벅스]바리스타 채용 신입 (~04.10)</option>
-          <option value="[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)">[조선호텔앤리조트]마케팅 전략 채용 경력 (~04.20)</option>
-        </select>
-        <input type="submit" value="검색">
-      </form>
-    </article>
-  </main>
+<section class="login1">
+<h2>로그인</h2>
+<article class="log_art1">
+  <h3 class="txt1">로그인</h3>
+  <form name="login" method="post" action="./login_check.php">
+    <table>
+      <tr>
+        <th>아이디</th>
+        <th><input type="text" name="mb_id" placeholder="이메일 아이디 입력" maxlength="16"></th>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <th><input type="password" name="mb_password" placeholder="패스워드 입력" maxlength="16"></th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="로그인" class="login_btn" id="btn1">
+        </td>
+      </tr>
+    </table>
+    <div class="login2">
+      <input type="checkbox" id="cb1">
+      <label for="cb1"></label>
+      <label for="cb1"><span class="txt2">아이디 저장</span></label>
+      <a href="#none"><span class="txt3">ID/PW 찾기</span></a>
+      <a href="./register.php" title="회원가입하기" class="txt4">회원가입</a>
+    </div>
+    <ul>
+      <li>
+        <a href="#none" title="네이버 로그인">
+          <img src="./image/sign_icon01.png" alt="카카오로그인">
+          <span class=btn2>네이버 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon02.png" alt="카카오로그인">
+          <span class="btn2">카카오 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon03.png" alt="카카오로그인">
+          <span class="btn2">애플 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon04.png" alt="카카오로그인">
+          <span class="btn2">SSG 로그인</span>
+        </a>
+      </li>
+    </ul>
+  </form>
+</article>
 
-  <!-- 푸터 영역 -->
-  <footer>
+      <article class="log_art2">
+        <h3>배너</h3>
+        <a href="#" title="인턴사원 모집">
+          <img src="./image/sign_banner.jpg" alt="배너">
+        </a>
+      </article>
+</section>
+<footer>
     <div class="f_inner">
       <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
       <div class="f_info">
@@ -218,9 +220,6 @@ include 'career_conn.php';
         </select>
       </div>
     </div>
-    <a href="#about_m" title="맨 위로 가기" class="top_btn">
-      <i class="fa-solid fa-arrow-up"></i>
-    </a>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
@@ -233,5 +232,6 @@ include 'career_conn.php';
       }
     }
   </script>
-  </body>
+
+</body>
 </html>

@@ -130,19 +130,19 @@ $query = "SELECT * FROM career WHERE num = '$num'";
         <input type="hidden" name="num" value="<?=$num?>">
         <table>
           <colgroup>
-            <col width="150">
-            <col width="1050">
+            <col style="width: 150px">
+            <col style="width: 1050px">
           </colgroup>
           <tr>
-            <th><label for="name">이름</lable></th>
+            <th><label for="name">이름</label></th>
             <td><input type="text" name="name" id="name" value="<?=$data['name']?>"></td>
           </tr>
           <tr>
-            <th><label for="email">이메일</lable></th>
+            <th><label for="email">이메일</label></th>
             <td><input type="text" name="email" id="email" value="<?=$data['email']?>"></td>
           </tr>
           <tr>
-            <th><label for="phone">전화번호</lable></th>
+            <th><label for="phone">전화번호</label></th>
             <td><input type="text" name="phone" id="phone" value="<?=$data['phone']?>"></td>
           </tr>
           <tr>
@@ -185,7 +185,7 @@ $query = "SELECT * FROM career WHERE num = '$num'";
           </tr>
           <tr>
             <th><label for="file">입사지원서</label></th>
-            <td><input type="file" name="file" id="file" value="<?=$data['file']?>"></td>
+            <td><input type="file" name="file" id="file"></td>
           </tr>
         </table>
         <p><input type="submit" value="지원하기"></p>

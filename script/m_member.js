@@ -1,5 +1,5 @@
 $(function(){
-  let t_mnu = $('.join2 > li > a');
+  let t_mnu = $('.join2 > li');
 
   t_mnu.click(function(){
 
@@ -9,7 +9,7 @@ $(function(){
     $(this).find('.arrow2').toggleClass('a_on').toggleClass('a_off').parents().siblings().find('.a_off').removeClass('a_off').addClass('a_on');
 
     //a태그의 자손 .cont에 적용되는 서식
-    $(this).next().slideToggle().parent().siblings().find('.ser_box').slideUp();
+    $(this).find('.ser_box').slideToggle().parent().siblings().find('.ser_box').slideUp();
     return false;
   });
 
