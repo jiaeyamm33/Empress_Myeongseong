@@ -137,7 +137,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <ul class="join2">
             <li>
               <span class="txt2">서비스 이용약관</span>
-              <div class="arrow"></div>
+              <div class="arrow a_on"></div>
               <div class="ser_box">
                 <p>
                   제 1 장 총칙
@@ -174,7 +174,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
             </li>
             <li>
               <span class="txt2">개인정보 수집・이용 동의서</span>
-              <div class="arrow"></div>
+              <div class="arrow2 a_on"></div>
               <div class="ser_box">
                   <p>
                     수집하는 개인정보 항목 및 방법
@@ -231,13 +231,6 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 				<p class="email_box">
             <label for="cb4">이메일</label>
 						<input class="email" type="text" name="mb_email" id="cb4" value="<?php echo $mb['mb_email'] ?>">
-          <select id="email">
-            <option value="">직접입력하기</option>
-            <option value="naver.com">naver.com</option>
-            <option value="kakao.com">kakao.com</option>
-            <option value="apple.com">apple.com</option>
-            <option value="ssg.com">ssg.com</option>
-          </select>
           </p>
 					<p class="pass_box">
             <label for="cb5">비밀번호</label>
