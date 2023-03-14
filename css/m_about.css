@@ -393,39 +393,3 @@ padding: 1.5rem 0px;
     background: var(--t-color03) !important;
 }
 
-/* 탑버튼 */
-.top_btn{
-    position: fixed;
-    bottom: 20px; right: 20px;
-    width: 20px; height: 20px;
-    border-radius: 50%;
-    text-align: center;
-    background: var(--t-color03);
-    /* z-index: 99999; */
-    display: none;
-}
-.top_btn > i{
-    font-size: 14px;
-    line-height: 20px;
-    color: var(--t-color04);
-    z-index: 1234;
-}
-.top_btn::before,.top_btn::after{
-    content: "";
-    width: 20px; height: 20px;
-    border-radius: 50%;
-    border: 1px solid var(--t-color04);
-    position: absolute;
-    left: 0px;
-    box-sizing: border-box;
-    animation: xaves 2s linear infinite;
-}
-.top_btn::after{
-    animation-delay: 1s;
-}
-@keyframes xaves{
-    to{
-        transform: scale(1.5);
-        opacity: 0;
-    }
-}
