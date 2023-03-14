@@ -1,3 +1,5 @@
+// 메인 내비 이동
+
 
 // 원페이지 스크롤
 window.addEventListener('wheel', function(e){
@@ -16,45 +18,47 @@ $(window).on('wheel', function(e){
 
   if(e.originalEvent.deltaY > 0){
     if(page == lastPage) return;
+    console.log(page);
+
+
+    console.log($('.m_nav a').eq(page));
 
     page++;
+    $('.m_nav a').removeClass('mn_on');
+    $('.m_nav a').eq(page-1).addClass('mn_on');
   }else if(e.originalEvent.deltaY < 0){
     if(page == 1) return;
 
     page--;
+    $('.m_nav a').removeClass('mn_on');
+    $('.m_nav a').eq(page-1).addClass('mn_on');
+
   }
 
   let posTop = (page-1) * $(window).height();
 
   $html.animate({scrollTop : posTop}, 500);
 
-  $('.m_nav a').each(function(i){
-    if(i==page-1){
-      $('.m_nav a').removeClass('mn_on');
-      $(this).addClass('mn_on');
-    }
+  let mn = $('.m_nav li');
+  mn.click(function(){
+    $('.m_nav li a').removeClass('mn_on');
+    $(this).find('a').addClass('mn_on');
+  
+    let id_name = $(this).find('a').length();
+    console.log(id_name);
+  
+    // let page = id_name.index();
+    // console.log(page);
+    // let posTop = (page-1) * $(window).height();
+
+    // $html.animate({scrollTop : posTop}, 500);
+  
+    // return false;
   });
 
   return false;
 });
 
-
-// 메인 내비 이동
-let mn = $('.m_nav li');
-mn.click(function(){
-  $('.m_nav a').removeClass('mn_on');
-  $(this).find('a').addClass('mn_on');
-
-  let id_name = $(this).find('a').attr('href');
-  // console.log(id_name);
-
-  let secOffset = $(id_name).offset().top;
-  // console.log(secOffset);
-
-  $('html, body').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
-
-  return false;
-});
 
 
 // 스크롤 이벤트
