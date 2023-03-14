@@ -15,7 +15,7 @@ mn.click(function(){
 
 $('section').each(function(){
     // 개별적으로 Wheel 이벤트 적용
-  $(this).on('mousewheel',function(event){
+  $(this).on('wheel DOMMouseScroll',function(event){
     
     let delta = 0;
     let moveTop = null;
@@ -65,7 +65,7 @@ $('section').each(function(){
   });
 });
 
-+// 원페이지 스크롤
+// 원페이지 스크롤
 window.addEventListener('wheel', function(e){
   e.preventDefault();
 }, {passive : false});
