@@ -18,7 +18,7 @@
   <script src="./script/m_common.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  
+
 </head>
 <body>
 <!-- 헤더 영역 -->
@@ -95,8 +95,8 @@
         </ul>
     
         <ul class="m_lnb">
-          <li><a href="m_signin.html" title="로그인"><i class="fa-solid fa-user"></i> 로그인</a>
-            <a href="m_join.html" title="회원가입">| 회원가입</a></li>
+          <li><a href="m_login.php" title="로그인"><i class="fa-solid fa-user"></i> 로그인</a>
+            <a href="m_register.php" title="회원가입">| 회원가입</a></li>
           <li>
             <a href="#" title="공지사항"><i class="fa-solid fa-bell"></i> 공지사항</a>
           </li>
