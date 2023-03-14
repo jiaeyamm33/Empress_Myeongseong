@@ -445,7 +445,7 @@ marker.setMap(map);
       </div>
     </div>
     <a href="#" title="맨 위로 가기" class="top_btn">
-      <i class="fa-solid fa-arrow-up-to-line"></i></a>
+      <i class="fa-solid fa-arrow-up"></i></a>
       <div class="version">
         <a href="http://jiaeyammas.dothome.co.kr/empress_myeongseong/index.html?move_pc_screen=1" title="PC버전보기">PC버전보기</a>
         <!-- 모바일 사용자가 주소창에 ?move_pc_screen=1값을 지우면 다시 pc화면을 볼 수 있음. -->
@@ -461,6 +461,16 @@ marker.setMap(map);
         return; //프로그램을 종료한다
       }
     }
+    window.addEventListener('scroll', ()=> {
+  console.log(window, scrollY);
+  let ws = window.scrollY;
+  console.log(ws);
+  if(ws>=1500) {
+      document.querySelector('.top_btn').style.display = 'block';
+  } else {
+      document.querySelector('.top_btn').style.display = 'none';
+  }
+ });
   </script>
 </body>
 </html>
