@@ -35,7 +35,7 @@ if(($name != '') && ($email != '') && ($phone != '') && ($subject != '') && ($ed
   $error = '';
   echo "
   <script>
-    alert('필수 입력사항이 입력되지 않았습니다. 다시 확인해주세요.');
+    alert('필수사항이 입력되지 않았습니다. 다시 확인해주세요.');
     history.back();
   </script>";
 }

@@ -185,7 +185,7 @@ $query = "SELECT * FROM career WHERE num = '$num'";
           </tr>
           <tr>
             <th>자기소개서</th>
-            <td><input type="file" name="file" value="<?=$data['file']?>"></td>
+            <td><input type="file" name="file" value="file <?=$data['file']?>"></td>
           </tr>
         </table>
         <p><input type="submit" value="지원하기"></p>

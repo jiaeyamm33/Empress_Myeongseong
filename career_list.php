@@ -121,12 +121,12 @@ include 'career_conn.php';
       <form name="search" method="post" action="career_search.php">
         <table>
           <colgroup>
-            <col width="50">
-            <col width="100">
-            <col width="100">
-            <col width="650">
-            <col width="150">
-            <col width="150">
+            <col width="50px">
+            <col width="100px">
+            <col width="100px">
+            <col width="650px">
+            <col width="150px">
+            <col width="150px">
           </colgroup>
           <tr class="title">
             <th>No</th>
