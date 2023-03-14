@@ -20,16 +20,19 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 ?>
 <html>
 <head>
-	<title>Register</title>
-	<link href="./css/register.css" rel="stylesheet" type="text/css">
-	<link href="./css/common.css" rel="stylesheet" type="text/css">
-	<link href="./css/reset.css" rel="stylesheet" type="text/css">
-	<link href="./css/base.css" rel="stylesheet" type="text/css">
-	<script src="./script/join.js" defer></script>
-	<script src="./script/prefixfree.min.js"></script>
+	<title>이마트</title>
+  <link rel="shortcut icon" href="./image/e_favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/join.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <script src="./script/prefixfree.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- 제이쿼리 ui -->
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="./script/join.js" defer></script>
+  <script src="./script/common.js" defer></script>
 </head>
 <body>
 <header>
@@ -73,6 +76,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
       <nav class="lnb">
         <div class="lnb_box">
           <ul class="sub">
+            <li><a href="about.html" title="기업개요">기업개요</a></li>
             <li><a href="about.html#vsci" title="비전">비전</a></li>
             <li><a href="about.html#vsci" title="CI소개">CI소개</a></li>
             <li><a href="about.html#history" title="연혁">연혁</a></li>
@@ -106,11 +110,11 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <ul class="sub">
             <li><a href="career.html" title="채용프로세스">채용프로세스</a></li>
             <li><a href="career.html" title="채용">채용</a></li>
-            <li><a href="career.html" title="나의 지원 현황">나의 지원 현황</a></li>
+            <li><a href="career_list.php" title="나의 지원 현황">나의 지원 현황</a></li>
           </ul>
 
           <ul class="sub">
-            <li><a href="join.html" title="">회원가입</a></li>
+            <li><a href="register.php" title="">회원가입</a></li>
             <li><a href="notice.html" title="공지사항">공지사항</a></li>
           </ul>
         </div> <!-- lnb_box -->
