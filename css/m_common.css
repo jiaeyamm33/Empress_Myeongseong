@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-body {
-  overflow-x: hidden;
-}
-
 /* 헤더서식 */
 header{
   width: 100%;
