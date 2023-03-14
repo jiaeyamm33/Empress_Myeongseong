@@ -2,15 +2,21 @@
   include('./dbconn.php'); // DB연결을 위한 같은 경로의 dbconn.php를 인클루드합니다.
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, intitial-scale=1">
-	<link rel="stylesheet" href="./css/member.css" type="text/css">
-	<link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인</title>
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/member.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <script src="./script/prefixfree.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
   <!-- 헤더 영역 -->
@@ -105,55 +111,59 @@
 <section class="login1">
 <h2>로그인</h2>
 <article class="log_art1">
-<h3 class="txt1">로그인</h3>
-<form name="login" method="post" action="./login_check.php">
-  <table>
-    <tr>
-      <th>아이디</th>
-      <th><input type="text" name="mb_id" placeholder="이메일 아이디 입력" maxlength="16"></th>
-    </tr>
-    <tr>
-      <th>비밀번호</th>
-      <th><input type="password" name="mb_password" placeholder="패스워드 입력" maxlength="16"></th>
-    </tr>
-    <td colspan="2">
-      <input type="submit" value="로그인" class="login_btn" id="btn1">
-    </td>
-  </table>
-	<div class="login2">
-            <input type="checkbox" id="cb1">
-            <label for="cb1"></label>
-            <label for="cb1"><span class="txt2">아이디 저장</span></label>
-            <a href="#none"><span class="txt3">ID/PW 찾기</span></a>
-            <a href="./register.php" title="회원가입하기" class="txt4">회원가입</a>
-          </div>
-          <ul>
-            <li>
-              <a href="#none" title="네이버 로그인">
-                <img src="./image/sign_icon01.png" alt="카카오로그인">
-                <span class=btn2>네이버 로그인</span>
-              </a>
-            </li>
-            <li>
-              <a href="#none" title="카카오 로그인">
-                <img src="./image/sign_icon02.png" alt="카카오로그인">
-                <span class="btn2">카카오 로그인</span>
-              </a>
-            </li>
-            <li>
-              <a href="#none" title="카카오 로그인">
-                <img src="./image/sign_icon03.png" alt="카카오로그인">
-                <span class="btn2">애플 로그인</span>
-              </a>
-            </li>
-            <li>
-              <a href="#none" title="카카오 로그인">
-                <img src="./image/sign_icon04.png" alt="카카오로그인">
-                <span class="btn2">SSG 로그인</span>
-              </a>
-            </li>
-          </ul>
+  <h3 class="txt1">로그인</h3>
+  <form name="login" method="post" action="./login_check.php">
+    <table>
+      <tr>
+        <th>아이디</th>
+        <th><input type="text" name="mb_id" placeholder="이메일 아이디 입력" maxlength="16"></th>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <th><input type="password" name="mb_password" placeholder="패스워드 입력" maxlength="16"></th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="로그인" class="login_btn" id="btn1">
+        </td>
+      </tr>
+    </table>
+    <div class="login2">
+      <input type="checkbox" id="cb1">
+      <label for="cb1"></label>
+      <label for="cb1"><span class="txt2">아이디 저장</span></label>
+      <a href="#none"><span class="txt3">ID/PW 찾기</span></a>
+      <a href="./register.php" title="회원가입하기" class="txt4">회원가입</a>
+    </div>
+    <ul>
+      <li>
+        <a href="#none" title="네이버 로그인">
+          <img src="./image/sign_icon01.png" alt="카카오로그인">
+          <span class=btn2>네이버 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon02.png" alt="카카오로그인">
+          <span class="btn2">카카오 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon03.png" alt="카카오로그인">
+          <span class="btn2">애플 로그인</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none" title="카카오 로그인">
+          <img src="./image/sign_icon04.png" alt="카카오로그인">
+          <span class="btn2">SSG 로그인</span>
+        </a>
+      </li>
+    </ul>
+  </form>
 </article>
+
       <article class="log_art2">
         <h3>배너</h3>
         <a href="#" title="인턴사원 모집">

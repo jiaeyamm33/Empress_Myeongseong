@@ -7,6 +7,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, intitial-scale=1">
+  <title>로그인</title>
 	<link rel="stylesheet" href="./css/m_member.css" type="text/css">
 	<link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
@@ -123,9 +124,11 @@
       <th>비밀번호</th>
       <th><input type="password" name="mb_password" placeholder="패스워드 입력" maxlength="16"></th>
     </tr>
-    <td colspan="2">
-      <input type="submit" value="로그인" class="login_btn" id="btn1">
-    </td>
+    <tr>
+        <td colspan="2">
+          <input type="submit" value="로그인" class="login_btn" id="btn1">
+        </td>
+      </tr>
   </table>
 	<div class="login2">
             <input type="checkbox" id="cb1">
@@ -160,6 +163,7 @@
               </a>
             </li>
           </ul>
+        </form>
 </article>
       <article class="log_art2">
         <h3>배너</h3>
