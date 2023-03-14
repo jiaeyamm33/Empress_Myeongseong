@@ -263,6 +263,8 @@ $query = "SELECT * FROM career WHERE num = '$num'";
         return; //프로그램을 종료한다
       }
     }
+
+    
   </script>
   </body>
 </html>
