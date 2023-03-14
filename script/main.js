@@ -14,19 +14,17 @@ mn.click(function(){
 });
 
 $('main section').each(function(){
-<<<<<<< HEAD
     // 개별적으로 Wheel 이벤트 적용
   $(this).on('mousewheel',function(event){
-=======
-  $(this).on('mousewheel',function(e){
->>>>>>> 6eb915faea9c722b7149a0fad575ff792adcc4e3
     
-    var delta = 0;
-    var moveTop = null;
-    var boxMax = $('section').length;
-    var winEvent = '';
-    var sec_n = $(this).index();
-    // console.log(boxMax);
+    let delta = 0;
+    let moveTop = null;
+    let boxMax = $('section').length;
+    let winEvent = '';
+    let sec_n = $(this).index();
+    let f_h = $('footer').height();
+    console.log(boxMax);
+    console.log(sec_n);
     
     if(!winEvent) {
       winEvent = window.event;
@@ -37,25 +35,26 @@ $('main section').each(function(){
       delta = -winEvent.detail / 3;
     }
     
-    // 마우스휠을 위에서 아래로 이동(처음에서 다음박스로 이동)
     if(delta < 0) {
-        // 마지막 BOX 보다 순서값이 작은 경우에 실행
-        if($(this).index() < boxMax) {
-            if($(this).next() != undefined) {
-              moveTop =$(this).next().offset().top;
-                sec_n++;
-            }
+      if($(this).index() < boxMax) {
+        if($(this).next() != undefined) {
+          moveTop = $(this).next().offset().top;
+          sec_n++;
         }
+      }
+      else {
+        moveTop = $('footer').prev().offset().top+150+'px';
+        return false;
+      }
     }
-    // 마우스휠을 아래에서 위로 이동( 뒤에서 앞으로 이동)
+    
     else {
-        // 첫번째 article보다 순서값이 큰 경우에 실행
-        if($(this).index() > 0) {
-            if($(this).prev() != undefined) {
-                moveTop =$(this).prev().offset().top;
-                sec_n--;
-            }
+      if($(this).index() > 0) {
+        if($(this).prev() != undefined) {
+          moveTop = $(this).prev().offset().top;
+          sec_n--;
         }
+      }
     }
     
     $('html, body').stop().animate({scrollTop : moveTop + 'px'}, 300);
@@ -69,26 +68,6 @@ $('main section').each(function(){
     });
   });
 });
-
-
-// 메인 로고 애니메이션
-// const m_f = document.querySelector('.card');
-// const heartBeat = m_f
-// .animate([
-//   {transform: 'scale(1)'},
-//   {transform: 'scale(1.001)', offset: 0.2 },
-//   {transform: 'scale(0.99)', offset: 0.4 },
-//   {transform: 'scale(1.004)', offset: 0.6 },
-//   {transform: 'scale(0.995)', offset: 0.8 },
-//   {transform: 'scale(1)'}
-// ], {
-//   duration: 1000,
-//   iterations: Infinity
-// });
-// const stopheartBeat = ()=>{heartBeat.pause();}
-// const startheartBeat = ()=>{heartBeat.play();}
-// m_f.addEventListener('mouseover', stopheartBeat, false);
-// m_f.addEventListener('mouseout', startheartBeat, false);
 
 
 // 스크롤 이벤트

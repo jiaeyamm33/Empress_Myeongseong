@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-body{overflow: hidden;}
 header {background: #ffffff30;}
 header .gnb > ul > li > a{color: var(--t-color02);}
 header .h_inner2{background: #ffffff30;}

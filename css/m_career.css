@@ -301,6 +301,16 @@
   box-sizing: border-box;
   text-align: center;
 }
+#c_list select, #c_apply select{
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none;
+  background: url('../image/arrow_down.png') no-repeat 96% 50% #fff;
+  color: var(--t-color01);
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+#c_list select::-ms-expand, #c_apply select::-ms-expand{ display:none;}
 #c_list h2, #c_apply h2{
   font-size: var(--f-size04);
 }
@@ -342,10 +352,6 @@
   padding: 10px 0;
 }
 #c_list #search_box{
-  -webkit-appearance: none;
-  -moz-appearance: none; 
-  appearance: none;
-  background: url('../image/arrow_down.png') no-repeat 96% 50% #fff;
   width: 200px;
   height: 35px;
   border-radius: 5px;
@@ -353,9 +359,6 @@
   cursor: pointer;
   text-indent: 10px;
 }
-#c_list #search_box::-ms-expand{ 
-  display:none;
-  }
 #c_list input[type=submit]{
   width: 60px;
   height: 35px;
@@ -392,22 +395,19 @@
 #c_apply td{
   text-align: left;
   border-bottom: 1px solid #ccc;
-}
-#c_apply input{
-  margin: 10px;
+  padding: 10px 0;
 }
 #c_apply input[type=text]{
-  width: 90%;
+  width: 92%;
   height: 30px;
   border-radius: 5px;
   border: 1px solid #757575;
 }
 #c_apply select{
-  width: 90%;
+  width: 93%;
   height: 35px;
   border-radius: 5px;
   border: 1px solid #757575;
-  margin: 10px;
 }
 #c_apply input[type=radio]{
   accent-color: var(--t-color03);

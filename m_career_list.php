@@ -31,9 +31,9 @@ include 'career_conn.php';
         </a>
       </h1>
       <div class="toggle" id="toggle">
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
+       <span>&nbsp;</span>
+       <span>&nbsp;</span>
+       <span>&nbsp;</span>
       </div>
       <nav class="gnb">
         <ul id="gnblist">
@@ -77,7 +77,6 @@ include 'career_conn.php';
             <ul class="sub">
               <li><a href="m_invest.html" title="투자정보">투자정보</a></li>
               <li><a href="m_invest.html" title="경영정보">경영정보</a></li>
-              <li><a href="m_invest.html" title="경영정보">경영정보</a></li>
               <li><a href="m_invest.html" title="공시정보">공시정보</a></li>
               <li><a href="m_invest.html" title="주식정보">주식정보</a></li>
               <li><a href="m_invest.html" title="채무정보">채무정보</a></li>
@@ -89,7 +88,7 @@ include 'career_conn.php';
             <a href="#none" title="채용정보">채용정보<i class="fa-solid fa-angle-down"></i></a>
             <ul class="sub">
               <li><a href="m_career.html" title="채용정보">채용정보</a></li>
-              <li><a href="m_career.html" title="채용프로세스">채용프로세스</a></li>
+              <li><a href="m_career.html#c_process" title="채용프로세스">채용프로세스</a></li>
               <li><a href="m_career.html" title="채용">채용</a></li>
               <li><a href="m_career_list.php" title="나의 지원 현황">나의 지원 현황</a></li>
             </ul>
@@ -173,7 +172,7 @@ include 'career_conn.php';
   <footer>
     <div class="f_inner">
       <div class="flnb_top">
-      <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
+      <h2><a href="m_index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
       <select onchange="siteUrl(this)">
         <option value="">FAMILY SITE</option>
         <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
@@ -225,12 +224,11 @@ include 'career_conn.php';
       </div>
     </div>
     <a href="#" title="맨 위로 가기" class="top_btn">
-      <i class="fa-solid fa-arrow-up-to-line"></i>
-    </a>
-    <div class="version">
-      <a href="http://jiaeyammas.dothome.co.kr/empress_myeongseong/index.html?move_pc_screen=1" title="PC버전보기">PC버전보기</a>
-      <!-- 모바일 사용자가 주소창에 ?move_pc_screen=1값을 지우면 다시 pc화면을 볼 수 있음. -->
-    </div>
+      <i class="fa-solid fa-arrow-up-to-line"></i></a>
+      <div class="version">
+        <a href="http://jiaeyammas.dothome.co.kr/empress_myeongseong/index.html?move_pc_screen=1" title="PC버전보기">PC버전보기</a>
+        <!-- 모바일 사용자가 주소창에 ?move_pc_screen=1값을 지우면 다시 pc화면을 볼 수 있음. -->
+      </div>
   </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
