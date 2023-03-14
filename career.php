@@ -24,6 +24,7 @@ $query = "SELECT * FROM career WHERE num = '$num'";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>이마트</title>
+  <link rel="shortcut icon" href="./image/e_favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
