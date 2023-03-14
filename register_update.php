@@ -107,7 +107,7 @@ if($mode == "insert"){ //신규 등록 상태
   mb_job = '$mb_job',
   mb_ip = '$mb_ip',
   mb_language = '$mb_language',
-  mb_datetime = '$mb_modify_datetime'
+  mb_modify_datetime = '$mb_modify_datetime'
   where mb_id = '$mb_id'";
 
   $result = mysqli_query($conn, $sql); //입력실행

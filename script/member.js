@@ -27,17 +27,5 @@ $(function(){
       $('.agree').css("display","inline")
     }
   })
-
   
-  $("select[id=email]").on("change", function(){
-    var $addr = $(this).closest(".join3").find("input[id=email01]");
-    if ($(this).val() == "etc") {
-        $addr.val('');
-        $addr.prop("readonly",false);
-
-    } else {
-        $addr.val($(this).val());
-        $addr.prop("readonly",true);
-    }
-  });
 })
