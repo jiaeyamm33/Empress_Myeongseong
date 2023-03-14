@@ -138,7 +138,7 @@ header .lnb .lnb_box ul li:hover a {
 }
 
 /* 푸터서식 */
-footer{
+.footer{
   width: 100%;
   background: var(--t-color04);
   padding: 50px 0;

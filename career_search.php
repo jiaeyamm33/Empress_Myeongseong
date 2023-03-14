@@ -120,14 +120,14 @@ include 'career_conn.php';
       </ul>
       <form name="search" method="post" action="career_search.php">
       <table>
-        <colgroup>
-          <col width="50px">
-          <col width="100px">
-          <col width="100px">
-          <col width="650px">
-          <col width="150px">
-          <col width="150px">
-        </colgroup>
+      <colgroup>
+        <col style="width: 50px;">
+        <col style="width: 100px">
+        <col style="width: 100px">
+        <col style="width: 650px">
+        <col style="width: 150px">
+        <col style="width: 150px">
+      </colgroup>
         <tr class="title">
           <th>No</th>
           <th>지원일</th>

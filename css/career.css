@@ -396,6 +396,7 @@
   border-bottom: 3px solid #333;
 }
 #c_apply th{
+  width: 150px;
   font-size: var(--f-size01);
   line-height: 30px;
   background: var(--t-color03);
@@ -403,6 +404,7 @@
   border-bottom: 1px solid #ccc;
 }
 #c_apply td{
+  width: 1050px;
   text-align: left;
   border-bottom: 1px solid #ccc;
   padding-left: 20px;

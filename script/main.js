@@ -1,4 +1,70 @@
 
+// 메인 내비 이동
+let mn = $('.m_nav li');
+mn.click(function(){
+  $('.m_nav li a').removeClass('mn_on');
+  $(this).find('a').addClass('mn_on');
+
+  let id_name = $(this).find('a').attr('href');
+  let secOffset = $(id_name).offset().top;
+
+  $('html, body').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
+
+  return false;
+});
+
+$('section').each(function(){
+    // 개별적으로 Wheel 이벤트 적용
+  $(this).on('wheel DOMMouseScroll',function(event){
+    
+    let delta = 0;
+    let moveTop = null;
+    let boxMax = $('section').length;
+    let winEvent = '';
+    let sec_n = $(this).index();
+
+    console.log(boxMax);
+    console.log(sec_n);
+    
+    if(!winEvent) {
+      winEvent = window.event;
+    }
+    if(winEvent.wheelDelta) {
+      delta = winEvent.wheelDelta;
+    } else if(winEvent.detail) {
+      delta = -winEvent.detail / 3;
+    }
+    
+    if(delta < 0) {
+      if($(this).index() < boxMax) {
+        if($(this).next() != undefined) {
+          moveTop = $(this).next().offset().top;
+          sec_n++;
+        }
+      }
+    }
+    
+    else {
+      if($(this).index() > 0) {
+        if($(this).prev() != undefined) {
+          moveTop = $(this).prev().offset().top;
+          sec_n--;
+        }
+      }
+    }
+    
+    $('html, body').stop().animate({scrollTop : moveTop + 'px'}, 300);
+
+    // gnb 색상 변경
+    $('.m_nav a').each(function(i){
+      if(i==sec_n-1){
+        $('.m_nav a').removeClass('mn_on');
+        $(this).addClass('mn_on');
+      }
+    });
+  });
+});
+
 // 원페이지 스크롤
 window.addEventListener('wheel', function(e){
   e.preventDefault();
@@ -38,23 +104,6 @@ $(window).on('wheel', function(e){
   return false;
 });
 
-
-// 메인 내비 이동
-let mn = $('.m_nav li');
-mn.click(function(){
-  $('.m_nav a').removeClass('mn_on');
-  $(this).find('a').addClass('mn_on');
-
-  let id_name = $(this).find('a').attr('href');
-  // console.log(id_name);
-
-  let secOffset = $(id_name).offset().top;
-  // console.log(secOffset);
-
-  $('html, body').animate({scrollTop:secOffset}, 500, 'easeOutQuint');
-
-  return false;
-});
 
 
 // 스크롤 이벤트
