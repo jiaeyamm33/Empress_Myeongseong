@@ -18,20 +18,20 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 	$modify_mb_info = '';
 }
 ?>
-<html>
+<!doctype html>
+<html lang="ko">
 <head>
-	<title>Register</title>
-  <link href="./css/reset.css" rel="stylesheet" type="text/css">
-	 <link href="./css/base.css" rel="stylesheet" type="text/css">
-	 <link href="./css/m_member.css" rel="stylesheet" type="text/css">
-	<link href="./css/m_common.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, intitial-scale=1">
+  <title>로그인</title>
+	<link rel="stylesheet" href="./css/m_member.css" type="text/css">
+	<link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <link rel="stylesheet" href="./css/m_common.css" type="text/css">
   <script src="./script/prefixfree.min.js"></script>
-  <script src="./script/m_member.js" defer></script>
   <script src="./script/m_common.js" defer></script>
+  <script src="./script/m_member.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <!-- 제이쿼리 ui -->
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
@@ -133,11 +133,12 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
       <form action="./m_register_update.php" onsubmit="return fregisterform_submit(this);" method="post">
 	<input type="hidden" name="mode" value="<?php echo $mode ?>">
         <fieldset>
-				<legend class="big1">회원가입</legend>
-          <legend class="txt1">이용약관</legend>
+          <legend class="big1">회원가입</legend>
+          <h3 class="txt1">이용약관</h3>
           <ul class="join2">
             <li>
-              <a href="#" title=""><label for="cb1"><span class="txt2">서비스 이용약관</span><div class="arrow a_on"></div></a>
+              <span class="txt2">서비스 이용약관</span>
+              <div class="arrow"></div>
               <div class="ser_box">
                 <p>
                   제 1 장 총칙
@@ -170,13 +171,11 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
                 <p>
                   ④ 이 약관에서 사용하는 용어의 정의는 이 조항에서 정하는 것을 제외하고는 관계 법령 및 서비스별 안내에서 정하는 바에 의합니다.
                 </p>
-                <input type="checkbox" id="cb1">
-                <label for="cb1"></label>
-                <label for="cb1">필수</label>
               </div>
             </li>
             <li>
-              <a href="#" title=""><label for="cb1"><span class="txt2">개인정보 수집・이용 동의서</span><div class="arrow2 a_on"></div></a>
+              <span class="txt2">개인정보 수집・이용 동의서</span>
+              <div class="arrow"></div>
               <div class="ser_box">
                   <p>
                     수집하는 개인정보 항목 및 방법
@@ -218,7 +217,6 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
                     [필수항목] : 사업자등록번호, 법인명, 아이디, 비밀번호, 사업자주소, 전자우편주소, 담당자명, 휴대전화번호
                   </p>
               </div>
-              </p>
             </li>
           </ul>
           <input type="checkbox" id="cb2" required>
@@ -229,11 +227,11 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
         <fieldset class="join3">
 				<legend class="txt3">정보입력<span>*필수입력</span></legend>
 				<p class="name_box"><label for="cb3">&nbsp;</label>
-				<input type="text" name="mb_name" autofocus placeholder="이름" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
+				<input type="text" name="mb_name" autofocus placeholder="이름" id="cb3" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
         </p>
 				<p class="email_box">
             <label for="cb4">&nbsp;</label>
-						<input class="email" type="text" name="mb_email" value="<?php echo $mb['mb_email'] ?>" placeholder="이메일">
+						<input class="email" type="text" name="mb_email" id="cb4" value="<?php echo $mb['mb_email'] ?>" placeholder="이메일">
           <select id="email">
             <option value="">직접입력하기</option>
             <option value="naver.com">naver.com</option>
@@ -244,15 +242,15 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           </p>
 					<p class="pass_box">
             <label for="cb5">&nbsp;</label>
-            <input type="password" name="mb_password" placeholder="비밀번호">
+            <input type="password" name="mb_password" placeholder="비밀번호" id="cb5">
           </p>
 					<p class="repass_box">
             <label for="cb6">&nbsp;</label>
-            <input type="password" name="mb_password_re" placeholder="비밀번호 확인">
+            <input type="password" name="mb_password_re" placeholder="비밀번호 확인" id="cb6">
           </p>
 					<p class="tel_box">
             <label for="cb7">&nbsp;</label>
-            <input type="text" name="mb_id" placeholder="아이디" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
+            <input type="text" name="mb_id" placeholder="아이디" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
           </p>
 				<!-- <tr>
 					<th>성별</th>
