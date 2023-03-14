@@ -8,7 +8,7 @@ $(function(){
     $(this).find('.arrow').toggleClass('a_on');
 
     //a태그의 자손 .cont에 적용되는 서식
-    $(this).find('.ser_box').slideToggle().siblings().find('.ser_box').slideUp();
+    $(this).find('.ser_box').slideToggle().parent().siblings().find('.ser_box').slideUp();
 
     return false;
   });
