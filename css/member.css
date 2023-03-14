@@ -65,6 +65,7 @@ article legend::after{
 .join2 > li{
   margin-bottom: 45px;
   position: relative;
+  cursor: pointer;
 }
 .join2 > li:last-child{
   margin-bottom: 40px;
@@ -88,24 +89,10 @@ article legend::after{
   top: 0px;
   right: 0;
   cursor: pointer;
-}
-.join2 .arrow2{
-  position: absolute;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 2px solid #FCB416;
-  border-left: none;
-  border-top:none;
-  top: 0px;
-  right: 0;
-  cursor: pointer;
-}
-.a_on{
   transform: rotate(45deg);
 }
-.a_off{
-  transform: rotate(-135deg) translateX(-5px) translateY(-5px);
+.a_on{
+  transform: rotate(-135deg) translateX(-5px) translateY(-5px) !important;
 }
 label[for="cb2"]{
   font-size: 16px;
