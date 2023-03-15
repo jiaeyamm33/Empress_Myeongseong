@@ -35,7 +35,8 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
-<header>
+  <!-- 헤더 영역 -->
+  <header>
     <div class="h_inner">
       <h1>
         <a href="m_index.html" title="상단 바로가기">
@@ -65,22 +66,22 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <li class="mainm">
             <a href="#none" title="이마트 웨이">이마트 웨이<i class="fa-solid fa-angle-down"></i></a>
             <ul class="sub">
-              <li><a href="#" title="이마트 웨이">이마트 웨이</a></li>
-              <li><a href="#" title="이마트 피플">이마트 피플</a></li>
-              <li><a href="#" title="매장찾기">매장찾기</a></li>
+              <li><a href="#none" title="이마트 웨이">이마트 웨이</a></li>
+              <li><a href="#none" title="이마트 피플">이마트 피플</a></li>
+              <li><a href="#none" title="매장찾기">매장찾기</a></li>
             </ul>
           </li>
     
           <li class="mainm">
             <a href="#none" title="ESG경영">ESG경영<i class="fa-solid fa-angle-down"></i></a>
             <ul class="sub">
-              <li><a href="#" title="개요">ESG경영</a></li>
-              <li><a href="#" title="개요">개요</a></li>
-              <li><a href="#" title="사회공헌">사회공헌</a></li>
-              <li><a href="#" title="친환경 경영">친환경 경영</a></li>
-              <li><a href="#" title="동반성장">동반성장</a></li>
-              <li><a href="#" title="경영철학">경영철학</a></li>
-              <li><a href="#" title="지속가능경영보고서">지속가능경영보고서</a></li>
+              <li><a href="#none" title="개요">ESG경영</a></li>
+              <li><a href="#none" title="개요">개요</a></li>
+              <li><a href="#none" title="사회공헌">사회공헌</a></li>
+              <li><a href="#none" title="친환경 경영">친환경 경영</a></li>
+              <li><a href="#none" title="동반성장">동반성장</a></li>
+              <li><a href="#none" title="경영철학">경영철학</a></li>
+              <li><a href="#none" title="지속가능경영보고서">지속가능경영보고서</a></li>
             </ul>
           </li>
     
@@ -108,16 +109,16 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
         </ul>
     
         <ul class="m_lnb">
-          <li><a href="m_signin.html" title="로그인"><i class="fa-solid fa-user"></i> 로그인</a>
-            <a href="m_join.html" title="회원가입">| 회원가입</a></li>
+          <li><a href="m_login.php" title="로그인"><i class="fa-solid fa-user"></i> 로그인</a>
+            <a href="m_register.php" title="회원가입">&#x007C; 회원가입</a></li>
           <li>
-            <a href="#" title="공지사항"><i class="fa-solid fa-bell"></i> 공지사항</a>
+            <a href="#none" title="공지사항"><i class="fa-solid fa-bell"></i> 공지사항</a>
           </li>
           <li>
-            <a href="#" title="고객센터"><i class="fa-solid fa-phone"></i> 고객센터</a>
+            <a href="#none" title="고객센터"><i class="fa-solid fa-phone"></i> 고객센터</a>
           </li>
           <li>
-            <a href="#" title="이용약관"><i class="fa-solid fa-circle-question"></i> 이용약관</a>
+            <a href="#none" title="이용약관"><i class="fa-solid fa-circle-question"></i> 이용약관</a>
           </li>
         </ul>
       </nav>

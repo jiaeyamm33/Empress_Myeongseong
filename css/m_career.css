@@ -116,7 +116,8 @@
   position: absolute;
   width: 100%;
   background: var(--t-color02);
-  border:1px solid var(--t-color03);
+  /* border:1px solid var(--t-color03); */
+  
   /* border-bottom: none; */
   border-radius: 0px 0px 8px 8px;
   border-top: none;
@@ -126,7 +127,7 @@
   z-index: 999;
   overflow-y: auto;
   max-height: 88px;
-  /* transform: translateY(-8px); */
+  transform: translateY(-2px);
   /* overflow: hidden; */
   /* display: none; */
   height: 0px;
@@ -141,6 +142,9 @@
 }
 #job .option_list.active{
   height: 88px;
+  border-bottom: 1px solid var(--t-color03);
+  border-left: 1px solid var(--t-color03);
+  border-right: 1px solid var(--t-color03);
 }
 #job .option{
   font-size: 14px;
