@@ -447,3 +447,67 @@ input[id="cb1"], input[id="cb2"]{
   color: #FF0000;
   margin-left: 20px;
 }
+/* 푸터서식 */
+footer{
+  width: 100%!important;
+  background: var(--t-color04)!important;
+  padding: 50px 0 30px 0!important;
+  color: #fff!important;
+  box-sizing: border-box!important;
+}
+
+footer select{
+  width: 100px!important;
+  height: 20px!important;
+  border: 1px solid #fff!important;
+  font-size: 12px!important;
+  color: #fff!important;
+  background: var(--t-color04)!important;
+  margin: 1.7% 5% 0 0!important;
+}
+
+.f_inner{
+  width: 100%!important;
+}
+
+footer .flnb_top {
+  width: 92%!important;
+  display: flex!important;
+  justify-content: space-between!important;
+}
+
+footer .flnb_top h2 {
+  padding-left: 5%!important;  
+}
+
+.f_link{
+  margin: 0px auto!important;
+  width: 92%!important;
+  padding: 20px 0px 20px 5%!important;
+  display: flex!important;
+  flex-wrap: wrap!important;
+  gap: 15px!important;
+}
+
+.f_link a{
+  font-size: 0.85rem!important;
+  color: #fff!important;
+  line-height: 1rem!important;
+}
+address{
+  width: 90%!important;
+  margin: 0px auto!important;
+  padding: 0px 0px 10px 5%!important;
+  font-size: 0.7rem!important;
+  line-height: 1.7rem!important;
+}
+address dt, address dd{display: inline-block!important;}
+address dd{margin-right: 0.5rem!important;}
+footer .version{
+  width: 90%!important;
+  margin: 0px auto!important;
+  padding: 0px 0px 0px 5%!important;
+}
+footer .version a{
+  color: var(--t-color02)!important;
+}

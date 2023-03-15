@@ -348,17 +348,6 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
       }
     }
   </script>
-  <script>
-    // 푸터 패밀리 사이트 스크립트
-    function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨
-      if(select.value!='none') { //옵션을 선택하면
-        window.open(select.value); //선택한 사이트가 열리게 하고
-        select.value='none'; //기존값을 지운다
-      }else { //선택을 하지 않으면
-        return; //프로그램을 종료한다
-      }
-    }
-  </script>
 <script>
 function fregisterform_submit(f) { // submit 최종 폼체크
 
