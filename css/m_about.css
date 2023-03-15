@@ -20,7 +20,7 @@ section h3, article h3 {
 #about_m {
     width: 100%;
     height: 100vh;
-    background-image: url(../image/about_back.jpeg);
+    background-image: url(../image/about_back.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
