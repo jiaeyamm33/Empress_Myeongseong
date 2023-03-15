@@ -126,7 +126,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
   </header>
 <!-- <h1><?php echo $title ?></h1> -->
 
-
+<main>
 	<section class="join1">
     <h2>회원가입영역</h2>
     <article>
@@ -284,6 +284,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
       </form>
     </article>
     </section>
+</main>
   <script>
     // 푸터 패밀리 사이트 스크립트
     function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨
