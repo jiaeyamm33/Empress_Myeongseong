@@ -15,7 +15,7 @@ mn.click(function(){
 
 $('section').each(function(){
     // 개별적으로 Wheel 이벤트 적용
-  $(this).on('wheel DOMMouseScroll',function(event){
+  $(this).on('wheel DOMMouseScroll',function(e){
     
     let delta = 0;
     let moveTop = null;
@@ -34,7 +34,8 @@ $('section').each(function(){
       if(window.opera) {
         delta = -delta;
       }
-    } else if(winEvent.detail) {
+    }
+    else if(winEvent.detail) {
       delta = -winEvent.detail / 3;
     }
     
@@ -51,14 +52,13 @@ $('section').each(function(){
     }
     
     else {
-      if($(this).index() > 0) {
+      if($(this).index() > 1) {
         if($(this).prev() != undefined) {
           moveTop = $(this).prev().offset().top;
           sec_n--;
         }
       }
       else {
-        alert("첫번째 페이지 입니다.");
         return false;
       }
     }

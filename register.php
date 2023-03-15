@@ -25,6 +25,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
+  <link rel="shortcut icon" href="./image/e_favicon.ico" type="image/x-icon">
 	<link href="./css/member.css" rel="stylesheet" type="text/css">
 	<link href="./css/common.css" rel="stylesheet" type="text/css">
 	<link href="./css/reset.css" rel="stylesheet" type="text/css">
@@ -137,7 +138,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <ul class="join2">
             <li>
               <span class="txt2">서비스 이용약관</span>
-              <div class="arrow"></div>
+              <div class="arrow a_on"></div>
               <div class="ser_box">
                 <p>
                   제 1 장 총칙
@@ -174,7 +175,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
             </li>
             <li>
               <span class="txt2">개인정보 수집・이용 동의서</span>
-              <div class="arrow"></div>
+              <div class="arrow2 a_on"></div>
               <div class="ser_box">
                   <p>
                     수집하는 개인정보 항목 및 방법
@@ -228,16 +229,13 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 				<p class="name_box"><label for="cb3">이름</label>
 				<input type="text" name="mb_name" id="cb3" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
         </p>
+        <p class="tel_box">
+          <label for="cb7">아이디</label>
+          <input type="text" name="mb_id" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
+        </p>
 				<p class="email_box">
             <label for="cb4">이메일</label>
 						<input class="email" type="text" name="mb_email" id="cb4" value="<?php echo $mb['mb_email'] ?>">
-          <select id="email">
-            <option value="">직접입력하기</option>
-            <option value="naver.com">naver.com</option>
-            <option value="kakao.com">kakao.com</option>
-            <option value="apple.com">apple.com</option>
-            <option value="ssg.com">ssg.com</option>
-          </select>
           </p>
 					<p class="pass_box">
             <label for="cb5">비밀번호</label>
@@ -246,10 +244,6 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 					<p class="repass_box">
             <label for="cb6">비밀번호 확인</label>
             <input type="password" name="mb_password_re" id="cb6">
-          </p>
-					<p class="tel_box">
-            <label for="cb7">아이디</label>
-            <input type="text" name="mb_id" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
           </p>
 				<!-- <tr>
 					<th>성별</th>
