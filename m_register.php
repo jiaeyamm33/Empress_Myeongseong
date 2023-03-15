@@ -227,7 +227,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <span class="agree">*회원정보 동의하기를 눌러주세요</span>
         </fieldset>
         <fieldset class="join3">
-				<legend class="txt3">정보입력<span>*필수입력</span></legend>
+				<legend class="txt3">정보입력</legend>
 				<p class="name_box"><label for="cb3">&nbsp;</label>
 				<input type="text" name="mb_name" autofocus placeholder="이름" id="cb3" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
         </p>
