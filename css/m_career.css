@@ -402,12 +402,16 @@
   height: 30px;
   border-radius: 5px;
   border: 1px solid #757575;
+  box-sizing: border-box;
+  margin-left: 10px;
 }
 #c_apply select{
-  width: 93%;
-  height: 35px;
+  width: 92%;
+  height: 30px;
   border-radius: 5px;
   border: 1px solid #757575;
+  box-sizing: border-box;
+  margin-left: 10px;
 }
 #c_apply input[type=radio]{
   accent-color: var(--t-color03);
