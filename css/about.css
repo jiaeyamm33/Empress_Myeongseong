@@ -134,6 +134,8 @@ section {
 
 #history p span {
     color: var(--t-color03);
+    width: 56px;
+    box-sizing: border-box;
 }
 
 #history select {
