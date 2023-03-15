@@ -174,7 +174,10 @@ padding: 1.5rem 0px;
 #history .hiscon ul li span {
     background-color: var(--t-color03);
     height: 25px;
-    padding: 5px 10px;
+    width: 48px;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
     color: var(--t-color02);
     margin-right: 20px;
 }
