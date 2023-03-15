@@ -246,9 +246,10 @@ section {
     font-size: var(--f-size02);
 }
 
-.casa_img {
-    width: 212px;
-    height: 212px;
+
+.wcimg {
+    width: 200px;
+    height: 200px;
 }
 /* 뉴스 */
 
