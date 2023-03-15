@@ -36,7 +36,8 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
-<header>
+  <!-- 헤더 영역 -->
+  <header>
     <div class="h_inner">
       <h1>
         <a href="m_index.html" title="상단 바로가기">
