@@ -207,7 +207,8 @@ img{display: block;}
 .pb_list li{
   position: relative;
   transition: .5s;
-  top: 1000px;
+  top: 700px;
+  opacity: 0;
 }
 .pb_list a{
   width: 387px;
