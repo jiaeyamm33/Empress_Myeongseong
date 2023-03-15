@@ -139,11 +139,10 @@ include 'career_conn.php';
         <?php
           $search_box = $_POST['search_box'];
           if($search_box == "*"){
-          $query = "select * from career";
+            $query = "select * from career";
           }else {
-          $query = "select * from career where subject='$search_box'";
+            $query = "select * from career where subject='$search_box'";
           }
-          // $query = "select * from career where subject LIKE '[%'='$search_box'";
           $result = mysqli_query($conn, $query);
           while($data = mysqli_fetch_array($result)){?>
 
