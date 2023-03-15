@@ -20,7 +20,7 @@ section h3, article h3 {
 #about_m {
     width: 100%;
     height: 100vh;
-    background-image: url(../image/about_back.jpeg);
+    background-image: url(../image/about_back.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -174,7 +174,10 @@ padding: 1.5rem 0px;
 #history .hiscon ul li span {
     background-color: var(--t-color03);
     height: 25px;
-    padding: 5px 10px;
+    width: 48px;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
     color: var(--t-color02);
     margin-right: 20px;
 }

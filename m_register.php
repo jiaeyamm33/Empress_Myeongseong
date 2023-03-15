@@ -31,6 +31,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
   <script src="./script/prefixfree.min.js"></script>
   <script src="./script/m_common.js" defer></script>
   <script src="./script/m_member.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
@@ -230,6 +231,10 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 				<p class="name_box"><label for="cb3">&nbsp;</label>
 				<input type="text" name="mb_name" autofocus placeholder="이름" id="cb3" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
         </p>
+        <p class="tel_box">
+          <label for="cb7">&nbsp;</label>
+          <input type="text" name="mb_id" placeholder="아이디" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
+        </p>
 				<p class="email_box">
             <label for="cb4">&nbsp;</label>
 						<input class="email" type="text" name="mb_email" id="cb4" value="<?php echo $mb['mb_email'] ?>" placeholder="이메일">
@@ -241,10 +246,6 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 					<p class="repass_box">
             <label for="cb6">&nbsp;</label>
             <input type="password" name="mb_password_re" placeholder="비밀번호 확인" id="cb6">
-          </p>
-					<p class="tel_box">
-            <label for="cb7">&nbsp;</label>
-            <input type="text" name="mb_id" placeholder="아이디" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
           </p>
 				<!-- <tr>
 					<th>성별</th>
@@ -285,6 +286,68 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
       </form>
     </article>
     </section>
+  <!-- 푸터 영역 -->
+  <footer>
+    <div class="f_inner">
+      <div class="flnb_top">
+      <h2><a href="m_index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
+      <select onchange="siteUrl(this)">
+        <option value="">FAMILY SITE</option>
+        <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
+        <option value="https://www.shinsegaepoint.com/">신세계포인트</option>
+        <option value="https://emart.ssg.com/">이마트몰</option>
+        <option value="http://culture.emart.com/main">문화센터</option>
+        <option value="http://store.traders.co.kr/index.jsp">이마트 트레이더스</option>
+        <option value="http://www.emarteveryday.co.kr">이마트 에브리데이</option>
+        <option value="https://www.emart24.co.kr">이마트24</option>
+        <option value="https://www.shinsegaegroupinside.com">신세계그룹</option>
+        <option value="http://www.shinsegae.com/">신세계백화점</option>
+        <option value="http://www.sikorea.co.kr/">신세계인터내셔날</option>
+        <option value="http://www.shinsegaefood.com/main.sf">신세계푸드</option>
+        <option value="http://www.shinsegae-con.co.kr">신세계건설</option>
+        <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
+        <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
+        <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
+        <option value="https://www.google.co.kr">신세계사이먼</option>
+        <option value="http://www.ssg.com">SSG.COM</option>
+      </select>
+    </div>
+      <div class="f_info">
+        <ul class="f_link">
+          <li><a href="#" title="고객센터">고객센터</a></li>
+          <li><a href="#" title="이용약관">이용약관</a></li>
+          <li><a href="#" title="공정거래자율준수">공정거래자율준수</a></li>
+          <li><a href="#" title="윤리신고센터">윤리신고센터</a></li>
+          <li><a href="#" title="개인정보처리방침"><span class="color_y">개인정보처리방침</span></a></li>
+          <li><a href="#" title="영상정보운영방침"><span class="color_y">영상정보운영방침</span></a></li>
+        </ul>
+        <address>
+          <dl>
+            <dt>상호 : </dt>
+            <dd>이마트(주)</dd>
+            <dt>주소 : </dt>
+            <dd>서울특별시 성동구 뚝섬로 377(성수동2가)</dd>
+            <dt>대표자 : </dt>
+            <dd>강희석</dd>
+            <dt>사업자등록번호 : </dt>
+            <dd>206-86-50913</dd>
+            <dt>통신판매업 신고번호 : </dt>
+            <dd>제 2011-서울성동-0345호</dd>
+            <dt>이마트대표전화 : </dt>
+            <dd>02-380-5678</dd>
+            <dt>㈜에스에스지닷컴 : </dt>
+            <dd>1577-3419</dd>
+          </dl>
+        </address>
+      </div>
+    </div>
+    <a href="#" title="맨 위로 가기" class="top_btn">
+      <i class="fa-solid fa-arrow-up-to-line"></i></a>
+      <div class="version">
+        <a href="http://jiaeyammas.dothome.co.kr/empress_myeongseong/index.html?move_pc_screen=1" title="PC버전보기">PC버전보기</a>
+        <!-- 모바일 사용자가 주소창에 ?move_pc_screen=1값을 지우면 다시 pc화면을 볼 수 있음. -->
+      </div>
+  </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
     function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨

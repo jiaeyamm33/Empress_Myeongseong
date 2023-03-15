@@ -25,6 +25,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
+  <link rel="shortcut icon" href="./image/e_favicon.ico" type="image/x-icon">
 	<link href="./css/member.css" rel="stylesheet" type="text/css">
 	<link href="./css/common.css" rel="stylesheet" type="text/css">
 	<link href="./css/reset.css" rel="stylesheet" type="text/css">
@@ -137,7 +138,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
           <ul class="join2">
             <li>
               <span class="txt2">서비스 이용약관</span>
-              <div class="arrow"></div>
+              <div class="arrow a_on"></div>
               <div class="ser_box">
                 <p>
                   제 1 장 총칙
@@ -174,7 +175,7 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
             </li>
             <li>
               <span class="txt2">개인정보 수집・이용 동의서</span>
-              <div class="arrow"></div>
+              <div class="arrow2 a_on"></div>
               <div class="ser_box">
                   <p>
                     수집하는 개인정보 항목 및 방법
@@ -228,16 +229,13 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 				<p class="name_box"><label for="cb3">이름</label>
 				<input type="text" name="mb_name" id="cb3" value="<?php echo $mb['mb_name'] ?>" <?php echo $modify_mb_info ?>>
         </p>
+        <p class="tel_box">
+          <label for="cb7">아이디</label>
+          <input type="text" name="mb_id" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
+        </p>
 				<p class="email_box">
             <label for="cb4">이메일</label>
 						<input class="email" type="text" name="mb_email" id="cb4" value="<?php echo $mb['mb_email'] ?>">
-          <select id="email">
-            <option value="">직접입력하기</option>
-            <option value="naver.com">naver.com</option>
-            <option value="kakao.com">kakao.com</option>
-            <option value="apple.com">apple.com</option>
-            <option value="ssg.com">ssg.com</option>
-          </select>
           </p>
 					<p class="pass_box">
             <label for="cb5">비밀번호</label>
@@ -246,10 +244,6 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
 					<p class="repass_box">
             <label for="cb6">비밀번호 확인</label>
             <input type="password" name="mb_password_re" id="cb6">
-          </p>
-					<p class="tel_box">
-            <label for="cb7">아이디</label>
-            <input type="text" name="mb_id" id="cb7" value="<?php echo $mb['mb_id'] ?>" <?php echo $modify_mb_info ?>>
           </p>
 				<!-- <tr>
 					<th>성별</th>
@@ -290,6 +284,59 @@ if(isset($_SESSION['ss_mb_id']) && $_GET['mode'] == 'modify') { // 세션이 있
       </form>
     </article>
     </section>
+    <footer>
+    <div class="f_inner">
+      <h2><a href="index.html" title="메인페이지로 바로가기"><img src="./image/f_logo.png" alt="하단로고"></a></h2>
+      <div class="f_info">
+        <ul class="f_link">
+          <li><a href="#" title="고객센터">고객센터</a></li>
+          <li><a href="#" title="이용약관">이용약관</a></li>
+          <li><a href="#" title="공정거래자율준수">공정거래자율준수</a></li>
+          <li><a href="#" title="윤리신고센터">윤리신고센터</a></li>
+          <li><a href="#" title="개인정보처리방침"><span class="color_y">개인정보처리방침</span></a></li>
+          <li><a href="#" title="영상정보운영방침"><span class="color_y">영상정보운영방침</span></a></li>
+        </ul>
+        <address>
+          <dl>
+            <dt>상호 : </dt>
+            <dd>이마트(주)</dd>
+            <dt>주소 : </dt>
+            <dd>서울특별시 성동구 뚝섬로 377(성수동2가)</dd>
+            <dt>대표자 : </dt>
+            <dd>강희석</dd>
+            <dt>사업자등록번호 : </dt>
+            <dd>206-86-50913</dd>
+            <dt>통신판매업 신고번호 : </dt>
+            <dd>제 2011-서울성동-0345호</dd>
+            <dt>이마트대표전화 : </dt>
+            <dd>02-380-5678</dd>
+            <dt>㈜에스에스지닷컴 : </dt>
+            <dd>1577-3419</dd>
+          </dl>
+        </address>
+        <select onchange="siteUrl(this)">
+          <option value="">FAMILY SITE</option>
+          <option value="https://store.emart.com/main/main.do">이마트 매장안내</option>
+          <option value="https://www.shinsegaepoint.com/">신세계포인트</option>
+          <option value="https://emart.ssg.com/">이마트몰</option>
+          <option value="http://culture.emart.com/main">문화센터</option>
+          <option value="http://store.traders.co.kr/index.jsp">이마트 트레이더스</option>
+          <option value="http://www.emarteveryday.co.kr">이마트 에브리데이</option>
+          <option value="https://www.emart24.co.kr">이마트24</option>
+          <option value="https://www.shinsegaegroupinside.com">신세계그룹</option>
+          <option value="http://www.shinsegae.com/">신세계백화점</option>
+          <option value="http://www.sikorea.co.kr/">신세계인터내셔날</option>
+          <option value="http://www.shinsegaefood.com/main.sf">신세계푸드</option>
+          <option value="http://www.shinsegae-con.co.kr">신세계건설</option>
+          <option value="http://www.sinc.co.kr">신세계아이앤씨</option>
+          <option value="http://www.istarbucks.co.kr/">스타벅스커피코리아</option>
+          <option value="https://www.josunhotel.com/">조선호텔앤리조트</option>
+          <option value="https://www.google.co.kr">신세계사이먼</option>
+          <option value="http://www.ssg.com">SSG.COM</option>
+        </select>
+      </div>
+    </div>
+  </footer>
   <script>
     // 푸터 패밀리 사이트 스크립트
     function siteUrl(select) { //사용자가 선택목록을 선택하면 siteUrl함수가 호출됨

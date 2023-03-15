@@ -7,7 +7,7 @@ section {
 #about_m {
     max-width: 100%;
     height: 100vh;
-    background-image: url(../image/about_back.jpeg);
+    background-image: url(../image/about_back.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -134,6 +134,7 @@ section {
 
 #history p span {
     color: var(--t-color03);
+    box-sizing: border-box;
 }
 
 #history select {
@@ -172,9 +173,16 @@ section {
 #history .hiscon ul li span {
     background-color: var(--t-color03);
     height: 25px;
-    padding: 5px 10px;
+    display: inline-block;
+    box-sizing: border-box;
     color: var(--t-color02);
     margin-right: 20px;
+    box-sizing: border-box;
+    line-height: 25px;
+    width: 55px;
+    text-align: center;
+    font-size: var(--f-size01);
+    text-indent: 0px;
 }
 
 /* 관계사 현황 */
@@ -246,9 +254,10 @@ section {
     font-size: var(--f-size02);
 }
 
-.casa_img {
-    width: 212px;
-    height: 212px;
+
+.wcimg {
+    width: 200px;
+    height: 200px;
 }
 /* 뉴스 */
 

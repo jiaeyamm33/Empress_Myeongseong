@@ -20,6 +20,10 @@ body {
   font-size: 12px;
   color: var(--t-color01);
 }
+
+body * {
+  font-family: 'Pretendard', '맑은 고딕', sans-serif;
+}
 a{
   color: var(--t-color01);
   text-decoration: none;

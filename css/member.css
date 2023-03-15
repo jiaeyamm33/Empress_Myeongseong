@@ -88,6 +88,7 @@ article legend::after{
   top: 0px;
   right: 0;
   cursor: pointer;
+  transform: rotate(45deg);
 }
 .join2 .arrow2{
   position: absolute;
@@ -102,10 +103,10 @@ article legend::after{
   cursor: pointer;
 }
 .a_on{
-  transform: rotate(45deg);
+  transform: rotate(45deg)!important;
 }
 .a_off{
-  transform: rotate(-135deg) translateX(-5px) translateY(-5px);
+  transform: rotate(-135deg) translateX(-5px) translateY(-5px)!important;
 }
 label[for="cb2"]{
   font-size: 16px;
@@ -153,7 +154,7 @@ label[for="cb2"]{
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 .btn_box input{
   width: 300px;
@@ -386,4 +387,45 @@ input[id="cb1"] {
   display: block;
   font-size: 32px;
   text-align: center;
+}
+footer{
+  width: 100%!important;
+  background: var(--t-color04)!important;
+  padding: 50px 0!important;
+  color: #fff!important;
+}
+
+.f_inner{
+  width: 1200px!important;
+  margin: 0 auto!important;
+  display: flex!important;
+  gap: 50px!important;
+}
+.f_link{
+  display: flex!important;
+  gap: 35px!important;
+}
+.f_link a{
+  font-size: var(--f-size02)!important;
+  color: #fff!important;
+  line-height: 32px!important;
+}
+address{
+  width: 730px!important;
+  padding: 20px 0!important;
+  font-size: var(--f-size)!important;
+  line-height: 24px!important;
+}
+address dt, address dd{display: inline-block!important;}
+address dd{margin-right: 20px!important;}
+.f_info select{
+  width: 100px!important;
+  height: 20px!important;
+  border: 1px solid #fff!important;
+  font-size: 12px!important;
+  color: #fff!important;
+  background: var(--t-color04)!important;
+}
+.hidden {
+  display: none!important;
 }

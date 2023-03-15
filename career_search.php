@@ -121,9 +121,9 @@ include 'career_conn.php';
       <form name="search" method="post" action="career_search.php">
       <table>
       <colgroup>
-        <col style="width: 50px;">
+        <col style="width: 30px;">
         <col style="width: 100px">
-        <col style="width: 100px">
+        <col style="width: 130px">
         <col style="width: 650px">
         <col style="width: 150px">
         <col style="width: 150px">
@@ -138,7 +138,11 @@ include 'career_conn.php';
         </tr>
         <?php
           $search_box = $_POST['search_box'];
-          $query = "select * from career where subject='$search_box'";
+          if($search_box == "*"){
+            $query = "select * from career";
+          }else {
+            $query = "select * from career where subject='$search_box'";
+          }
           $result = mysqli_query($conn, $query);
           while($data = mysqli_fetch_array($result)){?>
 
@@ -154,7 +158,7 @@ include 'career_conn.php';
     </table>
     
     <select id="search_box" name="search_box">
-      <option value="전체보기">전체보기</option>
+      <option value="*">전체보기</option>
       <option value="[노브랜드]전략 경력 구성원 채용 (~03.02)" <?if($search_box=="[노브랜드]전략 경력 구성원 채용 (~03.02)"){echo "selected";}?>>[노브랜드]전략 경력 구성원 채용 (~03.02)</option>
       <option value="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)" <?if($search_box=="[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)"){echo "selected";}?>>[Digital Transform]Back-end Engineer 채용 경력직 (~03.10)</option>
       <option value="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)" <?if($search_box=="[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)"){echo "selected";}?>>[Digital Transform]Fornt-end Engineer 채용 신입 (~03.10)</option>
@@ -234,6 +238,6 @@ include 'career_conn.php';
         return; //프로그램을 종료한다
       }
     }
-  </scriplocation.href=>
+    </script>
   </body>
 </html>

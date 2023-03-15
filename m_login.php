@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./css/m_common.css" type="text/css">
   <script src="./script/prefixfree.min.js"></script>
   <script src="./script/m_common.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
@@ -118,7 +119,7 @@
   <table>
     <tr>
       <th>아이디</th>
-      <th><input type="text" name="mb_id" placeholder="이메일 아이디 입력" maxlength="16"></th>
+      <th><input type="text" name="mb_id" placeholder="아이디 입력" maxlength="16"></th>
     </tr>
     <tr>
       <th>비밀번호</th>

@@ -11,6 +11,7 @@ include 'career_conn.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>이마트 지원현황</title>
+  <link rel="shortcut icon" href="./image/e_favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
@@ -121,9 +122,9 @@ include 'career_conn.php';
       <form name="search" method="post" action="career_search.php">
         <table>
           <colgroup>
-            <col style="width: 50px">
+            <col style="width: 30px">
             <col style="width: 100px">
-            <col style="width: 100px">
+            <col style="width: 130px">
             <col style="width: 650px">
             <col style="width: 150px">
             <col style="width: 150px">

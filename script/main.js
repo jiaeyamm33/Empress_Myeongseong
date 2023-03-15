@@ -15,7 +15,7 @@ mn.click(function(){
 
 $('section').each(function(){
     // 개별적으로 Wheel 이벤트 적용
-  $(this).on('wheel DOMMouseScroll',function(event){
+  $(this).on('wheel DOMMouseScroll',function(e){
     
     let delta = 0;
     let moveTop = null;
@@ -34,7 +34,8 @@ $('section').each(function(){
       if(window.opera) {
         delta = -delta;
       }
-    } else if(winEvent.detail) {
+    }
+    else if(winEvent.detail) {
       delta = -winEvent.detail / 3;
     }
     
@@ -51,14 +52,13 @@ $('section').each(function(){
     }
     
     else {
-      if($(this).index() > 0) {
+      if($(this).index() > 1) {
         if($(this).prev() != undefined) {
           moveTop = $(this).prev().offset().top;
           sec_n--;
         }
       }
       else {
-        alert("첫번째 페이지 입니다.");
         return false;
       }
     }
@@ -95,20 +95,22 @@ $(window).scroll(function() {
 
   // pb 아래에서 위로
   if (pb==ws) {
-    $('.pb_list li').css('top','0');
+    $('.pb_list li').stop().css('top','0');
+    $('.pb_list li').stop().css('opacity','1');
   } else {
-    $('.pb_list li').css('top','1000px');
+    $('.pb_list li').stop().css('top','700px');
+    $('.pb_list li').stop().css('opacity','0');
   }
 
   // esg 나타나기
-  if (esg==ws) {
-    $('#esg h2').css('transform','translateX(0)');
-    $('#esg .inner > p').css('transform','translateX(0)');
-    $($('#esg .esg_list')).fadeIn(1000);
+  if (esg==ws) { 
+    $('#esg h2').stop().css('transform','translateX(0)');
+    $('#esg .inner > p').stop().css('transform','translateX(0)');
+    $('#esg .esg_list').stop().fadeIn(1000);
   } else {
-    $('#esg h2').css('transform','translateX(-100%)');
-    $('#esg .inner > p').css('transform','translateX(-100%)');
-    $($('#esg .esg_list')).fadeOut();
+    $('#esg h2').stop().css('transform','translateX(-100%)');
+    $('#esg .inner > p').stop().css('transform','translateX(-100%)');
+    $('#esg .esg_list').stop().fadeOut(10);
   }
 });
 

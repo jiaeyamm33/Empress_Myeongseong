@@ -8,7 +8,7 @@ $(function(){
 let gnbli = $('.gnb #gnblist li a');
 
  gnbli.click(function() {
-  $(this).next().slideToggle();
+  $(this).next().stop().slideToggle();
   $(this).toggleClass('gnbdeco').parent().siblings().find('a').removeClass('gnbdeco');
   $(this).find('i.fa-angle-down').toggleClass('subro');
   $(this).parent().siblings().find('i.fa-angle-down').removeClass('subro');
