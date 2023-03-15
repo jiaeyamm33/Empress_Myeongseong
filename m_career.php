@@ -128,7 +128,7 @@ $query = "SELECT * FROM career WHERE num = '$num'";
   <main>
     <article id="c_apply">
       <h2>입사 지원하기</h2>
-      <a href="#" title="입사지원서 양식 다운로드" class="c_down"><i class="fa-regular fa-folder-open"></i> 입사지원서 양식</a>
+      <a href="./image/devil_hyun.png" title="입사지원서 양식 다운로드" class="c_down"><i class="fa-regular fa-folder-open"></i> 입사지원서 양식</a>
       <form name="career" method="post" action="m_career_sub.php">
         <input type="hidden" name="num" value="<?=$num?>">
         <table>
