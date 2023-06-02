@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* 헤더서식 */
-header{
+header {
   width: 100%;
   height: 100px;
   position: fixed;
@@ -13,7 +13,7 @@ header{
   left: 0;
 }
 
-.h_inner{
+.h_inner {
   width: 1200px;
   height: 100px;
   margin: 0 auto;
@@ -22,30 +22,38 @@ header{
   justify-content: space-between;
   align-items: center;
 }
-header h1{
+
+header h1 {
   width: 150px;
 }
-header h1 img{width: 100%;}
-header .gnb > ul{
+
+header h1 img {
+  width: 100%;
+}
+
+header .gnb>ul {
   display: flex;
   justify-content: space-evenly;
 }
-header .gnb > ul > li{
+
+header .gnb>ul>li {
   margin-left: 40px;
 }
 
-header .gnb > ul > li:hover a {
+header .gnb>ul>li:hover a {
   text-decoration: underline;
   text-decoration-color: var(--t-color03);
   text-underline-position: under;
   text-decoration-thickness: 3px;
 }
-header .gnb > ul > li > a{
+
+header .gnb>ul>li>a {
   font-size: var(--f-size02);
   color: var(--t-color01);
   font-weight: 400;
   line-height: 100px;
 }
+
 /* header .sub{
   display: none;
 }
@@ -107,7 +115,8 @@ header .lnb .lnb_box {
   gap: 30px;
 }
 
-header .lnb .lnb_box ul li, header .lnb .lnb_box ul li a {
+header .lnb .lnb_box ul li,
+header .lnb .lnb_box ul li a {
   line-height: 40px;
   display: block;
 }
@@ -138,37 +147,48 @@ header .lnb .lnb_box ul li:hover a {
 }
 
 /* 푸터서식 */
-footer{
+footer {
   width: 100%;
   background: var(--t-color04);
   padding: 50px 0;
   color: #fff;
 }
 
-.f_inner{
+.f_inner {
   width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 50px;
 }
-.f_link{
+
+.f_link {
   display: flex;
   gap: 35px;
 }
-.f_link a{
+
+.f_link a {
   font-size: var(--f-size02);
   color: #fff;
   line-height: 32px;
 }
-address{
+
+address {
   width: 730px;
   padding: 20px 0;
   font-size: var(--f-size);
   line-height: 24px;
 }
-address dt, address dd{display: inline-block;}
-address dd{margin-right: 20px;}
-.f_info select{
+
+address dt,
+address dd {
+  display: inline-block;
+}
+
+address dd {
+  margin-right: 20px;
+}
+
+.f_info select {
   width: 100px;
   height: 20px;
   border: 1px solid #fff;
@@ -176,8 +196,7 @@ address dd{margin-right: 20px;}
   color: #fff;
   background: var(--t-color04);
 }
+
 .hidden {
   display: none;
 }
-
-

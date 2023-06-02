@@ -3,7 +3,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 /* 모든 페이지에 공통으로 적용되는 서식 */
-:root{
+:root {
   --t-color01: #333;
   --t-color02: #fff;
   --t-color03: #FCB416;
@@ -15,6 +15,7 @@
   --f-size04: 36px;
   --f-size05: 96px;
 }
+
 body {
   font-family: 'Pretendard', '맑은 고딕', sans-serif;
   font-size: 12px;
@@ -24,9 +25,16 @@ body {
 body * {
   font-family: 'Pretendard', '맑은 고딕', sans-serif;
 }
-a{
+
+a {
   color: var(--t-color01);
   text-decoration: none;
 }
 
-.color_y{color: var(--t-color03);}
+.color_y {
+  color: var(--t-color03);
+}
+
+.hidden {
+  display: none;
+}
